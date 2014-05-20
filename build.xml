@@ -21,10 +21,10 @@
   
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}" />
-    <mkdir dir="${build.tmp}/default/mps-multiline.zip" />
-    <mkdir dir="${build.tmp}/default/mps-multiline.zip/mps-multiline" />
-    <mkdir dir="${build.tmp}/default/mps-multiline.zip/mps-multiline/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-multiline.zip/mps-multiline/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.editor.multiline</id>
         <name>MPS Multiline Property Editor Component</name>
@@ -38,8 +38,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages" />
-    <mkdir dir="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline" />
     <mkdir dir="${build.tmp}/default/mps-multiline.build.jar" />
     <mkdir dir="${build.tmp}/default/mps-multiline.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/mps-multiline.build.jar/META-INF/module.xml">
@@ -48,7 +48,7 @@
         <sources jar="mps-multiline.build-src.jar" descriptor="build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/mps-multiline.build.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/mps-multiline.build.jar">
       <fileset dir="${build.tmp}/java/out/mps-multiline.build" />
       <fileset dir="${basedir}/mps-multiline/solutions/mps-multiline.build" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/mps-multiline.build.jar" />
@@ -56,7 +56,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-mps-multiline.build-models">
       <fileset dir="${basedir}/mps-multiline/solutions/mps-multiline.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/mps-multiline.build-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/mps-multiline.build-src.jar">
       <fileset dir="${basedir}/mps-multiline/solutions/mps-multiline.build/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-multiline/solutions/mps-multiline.build/build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-mps-multiline.build-models" prefix="module/models" />
@@ -81,12 +81,12 @@
         <sources jar="de.slisson.mps.editor.multiline-src.jar" descriptor="multiline.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" />
       <fileset dir="${basedir}/mps-multiline/languages/multiline" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.editor.multiline.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline#5792856961266375224" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-generator-template">
@@ -95,7 +95,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-languageModels">
       <fileset dir="${basedir}/mps-multiline/languages/multiline/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-src.jar">
       <fileset dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-multiline/languages/multiline/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-multiline/languages/multiline/multiline.mpl" prefix="module" />
@@ -126,7 +126,7 @@
         <sources jar="de.slisson.mps.editor.multiline.runtime-src.jar" descriptor="runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
       <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.editor.multiline.runtime.jar" />
@@ -134,19 +134,14 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-de.slisson.mps.editor.multiline.runtime-models">
       <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-multiline.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime-src.jar">
       <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-de.slisson.mps.editor.multiline.runtime-models" prefix="module/models" />
     </jar>
-    <zip destfile="${build.layout}/mps-multiline.zip">
-      <zipfileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib" prefix="mps-multiline/lib" />
-      <fileset dir="${build.tmp}/default/mps-multiline.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/mps-richtext.zip" />
-    <mkdir dir="${build.tmp}/default/mps-richtext.zip/mps-richtext" />
-    <mkdir dir="${build.tmp}/default/mps-richtext.zip/mps-richtext/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-richtext.zip/mps-richtext/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-richtext/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.richtext</id>
         <name>MPS Richtext Editor Component</name>
@@ -161,8 +156,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages" />
-    <mkdir dir="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.richtext.build.jar" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.richtext.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.slisson.mps.richtext.build.jar/META-INF/module.xml">
@@ -171,7 +166,7 @@
         <sources jar="de.slisson.mps.richtext.build-src.jar" descriptor="de.slisson.mps.richtext.build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.build.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.build.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.richtext.build" />
       <fileset dir="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.richtext.build.jar" />
@@ -179,7 +174,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-richtext-solutions-de.slisson.mps.richtext.build-models">
       <fileset dir="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.build-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.build-src.jar">
       <fileset dir="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build/de.slisson.mps.richtext.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-solutions-de.slisson.mps.richtext.build-models" prefix="module/models" />
@@ -208,12 +203,12 @@
         <sources jar="de.slisson.mps.richtext-src.jar" descriptor="richtext.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.richtext" />
       <fileset dir="${basedir}/mps-richtext/languages/richtext" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.richtext.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-richtext-generator-template">
@@ -225,7 +220,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-richtext-models">
       <fileset dir="${basedir}/mps-richtext/languages/richtext/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext-src.jar">
       <fileset dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-richtext/languages/richtext/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" prefix="module" />
@@ -253,12 +248,12 @@
         <sources jar="de.slisson.mps.richtext.customcell-src.jar" descriptor="de.slisson.richtext.customcell.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" />
       <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.richtext.customcell.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell#2490242408670609648" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-generator-template">
@@ -267,20 +262,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-languageModels">
       <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-richtext.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell-src.jar">
       <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/mps-richtext.zip">
-      <fileset dir="${build.tmp}/default/mps-richtext.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/mps-bool-editor.zip" />
-    <mkdir dir="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor" />
-    <mkdir dir="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.itemis.mps.editor.bool</id>
         <name>MPS Boolean Editor</name>
@@ -294,8 +285,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages" />
-    <mkdir dir="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.bool.build.jar" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.bool.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.itemis.mps.editor.bool.build.jar/META-INF/module.xml">
@@ -304,7 +295,7 @@
         <sources jar="de.itemis.mps.editor.bool.build-src.jar" descriptor="mps-bool-editor.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.build.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.build.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.bool.build" />
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.bool.build.jar" />
@@ -312,7 +303,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-solutions-de.itemis.mps.editor.bool.build-models">
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.build-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.build-src.jar">
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/mps-bool-editor.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-solutions-de.itemis.mps.editor.bool.build-models" prefix="module/models" />
@@ -332,7 +323,7 @@
         <sources jar="de.itemis.mps.editor.bool.runtime-src.jar" descriptor="de.itemis.mps.editor.bool.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.bool.runtime" />
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.bool.runtime.jar" />
@@ -340,7 +331,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-solutions-de.itemis.mps.editor.bool.runtime-models">
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.runtime-src.jar">
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/de.itemis.mps.editor.bool.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-solutions-de.itemis.mps.editor.bool.runtime-models" prefix="module/models" />
@@ -365,12 +356,12 @@
         <sources jar="de.itemis.mps.editor.bool-src.jar" descriptor="de.itemis.mps.editor.bool.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.bool" />
       <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.bool.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.bool#4900677560559654859" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-generator-template">
@@ -379,20 +370,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-languageModels">
       <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-bool-editor.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool-src.jar">
       <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/mps-bool-editor.zip">
-      <fileset dir="${build.tmp}/default/mps-bool-editor.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/mps-math-editor.zip" />
-    <mkdir dir="${build.tmp}/default/mps-math-editor.zip/mps-math-editor" />
-    <mkdir dir="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-math-editor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.itemis.mps.editor.math</id>
         <name>MPS Math Editor</name>
@@ -406,8 +393,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages" />
-    <mkdir dir="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.math.build.jar" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.math.build.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.itemis.mps.editor.math.build.jar/META-INF/module.xml">
@@ -416,7 +403,7 @@
         <sources jar="de.itemis.mps.editor.math.build-src.jar" descriptor="de.itemis.mps.editor.math.build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.build.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.build.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math.build" />
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.math.build.jar" />
@@ -424,7 +411,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.build-models">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.build-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.build-src.jar">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build/de.itemis.mps.editor.math.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.build-models" prefix="module/models" />
@@ -443,7 +430,7 @@
         <sources jar="de.itemis.mps.editor.math.runtime-src.jar" descriptor="de.itemis.mps.editor.math.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math.runtime" />
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.math.runtime.jar" />
@@ -451,7 +438,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.runtime-models">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.runtime-src.jar">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.runtime-models" prefix="module/models" />
@@ -473,7 +460,7 @@
         <sources jar="de.itemis.mps.editor.math.symbols-src.jar" descriptor="de.itemis.mps.editor.math.symbols.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.symbols.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.symbols.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math.symbols" />
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.math.symbols.jar" />
@@ -481,7 +468,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.symbols-models">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.symbols-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.symbols-src.jar">
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.symbols-models" prefix="module/models" />
@@ -506,12 +493,12 @@
         <sources jar="de.itemis.mps.editor.math-src.jar" descriptor="de.itemis.mps.editor.math.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math" />
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.math.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math#1546395981771464573" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math-generator-template">
@@ -520,7 +507,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math-languageModels">
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math-src.jar">
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-math/languages/de.itemis.mps.editor.math/de.itemis.mps.editor.math.mpl" prefix="module" />
@@ -547,12 +534,12 @@
         <sources jar="de.itemis.mps.editor.math.notations-src.jar" descriptor="de.itemis.mps.editor.math.notations.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations" />
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.math.notations.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations#175930839491770475" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-generator-template">
@@ -561,20 +548,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-languageModels">
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-math-editor.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations-src.jar">
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/mps-math-editor.zip">
-      <fileset dir="${build.tmp}/default/mps-math-editor.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/mps-tables.zip" />
-    <mkdir dir="${build.tmp}/default/mps-tables.zip/mps-tables" />
-    <mkdir dir="${build.tmp}/default/mps-tables.zip/mps-tables/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-tables.zip/mps-tables/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-tables" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-tables/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-tables/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.tables</id>
         <name>MPS Table Editor Component</name>
@@ -589,8 +572,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-tables.zip/mps-tables/languages" />
-    <mkdir dir="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.tables.runtime.jar" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.tables.runtime.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.slisson.mps.tables.runtime.jar/META-INF/module.xml">
@@ -607,7 +590,7 @@
         <sources jar="de.slisson.mps.tables.runtime-src.jar" descriptor="de.slisson.mps.tables.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.tables.runtime.jar" />
@@ -615,7 +598,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-runtime-models">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime-src.jar">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-runtime-models" prefix="module/models" />
@@ -628,7 +611,7 @@
         <sources jar="de.slisson.mps.tables.build-src.jar" descriptor="de.slisson.mps.tables.build.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.build.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.build.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.tables.build" />
       <fileset dir="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.tables.build.jar" />
@@ -636,7 +619,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-solutions-de.slisson.mps.tables.build-models">
       <fileset dir="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.build-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.build-src.jar">
       <fileset dir="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build/de.slisson.mps.tables.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-solutions-de.slisson.mps.tables.build-models" prefix="module/models" />
@@ -664,12 +647,12 @@
         <sources jar="de.slisson.mps.tables-src.jar" descriptor="de.slisson.mps.tables.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.tables" />
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.tables.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-generator-template">
@@ -678,20 +661,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-languageModels">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-tables.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables-src.jar">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/mps-tables.zip">
-      <fileset dir="${build.tmp}/default/mps-tables.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/META-INF" />
-    <echoxml file="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.conditionalEditor</id>
         <name>de.slisson.mps.conditionalEditor</name>
@@ -703,8 +682,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.runtime.jar" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.runtime.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.slisson.mps.conditionalEditor.runtime.jar/META-INF/module.xml">
@@ -724,7 +703,7 @@
         <sources jar="de.slisson.mps.conditionalEditor.runtime-src.jar" descriptor="de.slisson.mps.conditionalEditor.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
       <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.runtime.jar" />
@@ -732,7 +711,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-solutions-de.slisson.mps.conditionalEditor.runtime-models">
       <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime-src.jar">
       <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-solutions-de.slisson.mps.conditionalEditor.runtime-models" prefix="module/models" />
@@ -757,12 +736,12 @@
         <sources jar="de.slisson.mps.conditionalEditor-src.jar" descriptor="de.slisson.mps.conditionalEditor.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" />
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-generator-template">
@@ -771,20 +750,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-languageModels">
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor-src.jar">
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/de.slisson.mps.conditionalEditor.zip">
-      <fileset dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.zip" />
-    </zip>
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.hacks.zip" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/META-INF" />
-    <echoxml file="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.hacks</id>
         <name>de.slisson.mps.hacks</name>
@@ -796,8 +771,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.reflection.runtime.jar" />
     <mkdir dir="${build.tmp}/default/de.slisson.mps.reflection.runtime.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.slisson.mps.reflection.runtime.jar/META-INF/module.xml">
@@ -808,7 +783,7 @@
         <sources jar="de.slisson.mps.reflection.runtime-src.jar" descriptor="de.slisson.mps.reflection.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
       <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.reflection.runtime.jar" />
@@ -816,7 +791,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-hacks-solutions-de.slisson.mps.reflection.runtime-models">
       <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime-src.jar">
       <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-solutions-de.slisson.mps.reflection.runtime-models" prefix="module/models" />
@@ -841,12 +816,12 @@
         <sources jar="de.slisson.mps.reflection-src.jar" descriptor="de.slisson.mps.reflection.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.reflection" />
       <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.slisson.mps.reflection.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.slisson.mps.reflection#5820306262934157507" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-generator-template">
@@ -855,15 +830,16 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-languageModels">
       <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/de.slisson.mps.hacks.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection-src.jar">
       <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" includes="**/*.java" />
       <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-languageModels" prefix="module/languageModels" />
     </jar>
-    <zip destfile="${build.layout}/de.slisson.mps.hacks.zip">
-      <fileset dir="${build.tmp}/default/de.slisson.mps.hacks.zip" />
+    <zip destfile="${build.layout}/mps-sl-all.zip">
+      <zipfileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib" prefix="mps-multiline/lib" />
+      <fileset dir="${build.tmp}/default/mps-sl-all.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
   </target>
