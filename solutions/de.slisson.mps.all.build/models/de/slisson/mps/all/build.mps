@@ -1564,7 +1564,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="5063083321524165985" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="5063083321524165986" resolveInfo="de.slisson.mps.editor.multiline" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="5063083321524165986" />
           <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Folder" typeId="3ior.7389400916848036984" id="3758249303358752589" nodeInfo="ng">
             <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3758249303358752590" nodeInfo="ng">
               <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3758249303358752591" nodeInfo="ng">
@@ -1597,7 +1597,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="1671983567912265692" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="1671983567912265693" resolveInfo="de.slisson.mps.richtext" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="1671983567912265693" />
         </node>
       </node>
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="7723076858040759355" nodeInfo="ng">
@@ -1607,7 +1607,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="7723076858040759358" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="7723076858040759359" resolveInfo="de.itemis.mps.editor.bool" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="7723076858040759359" />
         </node>
       </node>
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3410197114991202158" nodeInfo="ng">
@@ -1617,7 +1617,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3410197114991202161" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991201376" resolveInfo="de.itemis.mps.editor.math" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991201376" />
         </node>
       </node>
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="2475960130283269725" nodeInfo="ng">
@@ -1627,7 +1627,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="2475960130283269728" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="2475960130283269715" resolveInfo="de.slisson.mps.tables" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="2475960130283269715" />
         </node>
       </node>
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="8436908933892219266" nodeInfo="ng">
@@ -1637,7 +1637,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="8436908933892219269" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="8436908933892219256" resolveInfo="de.slisson.mps.conditionalEditor" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="8436908933892219256" />
         </node>
       </node>
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3410197114991216529" nodeInfo="ng">
@@ -1647,7 +1647,7 @@
           </node>
         </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3410197114991216532" nodeInfo="ng">
-          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991226479" resolveInfo="de.slisson.mps.hacks" />
+          <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991226479" />
         </node>
       </node>
     </node>
