@@ -1,0 +1,26 @@
+[submodule "mps-conditional-editor"]
+	path = mps-conditional-editor
+	url = https://github.com/slisson/mps-conditional-editor.git
+[submodule "mps-tables"]
+	path = mps-tables
+	url = https://github.com/slisson/mps-tables.git
+	branch = 31_EAP1-25
+[submodule "mps-multiline"]
+	path = mps-multiline
+	url = https://github.com/slisson/mps-multiline.git
+	branch = 31_EAP
+[submodule "mps-math"]
+	path = mps-math
+	url = https://github.com/slisson/mps-math.git
+	branch = master
+[submodule "mps-boolean-editor"]
+	path = mps-boolean-editor
+	url = https://github.com/slisson/mps-boolean-editor.git
+	branch = master
+[submodule "mps-richtext"]
+	path = mps-richtext
+	url = https://github.com/slisson/mps-richtext.git
+	branch = 31_EAP
+[submodule "mps-hacks"]
+	path = mps-hacks
+	url = https://github.com/slisson/mps-hacks.git

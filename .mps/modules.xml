@@ -1,7 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="MPSProject">
-    <projectModules />
+    <projectModules>
+      <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool.demolang/de.itemis.mps.editor.bool.demolang.mpl" folder="bool" />
+      <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" folder="bool" />
+      <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/mps-bool-editor.msd" folder="bool" />
+      <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/de.itemis.mps.editor.bool.runtime.msd" folder="bool" />
+      <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.sandbox/de.itemis.mps.editor.bool.sandbox.msd" folder="bool" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.demolang/de.slisson.mps.conditionalEditor.demolang.mpl" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.build/de.slisson.mps.conditionalEditor.build.msd" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.sandbox/de.slisson.mps.conditionalEditor.sandbox.msd" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" folder="hacks" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" folder="hacks" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.sandbox/de.slisson.mps.reflection.sandbox.msd" folder="hacks" />
+      <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.demolang/de.itemis.mps.editor.math.demolang.mpl" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.java/de.itemis.mps.editor.math.java.mpl" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math/de.itemis.mps.editor.math.mpl" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/solutions/de.itemis.mps.editor.math.build/de.itemis.mps.editor.math.build.msd" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/solutions/de.itemis.mps.editor.math.sandbox/de.itemis.mps.editor.math.sandbox.msd" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" folder="math" />
+      <modulePath path="$PROJECT_DIR$/mps-multiline/languages/demolang/demolang.mpl" folder="multiline" />
+      <modulePath path="$PROJECT_DIR$/mps-multiline/languages/multiline/multiline.mpl" folder="multiline" />
+      <modulePath path="$PROJECT_DIR$/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/runtime.msd" folder="multiline" />
+      <modulePath path="$PROJECT_DIR$/mps-multiline/solutions/de.slisson.mps.editor.multiline.sandbox/de.slisson.mps.editor.multiline.sandbox.msd" folder="multiline" />
+      <modulePath path="$PROJECT_DIR$/mps-multiline/solutions/mps-multiline.build/build.msd" folder="multiline" />
+      <modulePath path="$PROJECT_DIR$/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" folder="richtext" />
+      <modulePath path="$PROJECT_DIR$/mps-richtext/languages/javadoc/javadoc.mpl" folder="richtext" />
+      <modulePath path="$PROJECT_DIR$/mps-richtext/languages/richtext/richtext.mpl" folder="richtext" />
+      <modulePath path="$PROJECT_DIR$/mps-richtext/solutions/de.slisson.mps.richtext.build/de.slisson.mps.richtext.build.msd" folder="richtext" />
+      <modulePath path="$PROJECT_DIR$/mps-richtext/solutions/de.slisson.mps.richtext.sandbox/de.slisson.mps.richtext.sandbox.msd" folder="richtext" />
+      <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables.demolang/de.slisson.mps.tables.demolang.mpl" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/sandbox/de.slisson.mps.tables.sandbox.msd" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/mps-tables/solutions/de.slisson.mps.tables.build/de.slisson.mps.tables.build.msd" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" folder="" />
+    </projectModules>
   </component>
 </project>
 
