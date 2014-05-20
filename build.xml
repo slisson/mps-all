@@ -22,6 +22,44 @@
   <target name="assemble" depends="classes, declare-mps-tasks">
     <mkdir dir="${build.layout}" />
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/META-INF/plugin.xml">
+      <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>de.slisson.mps.all</id>
+        <name>de.slisson.mps.all</name>
+        <version>1.0</version>
+        <depends>jetbrains.mps.core</depends>
+        <depends>jetbrains.mps.build</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/languages/de.slisson.mps.all" />
+    <mkdir dir="${build.tmp}/default/de.slisson.mps.all.build.jar" />
+    <mkdir dir="${build.tmp}/default/de.slisson.mps.all.build.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.slisson.mps.all.build.jar/META-INF/module.xml">
+      <module namespace="de.slisson.mps.all.build" type="solution" uuid="f1fb7b1c-ce0d-423c-9369-4a661d600029">
+        <dependencies />
+        <sources jar="de.slisson.mps.all.build-src.jar" descriptor="de.slisson.mps.all.build.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/languages/de.slisson.mps.all/de.slisson.mps.all.build.jar">
+      <fileset dir="${build.tmp}/java/out/de.slisson.mps.all.build" />
+      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/de.slisson.mps.all.build.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.slisson.mps.all.build-models">
+      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/languages/de.slisson.mps.all/de.slisson.mps.all.build-src.jar">
+      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" includes="**/*.java" />
+      <zipfileset file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.slisson.mps.all.build-models" prefix="module/models" />
+    </jar>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline" />
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF" />
     <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF/plugin.xml">
@@ -855,7 +893,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.mps-multiline.build, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.build, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.build, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.build, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.build, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.mps-multiline.build, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.build, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.build, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.build, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.build, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507" />
   
   <target name="processResources" />
   
@@ -942,6 +980,7 @@
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build/de.itemis.mps.editor.math.build.msd" />
         <module file="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" />
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" />
+        <module file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" />
         <module file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" />
         <module file="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" />
         <module file="${basedir}/mps-multiline/languages/multiline/multiline.mpl" />
@@ -971,6 +1010,21 @@
   </target>
   
   <target name="makeDependents" />
+  
+  <target name="java.compile.de.slisson.mps.all.build">
+    <mkdir dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.slisson.mps.all.build" />
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.all.build" fork="true" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
+      </src>
+      <classpath />
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.slisson.mps.all.build">
+      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
   
   <target name="java.compile.mps-multiline.build">
     <mkdir dir="${basedir}/mps-multiline/solutions/mps-multiline.build/source_gen" />
@@ -2214,6 +2268,7 @@
     <delete dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.build/source_gen" />
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" />
     <delete dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
+    <delete dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
     <delete dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
