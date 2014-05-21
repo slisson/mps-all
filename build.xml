@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/mps-sl-all" />
   <property name="build.layout" location="${build.dir}/artifacts/mps-sl-all" />
-  <property name="mps.home" location="${basedir}/../../app/mps31eap1" />
+  <property name="mps.home" location="${basedir}/../../../../../app/mps31eap1" />
   <property name="artifacts.mps" location="${mps.home}" />
   <property file="${artifacts.mps}/build.properties" prefix="import.mps" />
   <property name="mps.build.number" value="${import.mps.mps.build.number}" />
