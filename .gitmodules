@@ -1,26 +1,33 @@
 [submodule "mps-conditional-editor"]
 	path = mps-conditional-editor
 	url = https://github.com/slisson/mps-conditional-editor.git
+	ignore = dirty
 [submodule "mps-tables"]
 	path = mps-tables
 	url = https://github.com/slisson/mps-tables.git
 	branch = 31_EAP1-25
+	ignore = dirty
 [submodule "mps-multiline"]
 	path = mps-multiline
 	url = https://github.com/slisson/mps-multiline.git
 	branch = 31_EAP
+	ignore = dirty
 [submodule "mps-math"]
 	path = mps-math
 	url = https://github.com/slisson/mps-math.git
 	branch = master
+	ignore = dirty
 [submodule "mps-boolean-editor"]
 	path = mps-boolean-editor
 	url = https://github.com/slisson/mps-boolean-editor.git
 	branch = master
+	ignore = dirty
 [submodule "mps-richtext"]
 	path = mps-richtext
 	url = https://github.com/slisson/mps-richtext.git
 	branch = 31_EAP
+	ignore = dirty
 [submodule "mps-hacks"]
 	path = mps-hacks
 	url = https://github.com/slisson/mps-hacks.git
+	ignore = dirty
