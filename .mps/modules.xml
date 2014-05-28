@@ -12,6 +12,7 @@
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.build/de.slisson.mps.conditionalEditor.build.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.sandbox/de.slisson.mps.conditionalEditor.sandbox.msd" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.dynsmodel/de.slisson.mps.dynsmodel.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" folder="hacks" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" folder="hacks" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.sandbox/de.slisson.mps.reflection.sandbox.msd" folder="hacks" />
