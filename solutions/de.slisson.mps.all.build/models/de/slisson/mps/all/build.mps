@@ -1631,29 +1631,6 @@
     <node role="plugins" roleId="3ior.6647099934206700656" type="kdzh.BuildMPSPlugin" typeId="kdzh.868032131020265945" id="3410197114990977085" nodeInfo="ng" />
     <node role="macros" roleId="3ior.5617550519002745378" type="3ior.BuildFolderMacro" typeId="3ior.7389400916848136194" id="3410197114990977086" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="mps.home" />
-      <node role="defaultPath" roleId="3ior.7389400916848144618" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3410197114990987299" nodeInfo="ng">
-        <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114990987301" nodeInfo="nn">
-          <property name="head" nameId="3ior.8618885170173601779" value=".." />
-          <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114990987787" nodeInfo="nn">
-            <property name="head" nameId="3ior.8618885170173601779" value=".." />
-            <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384345799" nodeInfo="nn">
-              <property name="head" nameId="3ior.8618885170173601779" value=".." />
-              <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347852" nodeInfo="nn">
-                <property name="head" nameId="3ior.8618885170173601779" value=".." />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347861" nodeInfo="nn">
-                  <property name="head" nameId="3ior.8618885170173601779" value=".." />
-                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347862" nodeInfo="nn">
-                    <property name="head" nameId="3ior.8618885170173601779" value="app" />
-                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347863" nodeInfo="nn">
-                      <property name="head" nameId="3ior.8618885170173601779" value="mps31eap1" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
     </node>
     <node role="dependencies" roleId="3ior.5617550519002745381" type="3ior.BuildProjectDependency" typeId="3ior.4993211115183325728" id="3410197114990977087" nodeInfo="ng">
       <link role="script" roleId="3ior.5617550519002745380" targetNodeId="ffeo.4301118715654192646" resolveInfo="mps" />
@@ -1663,6 +1640,107 @@
     </node>
     <node role="layout" roleId="3ior.5617550519002745372" type="3ior.BuildLayout" typeId="3ior.5617550519002745364" id="3410197114990977228" nodeInfo="ng">
       <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3410197114991840790" nodeInfo="ng">
+        <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Folder" typeId="3ior.7389400916848036984" id="3698968274976496456" nodeInfo="ng">
+          <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Folder" typeId="3ior.7389400916848036984" id="3698968274976500059" nodeInfo="ng">
+            <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Folder" typeId="3ior.7389400916848036984" id="3698968274976500861" nodeInfo="ng">
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976502229" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976502231" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976502631" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="de.slisson.mps.all.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976502633" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="4926855601833790097" resolveInfo="de.slisson.mps.all" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976515340" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976515341" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976515342" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="mps-multiline.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976515343" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="5063083321524165986" resolveInfo="de.slisson.mps.editor.multiline" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976518939" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976518940" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976518941" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="mps-richtext.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976518942" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="1671983567912265693" resolveInfo="de.slisson.mps.richtext" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976518955" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976518956" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976518957" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="mps-bool-editor.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976518958" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="7723076858040759359" resolveInfo="de.itemis.mps.editor.bool" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976518975" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976518976" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976518977" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="mps-math-editor.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976518978" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991201376" resolveInfo="de.itemis.mps.editor.math" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976518999" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976519000" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976519001" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="mps-tables.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976519002" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="2475960130283269715" resolveInfo="de.slisson.mps.tables" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976519027" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976519028" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976519029" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="de.slisson.mps.conditionalEditor.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976519030" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="8436908933892219256" resolveInfo="de.slisson.mps.conditionalEditor" />
+                </node>
+              </node>
+              <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_Zip" typeId="3ior.7389400916848050071" id="3698968274976523817" nodeInfo="ng">
+                <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976523818" nodeInfo="ng">
+                  <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976523819" nodeInfo="ng">
+                    <property name="text" nameId="3ior.4903714810883755350" value="de.slisson.mps.hacks.zip" />
+                  </node>
+                </node>
+                <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="3698968274976523820" nodeInfo="ng">
+                  <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="3410197114991226479" resolveInfo="de.slisson.mps.hacks" />
+                </node>
+              </node>
+              <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976500863" nodeInfo="ng">
+                <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976501263" nodeInfo="ng">
+                  <property name="text" nameId="3ior.4903714810883755350" value="mps-sl-all" />
+                </node>
+              </node>
+            </node>
+            <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976500061" nodeInfo="ng">
+              <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976500065" nodeInfo="ng">
+                <property name="text" nameId="3ior.4903714810883755350" value="artifacts" />
+              </node>
+            </node>
+          </node>
+          <node role="containerName" roleId="3ior.4380385936562148502" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="3698968274976496458" nodeInfo="ng">
+            <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="3698968274976498267" nodeInfo="ng">
+              <property name="text" nameId="3ior.4903714810883755350" value="build" />
+            </node>
+          </node>
+        </node>
         <node role="children" roleId="3ior.7389400916848037006" type="kdzh.BuildMpsLayout_Plugin" typeId="kdzh.6592112598314498926" id="4926855601833749312" nodeInfo="ng">
           <link role="plugin" roleId="kdzh.6592112598314801433" targetNodeId="4926855601833790097" resolveInfo="de.slisson.mps.all" />
         </node>
