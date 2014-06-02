@@ -34,7 +34,6 @@
       <modulePath path="$PROJECT_DIR$/mps-richtext/solutions/de.slisson.mps.richtext.build/de.slisson.mps.richtext.build.msd" folder="richtext" />
       <modulePath path="$PROJECT_DIR$/mps-richtext/solutions/de.slisson.mps.richtext.sandbox/de.slisson.mps.richtext.sandbox.msd" folder="richtext" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables.demolang/de.slisson.mps.tables.demolang.mpl" folder="tables" />
-      <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables.styles/de.slisson.mps.tables.styles.mpl" folder="tables" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" folder="tables" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" folder="tables" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/sandbox/de.slisson.mps.tables.sandbox.msd" folder="tables" />

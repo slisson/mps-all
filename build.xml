@@ -624,6 +624,7 @@
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
+          <module ref="83f155ff-422c-4b5a-a2f2-b459302dd215(jetbrains.mps.baseLanguage.unitTest.libs)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
         <sources jar="de.slisson.mps.tables.runtime-src.jar" descriptor="de.slisson.mps.tables.runtime.msd" />
@@ -738,6 +739,9 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-generator-template">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-languageAccessories">
+      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/languageAccessories" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-languageModels">
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
@@ -746,6 +750,7 @@
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/source_gen" includes="**/*.java" />
       <zipfileset file="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/de.slisson.mps.tables.styles.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-generator-template" prefix="module/generator/template" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-languageAccessories" prefix="module/languageAccessories" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables.styles-languageModels" prefix="module/languageModels" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor" />
@@ -935,7 +940,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.mps-multiline.build, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.build, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.build, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.build, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.build, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.tables.styles, java.compile.de.slisson.mps.tables.styles#8372087084658251291, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.mps-multiline.build, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.build, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.build, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.build, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.1, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.build, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.tables.styles, java.compile.de.slisson.mps.tables.styles#8372087084658251291, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507" />
   
   <target name="processResources" />
   
@@ -1007,6 +1012,8 @@
       <library file="${artifacts.mps}/lib/mps-editor.jar" />
       <library file="${artifacts.mps}/lib/mps-openapi.jar" />
       <library file="${artifacts.mps}/lib/mps-platform.jar" />
+      <library file="${artifacts.mps}/lib/mps-test.jar" />
+      <library file="${artifacts.mps}/lib/mps-tool.jar" />
       <library file="${artifacts.mps}/lib/mps-tuples.jar" />
       <library file="${artifacts.mps}/lib/mps-workbench.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.jar" />
@@ -1014,6 +1021,7 @@
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.ide.build.jar" />
       <library file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.core.properties.jar" />
+      <library file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.jar" />
       <chunk>
         <module file="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" />
         <module file="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/mps-bool-editor.msd" />
@@ -1031,15 +1039,15 @@
         <module file="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" />
         <module file="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build/de.slisson.mps.richtext.build.msd" />
         <module file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" />
+        <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" />
         <module file="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build/de.slisson.mps.tables.build.msd" />
+        <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/de.slisson.mps.tables.styles.mpl" />
         <module file="${basedir}/mps-multiline/solutions/mps-multiline.build/build.msd" />
       </chunk>
       <chunk>
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" />
         <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
-        <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" />
-        <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
       </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
@@ -1883,7 +1891,65 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.tables.runtime" depends="java.compile.de.slisson.mps.tables.styles, fetchDependencies">
+  <target name="java.compile.java.modules.cycle.1" depends="fetchDependencies">
+    <mkdir dir="${build.tmp}/java.modules.cycle.1" />
+    <javac destdir="${build.tmp}/java.modules.cycle.1" fork="true" nowarn="true" includeantruntime="false">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
+        <path location="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/bsh-core-2.0b4.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/cglib-nodep-2.1_3.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-core-1.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-library-1.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-junit3-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-junit4-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/objenesis-1.0.jar" />
+        <fileset file="${artifacts.mps}/lib/junit-4.11.jar" />
+        <fileset file="${artifacts.mps}/lib/annotations.jar" />
+        <fileset file="${artifacts.mps}/lib/jdom.jar" />
+        <fileset file="${artifacts.mps}/lib/log4j.jar" />
+        <fileset file="${artifacts.mps}/lib/ecj-4.3.2.jar" />
+        <fileset file="${artifacts.mps}/lib/trove4j.jar" />
+        <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.project.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="java.compile.de.slisson.mps.tables.runtime" depends="java.compile.java.modules.cycle.1, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" fork="true" includeantruntime="false" debug="true">
@@ -1901,7 +1967,17 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.styles" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/bsh-core-2.0b4.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/cglib-nodep-2.1_3.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-core-1.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-library-1.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-junit3-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/jmock-junit4-2.5.1.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/objenesis-1.0.jar" />
+        <fileset file="${artifacts.mps}/lib/junit-4.11.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -1913,13 +1989,20 @@
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.project.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.1" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.tables.runtime">
@@ -1942,7 +2025,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.tables" depends="java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.styles, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.tables" depends="java.compile.java.modules.cycle.1, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables" fork="true" includeantruntime="false" debug="true">
@@ -1960,8 +2043,6 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
-        <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
-        <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.styles" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
@@ -1988,6 +2069,7 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+        <pathelement path="${build.tmp}/java.modules.cycle.1" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.tables">
@@ -1995,7 +2077,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.tables#2318718871439220866" depends="java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables.styles, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.tables#2318718871439220866" depends="java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" fork="true" includeantruntime="false" debug="true">
@@ -2017,7 +2099,6 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
-        <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.styles" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2048,7 +2129,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.tables.styles" depends="fetchDependencies">
+  <target name="java.compile.de.slisson.mps.tables.styles" depends="java.compile.de.slisson.mps.tables.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables.styles" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables.styles" fork="true" includeantruntime="false" debug="true">
@@ -2066,6 +2147,7 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2390,7 +2472,10 @@
     <delete dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
     <delete dir="${basedir}/mps-richtext/solutions/de.slisson.mps.richtext.build/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
+    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
+    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <delete dir="${basedir}/mps-tables/solutions/de.slisson.mps.tables.build/source_gen" />
+    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/source_gen" />
     <delete dir="${basedir}/mps-multiline/solutions/mps-multiline.build/source_gen" />
     <delete dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
@@ -2402,9 +2487,6 @@
     <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
-    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
-    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
-    <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables.styles/generator/source_gen" />
   </target>
 </project>
