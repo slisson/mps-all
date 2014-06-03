@@ -463,18 +463,18 @@
             <link role="module" roleId="kdzh.5253498789149547705" targetNodeId="ffeo.1480008320050917282" resolveInfo="MPS.IDEA" />
           </node>
         </node>
-        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="3410197114991149658" nodeInfo="nn">
-          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="3410197114991149659" nodeInfo="ng">
-            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3410197114991149652" nodeInfo="ng">
-              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149653" nodeInfo="nn">
+        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7470428361148846560" nodeInfo="nn">
+          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="7470428361148846561" nodeInfo="ng">
+            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="7470428361148846554" nodeInfo="ng">
+              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846555" nodeInfo="nn">
                 <property name="head" nameId="3ior.8618885170173601779" value="mps-multiline" />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149654" nodeInfo="nn">
+                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846556" nodeInfo="nn">
                   <property name="head" nameId="3ior.8618885170173601779" value="solutions" />
-                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149655" nodeInfo="nn">
+                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846557" nodeInfo="nn">
                     <property name="head" nameId="3ior.8618885170173601779" value="de.slisson.mps.editor.multiline.runtime" />
-                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149656" nodeInfo="nn">
+                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846558" nodeInfo="nn">
                       <property name="head" nameId="3ior.8618885170173601779" value="lib" />
-                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149657" nodeInfo="nn">
+                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846559" nodeInfo="nn">
                         <property name="head" nameId="3ior.8618885170173601779" value="diff_match_patch.jar" />
                       </node>
                     </node>
@@ -484,18 +484,18 @@
             </node>
           </node>
         </node>
-        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="3410197114991149666" nodeInfo="nn">
-          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="3410197114991149667" nodeInfo="ng">
-            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3410197114991149660" nodeInfo="ng">
-              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149661" nodeInfo="nn">
+        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7470428361148846568" nodeInfo="nn">
+          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="7470428361148846569" nodeInfo="ng">
+            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="7470428361148846562" nodeInfo="ng">
+              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846563" nodeInfo="nn">
                 <property name="head" nameId="3ior.8618885170173601779" value="mps-multiline" />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149662" nodeInfo="nn">
+                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846564" nodeInfo="nn">
                   <property name="head" nameId="3ior.8618885170173601779" value="solutions" />
-                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149663" nodeInfo="nn">
+                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846565" nodeInfo="nn">
                     <property name="head" nameId="3ior.8618885170173601779" value="de.slisson.mps.editor.multiline.runtime" />
-                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149664" nodeInfo="nn">
+                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846566" nodeInfo="nn">
                       <property name="head" nameId="3ior.8618885170173601779" value="lib" />
-                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149665" nodeInfo="nn">
+                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846567" nodeInfo="nn">
                         <property name="head" nameId="3ior.8618885170173601779" value="commons-lang3-3.1.jar" />
                       </node>
                     </node>
@@ -505,18 +505,18 @@
             </node>
           </node>
         </node>
-        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="3410197114991149674" nodeInfo="nn">
-          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="3410197114991149675" nodeInfo="ng">
-            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3410197114991149668" nodeInfo="ng">
-              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149669" nodeInfo="nn">
+        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7470428361148846576" nodeInfo="nn">
+          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="7470428361148846577" nodeInfo="ng">
+            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="7470428361148846570" nodeInfo="ng">
+              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846571" nodeInfo="nn">
                 <property name="head" nameId="3ior.8618885170173601779" value="mps-multiline" />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149670" nodeInfo="nn">
+                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846572" nodeInfo="nn">
                   <property name="head" nameId="3ior.8618885170173601779" value="solutions" />
-                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149671" nodeInfo="nn">
+                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846573" nodeInfo="nn">
                     <property name="head" nameId="3ior.8618885170173601779" value="de.slisson.mps.editor.multiline.runtime" />
-                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149672" nodeInfo="nn">
+                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846574" nodeInfo="nn">
                       <property name="head" nameId="3ior.8618885170173601779" value="lib" />
-                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114991149673" nodeInfo="nn">
+                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="7470428361148846575" nodeInfo="nn">
                         <property name="head" nameId="3ior.8618885170173601779" value="commons-lang-2.6.jar" />
                       </node>
                     </node>
@@ -1395,6 +1395,12 @@
         <property name="name" nameId="tpck.1169194664001" value="de.slisson.mps.tables.styles" />
         <property name="uuid" nameId="kdzh.322010710375892619" value="4f98e711-7b2a-431b-9772-7ee907d040b2" />
         <property name="doNotCompile" nameId="kdzh.1500819558096356884" value="false" />
+        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7423478030880505882" nodeInfo="nn">
+          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyOnModule" typeId="kdzh.5253498789149585690" id="7423478030880505883" nodeInfo="ng">
+            <property name="reexport" nameId="kdzh.5253498789149547713" value="false" />
+            <link role="module" roleId="kdzh.5253498789149547705" targetNodeId="2475960130283269701" resolveInfo="de.slisson.mps.tables.runtime" />
+          </node>
+        </node>
         <node role="path" roleId="kdzh.322010710375956261" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="6850658159071263533" nodeInfo="ng">
           <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="6850658159071264349" nodeInfo="nn">
             <property name="head" nameId="3ior.8618885170173601779" value="mps-tables" />
@@ -1413,12 +1419,6 @@
           <property name="name" nameId="tpck.1169194664001" value="de.slisson.mps.tables.styles#8372087084658251291" />
           <property name="uuid" nameId="kdzh.322010710375892619" value="1f081667-abd7-4ebf-84f7-55302449f604" />
           <property name="doNotCompile" nameId="kdzh.1500819558096356884" value="false" />
-        </node>
-        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7423478030880505882" nodeInfo="nn">
-          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyOnModule" typeId="kdzh.5253498789149585690" id="7423478030880505883" nodeInfo="ng">
-            <property name="reexport" nameId="kdzh.5253498789149547713" value="false" />
-            <link role="module" roleId="kdzh.5253498789149547705" targetNodeId="2475960130283269701" resolveInfo="de.slisson.mps.tables.runtime" />
-          </node>
         </node>
       </node>
     </node>
@@ -1643,29 +1643,6 @@
     <node role="plugins" roleId="3ior.6647099934206700656" type="kdzh.BuildMPSPlugin" typeId="kdzh.868032131020265945" id="3410197114990977085" nodeInfo="ng" />
     <node role="macros" roleId="3ior.5617550519002745378" type="3ior.BuildFolderMacro" typeId="3ior.7389400916848136194" id="3410197114990977086" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="mps.home" />
-      <node role="defaultPath" roleId="3ior.7389400916848144618" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3410197114990987299" nodeInfo="ng">
-        <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114990987301" nodeInfo="nn">
-          <property name="head" nameId="3ior.8618885170173601779" value=".." />
-          <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3410197114990987787" nodeInfo="nn">
-            <property name="head" nameId="3ior.8618885170173601779" value=".." />
-            <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384345799" nodeInfo="nn">
-              <property name="head" nameId="3ior.8618885170173601779" value=".." />
-              <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347852" nodeInfo="nn">
-                <property name="head" nameId="3ior.8618885170173601779" value=".." />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347861" nodeInfo="nn">
-                  <property name="head" nameId="3ior.8618885170173601779" value=".." />
-                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347862" nodeInfo="nn">
-                    <property name="head" nameId="3ior.8618885170173601779" value="app" />
-                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="2639133370384347863" nodeInfo="nn">
-                      <property name="head" nameId="3ior.8618885170173601779" value="mps31eap1" />
-                    </node>
-                  </node>
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-      </node>
     </node>
     <node role="dependencies" roleId="3ior.5617550519002745381" type="3ior.BuildProjectDependency" typeId="3ior.4993211115183325728" id="3410197114990977087" nodeInfo="ng">
       <link role="script" roleId="3ior.5617550519002745380" targetNodeId="ffeo.4301118715654192646" resolveInfo="mps" />
