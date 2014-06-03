@@ -1390,37 +1390,6 @@
           </node>
         </node>
       </node>
-      <node role="modules" roleId="kdzh.1500819558095907806" type="kdzh.BuildMps_Language" typeId="kdzh.3189788309731840248" id="6850658159071263530" nodeInfo="ng">
-        <property name="compact" nameId="kdzh.8369506495128725901" value="true" />
-        <property name="name" nameId="tpck.1169194664001" value="de.slisson.mps.tables.styles" />
-        <property name="uuid" nameId="kdzh.322010710375892619" value="4f98e711-7b2a-431b-9772-7ee907d040b2" />
-        <property name="doNotCompile" nameId="kdzh.1500819558096356884" value="false" />
-        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="7423478030880505882" nodeInfo="nn">
-          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyOnModule" typeId="kdzh.5253498789149585690" id="7423478030880505883" nodeInfo="ng">
-            <property name="reexport" nameId="kdzh.5253498789149547713" value="false" />
-            <link role="module" roleId="kdzh.5253498789149547705" targetNodeId="2475960130283269701" resolveInfo="de.slisson.mps.tables.runtime" />
-          </node>
-        </node>
-        <node role="path" roleId="kdzh.322010710375956261" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="6850658159071263533" nodeInfo="ng">
-          <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="6850658159071264349" nodeInfo="nn">
-            <property name="head" nameId="3ior.8618885170173601779" value="mps-tables" />
-            <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="6850658159071264727" nodeInfo="nn">
-              <property name="head" nameId="3ior.8618885170173601779" value="languages" />
-              <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="6850658159071266227" nodeInfo="nn">
-                <property name="head" nameId="3ior.8618885170173601779" value="de.slisson.mps.tables.styles" />
-                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="6850658159071266979" nodeInfo="nn">
-                  <property name="head" nameId="3ior.8618885170173601779" value="de.slisson.mps.tables.styles.mpl" />
-                </node>
-              </node>
-            </node>
-          </node>
-        </node>
-        <node role="generator" roleId="kdzh.9200313594498201639" type="kdzh.BuildMps_Generator" typeId="kdzh.5507251971038816436" id="6850658159071267355" nodeInfo="ng">
-          <property name="name" nameId="tpck.1169194664001" value="de.slisson.mps.tables.styles#8372087084658251291" />
-          <property name="uuid" nameId="kdzh.322010710375892619" value="1f081667-abd7-4ebf-84f7-55302449f604" />
-          <property name="doNotCompile" nameId="kdzh.1500819558096356884" value="false" />
-        </node>
-      </node>
     </node>
     <node role="parts" roleId="3ior.7389400916848080626" type="kdzh.BuildMps_Group" typeId="kdzh.1500819558095907805" id="8436908933892219255" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="de.slisson.mps.conditionalEditor" />
