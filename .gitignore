@@ -8,6 +8,6 @@ test_gen.caches/
 *.iws
 /build/tmp/*
 /build/artifacts/*
-
+build.xml
 /.mps/workspace.xml
 
