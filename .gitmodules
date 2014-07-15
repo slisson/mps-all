@@ -31,3 +31,6 @@
 	path = mps-hacks
 	url = https://github.com/slisson/mps-hacks.git
 	ignore = dirty
+[submodule "diagram"]
+	path = diagram
+	url = https://github.com/slisson/mps-diagram-editor.git
