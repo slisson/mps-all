@@ -259,7 +259,7 @@
         </node>
       </node>
       <node role="content" roleId="kdzh.6592112598314499050" type="kdzh.BuildMps_IdeaPluginGroup" typeId="kdzh.6592112598314586625" id="4813947565936950043" nodeInfo="ng">
-        <link role="group" roleId="kdzh.6592112598314586626" targetNodeId="4813947565936896126" resolveInfo="de.itemid.mps.editor.diagram" />
+        <link role="group" roleId="kdzh.6592112598314586626" targetNodeId="4813947565936896126" resolveInfo="de.itemis.mps.editor.diagram" />
       </node>
       <node role="dependencies" roleId="kdzh.6592112598314499028" type="kdzh.BuildMps_IdeaPluginDependency" typeId="kdzh.6592112598314499027" id="4813947565936947183" nodeInfo="ng">
         <link role="target" roleId="kdzh.6592112598314499066" targetNodeId="ffeo.4973949960459588488" />
@@ -1488,7 +1488,7 @@
       </node>
     </node>
     <node role="parts" roleId="3ior.7389400916848080626" type="kdzh.BuildMps_Group" typeId="kdzh.1500819558095907805" id="4813947565936896126" nodeInfo="ng">
-      <property name="name" nameId="tpck.1169194664001" value="de.itemid.mps.editor.diagram" />
+      <property name="name" nameId="tpck.1169194664001" value="de.itemis.mps.editor.diagram" />
       <node role="modules" roleId="kdzh.1500819558095907806" type="kdzh.BuildMps_Solution" typeId="kdzh.3189788309731840247" id="4813947565936897418" nodeInfo="ng">
         <property name="compact" nameId="kdzh.8369506495128725901" value="true" />
         <property name="name" nameId="tpck.1169194664001" value="de.itemis.mps.editor.diagram.runtime" />

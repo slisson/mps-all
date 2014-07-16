@@ -76,7 +76,7 @@
       </idea-plugin>
     </echoxml>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages" />
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.runtime.jar" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.runtime.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.itemis.mps.editor.diagram.runtime.jar/META-INF/module.xml">
@@ -99,7 +99,7 @@
         <sources jar="de.itemis.mps.editor.diagram.runtime-src.jar" descriptor="de.itemis.mps.editor.diagram.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
       <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.diagram.runtime.jar" />
@@ -107,7 +107,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.runtime-models">
       <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime-src.jar">
       <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
       <zipfileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.runtime-models" prefix="module/models" />
@@ -132,12 +132,12 @@
         <sources jar="de.itemis.mps.editor.diagram-src.jar" descriptor="de.itemis.mps.editor.diagram.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram/de.itemis.mps.editor.diagram.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram" includes="icons/**, resources/**" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.diagram.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram/de.itemis.mps.editor.diagram-generator.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram-generator.jar">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram-generator-template">
@@ -146,7 +146,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram-languageModels">
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemid.mps.editor.diagram/de.itemis.mps.editor.diagram-src.jar">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram-src.jar">
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
       <zipfileset file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" prefix="module" />
