@@ -57,9 +57,56 @@
       <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.all/languages/de.slisson.mps.all/de.slisson.mps.all.build-src.jar">
-      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
+      <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.slisson.mps.all.build-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/META-INF/plugin.xml">
+      <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>org.apache.commons</id>
+        <name>Apache Commons Library</name>
+        <version>1.0</version>
+        <vendor url="https://commons.apache.org/">Apache Foundation</vendor>
+        <depends>jetbrains.mps.core</depends>
+        <depends>jetbrains.mps.build</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons" />
+    <mkdir dir="${build.tmp}/default/org.apache.commons.jar" />
+    <mkdir dir="${build.tmp}/default/org.apache.commons.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/org.apache.commons.jar/META-INF/module.xml">
+      <module namespace="org.apache.commons" type="solution" uuid="b0f8641f-bd77-4421-8425-30d9088a82f7">
+        <dependencies />
+        <library jar="../../lib/commons-io-2.4.jar" />
+        <library jar="../../lib/commons-lang3-3.3.2.jar" />
+        <library jar="../../lib/commons-math3-3.3.jar" />
+        <library jar="../../lib/commons-primitives-1.0.jar" />
+        <sources jar="org.apache.commons-src.jar" descriptor="org.apache.commons.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons/org.apache.commons.jar">
+      <fileset dir="${build.tmp}/java/out/org.apache.commons" />
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/org.apache.commons.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-apache-commons-solutions-org.apache.commons-models">
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons/org.apache.commons-src.jar">
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-apache-commons-solutions-org.apache.commons-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram" />
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/META-INF" />
@@ -85,6 +132,7 @@
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
@@ -97,6 +145,7 @@
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
         <library jar="../../lib/jgraphx.jar" />
+        <library jar="../../lib/commons-math3-3.3/commons-math3-3.3.jar" />
         <sources jar="de.itemis.mps.editor.diagram.runtime-src.jar" descriptor="de.itemis.mps.editor.diagram.runtime.msd" />
       </module>
     </echoxml>
@@ -109,7 +158,9 @@
       <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime-src.jar">
-      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
+      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.runtime-models" prefix="module/models" />
     </jar>
@@ -148,20 +199,24 @@
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram-src.jar">
-      <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
-      <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
+      <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram-languageModels" prefix="module/languageModels" />
     </jar>
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline" />
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-multiline/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
-        <id>de.slisson.mps.editor.multiline</id>
-        <name>MPS Multiline Property Editor Component</name>
+        <id>org.apache.commons</id>
+        <name>Apache Commons Library</name>
         <version>1.0</version>
-        <vendor url="http://github.com/slisson/mps-multiline">Sascha Lisson</vendor>
+        <vendor url="https://commons.apache.org/">Apache Foundation</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
         
@@ -170,85 +225,34 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages" />
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.editor.multiline.jar" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.editor.multiline.jar/META-INF" />
-    <echoxml file="${build.tmp}/default/de.slisson.mps.editor.multiline.jar/META-INF/module.xml">
-      <module namespace="de.slisson.mps.editor.multiline" type="language" uuid="31c91def-a131-41a1-9018-102874f49a12">
-        <dependencies>
-          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
-          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
-          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
-          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
-          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
-          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
-          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
-          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
-          <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
-          <module ref="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" />
-          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
-        </dependencies>
-        <sources jar="de.slisson.mps.editor.multiline-src.jar" descriptor="multiline.mpl" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons" />
+    <mkdir dir="${build.tmp}/default/org.apache.commons.jar1" />
+    <mkdir dir="${build.tmp}/default/org.apache.commons.jar1/META-INF" />
+    <echoxml file="${build.tmp}/default/org.apache.commons.jar1/META-INF/module.xml">
+      <module namespace="org.apache.commons" type="solution" uuid="b0f8641f-bd77-4421-8425-30d9088a82f7">
+        <dependencies />
+        <library jar="../../lib/commons-io-2.4.jar" />
+        <library jar="../../lib/commons-lang3-3.3.2.jar" />
+        <library jar="../../lib/commons-math3-3.3.jar" />
+        <library jar="../../lib/commons-primitives-1.0.jar" />
+        <sources jar="org.apache.commons-src.jar" descriptor="org.apache.commons.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.jar">
-      <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" />
-      <fileset dir="${basedir}/mps-multiline/languages/multiline" includes="icons/**, resources/**" />
-      <fileset dir="${build.tmp}/default/de.slisson.mps.editor.multiline.jar" />
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons/org.apache.commons.jar">
+      <fileset dir="${build.tmp}/java/out/org.apache.commons" />
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/org.apache.commons.jar1" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-generator.jar">
-      <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline#5792856961266375224" />
-    </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-generator-template">
-      <fileset dir="${basedir}/mps-multiline/languages/multiline/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-apache-commons-solutions-org.apache.commons-models1">
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-languageModels">
-      <fileset dir="${basedir}/mps-multiline/languages/multiline/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
-    </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline-src.jar">
-      <fileset dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
-      <fileset dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
-      <zipfileset file="${basedir}/mps-multiline/languages/multiline/multiline.mpl" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-generator-template" prefix="module/generator/template" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-multiline-languages-multiline-languageModels" prefix="module/languageModels" />
-    </jar>
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.editor.multiline.runtime.jar" />
-    <mkdir dir="${build.tmp}/default/de.slisson.mps.editor.multiline.runtime.jar/META-INF" />
-    <echoxml file="${build.tmp}/default/de.slisson.mps.editor.multiline.runtime.jar/META-INF/module.xml">
-      <module namespace="de.slisson.mps.editor.multiline.runtime" type="solution" uuid="dc038ceb-b7ea-4fea-ac12-55f7400e97ba">
-        <dependencies>
-          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
-          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
-          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
-          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
-          <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" />
-          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
-          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
-          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
-          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
-          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" />
-          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" />
-          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
-        </dependencies>
-        <library jar="../../lib/diff_match_patch.jar" />
-        <library jar="../../lib/commons-lang3-3.1.jar" />
-        <library jar="../../lib/commons-lang-2.6.jar" />
-        <sources jar="de.slisson.mps.editor.multiline.runtime-src.jar" descriptor="runtime.msd" />
-      </module>
-    </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime.jar">
-      <fileset dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
-      <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime" includes="icons/**, resources/**" />
-      <fileset dir="${build.tmp}/default/de.slisson.mps.editor.multiline.runtime.jar" />
-    </jar>
-    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-de.slisson.mps.editor.multiline.runtime-models">
-      <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
-    </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-multiline/languages/mps-multiline/de.slisson.mps.editor.multiline.runtime-src.jar">
-      <fileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
-      <zipfileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/runtime.msd" prefix="module" />
-      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-multiline-solutions-de.slisson.mps.editor.multiline.runtime-models" prefix="module/models" />
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-apache-commons/languages/mps-apache-commons/org.apache.commons-src.jar">
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-apache-commons-solutions-org.apache.commons-models1" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext" />
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/mps-richtext/META-INF" />
@@ -261,6 +265,7 @@
         <depends>jetbrains.mps.build</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
+        <depends>org.apache.commons</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -311,8 +316,12 @@
       <fileset dir="${basedir}/mps-richtext/languages/richtext/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext-src.jar">
-      <fileset dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
-      <fileset dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
+      <fileset dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-richtext/languages/richtext/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-richtext-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-richtext-languageModels" prefix="module/languageModels" />
@@ -353,8 +362,12 @@
       <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-richtext/languages/mps-richtext/de.slisson.mps.richtext.customcell-src.jar">
-      <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
-      <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
+      <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-richtext-languages-de.slisson.richtext.customcell-languageModels" prefix="module/languageModels" />
@@ -401,7 +414,9 @@
       <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool.runtime-src.jar">
-      <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" />
+      <fileset dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/de.itemis.mps.editor.bool.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-solutions-de.itemis.mps.editor.bool.runtime-models" prefix="module/models" />
     </jar>
@@ -440,8 +455,12 @@
       <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-bool-editor/languages/mps-bool-editor/de.itemis.mps.editor.bool-src.jar">
-      <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
-      <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" />
+      <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-boolean-editor-languages-de.itemis.mps.editor.bool-languageModels" prefix="module/languageModels" />
@@ -487,7 +506,9 @@
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.runtime-src.jar">
-      <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
+      <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.runtime-models" prefix="module/models" />
     </jar>
@@ -517,7 +538,9 @@
       <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.symbols-src.jar">
-      <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen" />
+      <fileset dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-solutions-de.itemis.mps.editor.math.symbols-models" prefix="module/models" />
     </jar>
@@ -556,8 +579,12 @@
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math-src.jar">
-      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/generator/source_gen" />
-      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen" />
+      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-math/languages/de.itemis.mps.editor.math/de.itemis.mps.editor.math.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math-languageModels" prefix="module/languageModels" />
@@ -597,8 +624,12 @@
       <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-math-editor/languages/mps-math-editor/de.itemis.mps.editor.math.notations-src.jar">
-      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
-      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" />
+      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-math-languages-de.itemis.mps.editor.math.notations-languageModels" prefix="module/languageModels" />
@@ -649,7 +680,9 @@
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables.runtime-src.jar">
-      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
+      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-runtime-models" prefix="module/models" />
     </jar>
@@ -691,8 +724,12 @@
       <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/mps-tables/languages/mps-tables/de.slisson.mps.tables-src.jar">
-      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
-      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
+      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-languageModels" prefix="module/languageModels" />
@@ -741,7 +778,9 @@
       <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime-src.jar">
-      <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
+      <fileset dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-solutions-de.slisson.mps.conditionalEditor.runtime-models" prefix="module/models" />
     </jar>
@@ -780,8 +819,12 @@
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor-src.jar">
-      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
-      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-languageModels" prefix="module/languageModels" />
@@ -821,7 +864,9 @@
       <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime-src.jar">
-      <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
+      <fileset dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-solutions-de.slisson.mps.reflection.runtime-models" prefix="module/models" />
     </jar>
@@ -860,15 +905,23 @@
       <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
     <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection-src.jar">
-      <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" />
-      <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" />
+      <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
       <zipfileset file="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-languageModels" prefix="module/languageModels" />
     </jar>
     <zip destfile="${build.layout}/mps-sl-all.zip">
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" prefix="mps-apache-commons/lib" />
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" prefix="mps-apache-commons/lib" />
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" prefix="mps-apache-commons/lib" />
+      <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" prefix="mps-apache-commons/lib" />
       <zipfileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib" prefix="de.itemis.mps.editor.diagram/lib" />
-      <zipfileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib" prefix="mps-multiline/lib" />
+      <zipfileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib" prefix="mps-apache-commons/lib" />
       <fileset dir="${build.tmp}/default/mps-sl-all.zip" />
     </zip>
     <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}</echo>
@@ -885,7 +938,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.1, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.java.modules.cycle.2, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.1, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.java.modules.cycle.2, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940" />
   
   <target name="processResources" />
   
@@ -983,6 +1036,7 @@
         <module file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
+        <module file="${basedir}/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" />
       </chunk>
       <chunk>
         <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" />
@@ -1021,6 +1075,26 @@
     </copy>
   </target>
   
+  <target name="java.compile.org.apache.commons">
+    <mkdir dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/org.apache.commons" />
+    <javac destdir="${build.tmp}/java/out/org.apache.commons" fork="true" includeantruntime="false" debug="true">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/org.apache.commons">
+      <fileset dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
   <target name="java.compile.de.slisson.mps.editor.multiline" depends="java.compile.de.slisson.mps.editor.multiline.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" />
@@ -1043,8 +1117,6 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang3-3.1.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang-2.6.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -1052,6 +1124,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1102,6 +1175,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1125,7 +1199,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="fetchDependencies">
+  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" fork="true" includeantruntime="false" debug="true">
@@ -1134,6 +1208,7 @@
         <path location="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
       </src>
       <classpath>
+        <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
@@ -1146,8 +1221,10 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang3-3.1.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang-2.6.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/bsh-core-2.0b4.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/cglib-nodep-2.1_3.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-core-1.1.jar" />
@@ -1164,6 +1241,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
@@ -1197,8 +1275,6 @@
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang3-3.1.jar" />
-        <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/commons-lang-2.6.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -1206,6 +1282,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1259,6 +1336,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1301,6 +1379,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1350,6 +1429,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1398,6 +1478,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
       </classpath>
@@ -1433,6 +1514,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1483,6 +1565,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1531,6 +1614,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
       </classpath>
@@ -1566,6 +1650,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
       </classpath>
@@ -1601,6 +1686,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1651,6 +1737,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1702,6 +1789,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1754,6 +1842,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1813,6 +1902,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1871,6 +1961,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1923,6 +2014,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -1977,6 +2069,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2027,6 +2120,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
@@ -2065,6 +2159,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2117,6 +2212,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2180,6 +2276,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2225,6 +2322,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2263,6 +2361,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2270,6 +2369,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2314,6 +2414,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2321,6 +2422,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2367,6 +2469,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2374,6 +2477,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2422,6 +2526,7 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2429,6 +2534,7 @@
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
         <fileset file="${artifacts.mps}/lib/xstream-1.4.3.jar" />
         <fileset file="${artifacts.mps}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.mps}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
@@ -2469,6 +2575,7 @@
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
+    <delete dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" />
     <delete dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />

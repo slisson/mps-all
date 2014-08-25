@@ -34,3 +34,6 @@
 [submodule "diagram"]
 	path = diagram
 	url = https://github.com/slisson/mps-diagram-editor.git
+[submodule "mps-apache-commons"]
+	path = mps-apache-commons
+	url = git@github.com:slisson/mps-apache-commons.git
