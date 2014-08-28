@@ -146,6 +146,7 @@
         </dependencies>
         <library jar="../../lib/jgraphx.jar" />
         <library jar="../../lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <library jar="../../lib/klay-emf_2014-05.jar" />
         <sources jar="de.itemis.mps.editor.diagram.runtime-src.jar" descriptor="de.itemis.mps.editor.diagram.runtime.msd" />
       </module>
     </echoxml>
@@ -2423,6 +2424,7 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2476,6 +2478,7 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2531,6 +2534,7 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
@@ -2588,6 +2592,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/commons-math3-3.3/commons-math3-3.3.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/annotations.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
