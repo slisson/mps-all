@@ -459,6 +459,30 @@
             </node>
           </node>
         </node>
+        <node role="dependencies" roleId="kdzh.5253498789149547704" type="kdzh.BuildMps_ExtractedModuleDependency" typeId="kdzh.7259033139236285166" id="3937583844219184430" nodeInfo="nn">
+          <node role="dependency" roleId="kdzh.7259033139236285167" type="kdzh.BuildMps_ModuleDependencyJar" typeId="kdzh.4278635856200826393" id="3937583844219184431" nodeInfo="ng">
+            <node role="path" roleId="kdzh.4278635856200826394" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3937583844219184423" nodeInfo="ng">
+              <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184424" nodeInfo="nn">
+                <property name="head" nameId="3ior.8618885170173601779" value="mps-apache-commons" />
+                <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184425" nodeInfo="nn">
+                  <property name="head" nameId="3ior.8618885170173601779" value="solutions" />
+                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184426" nodeInfo="nn">
+                    <property name="head" nameId="3ior.8618885170173601779" value="org.apache.commons" />
+                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184427" nodeInfo="nn">
+                      <property name="head" nameId="3ior.8618885170173601779" value="lib" />
+                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184428" nodeInfo="nn">
+                        <property name="head" nameId="3ior.8618885170173601779" value="commons-csv-1.0" />
+                        <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219184429" nodeInfo="nn">
+                          <property name="head" nameId="3ior.8618885170173601779" value="commons-csv-1.0.jar" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
     <node role="parts" roleId="3ior.7389400916848080626" type="kdzh.BuildMps_Group" typeId="kdzh.1500819558095907805" id="5063083321524165995" nodeInfo="ng">
@@ -1957,6 +1981,28 @@
                           <property name="head" nameId="3ior.8618885170173601779" value="commons-primitives-1.0" />
                           <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3480045216712479840" nodeInfo="nn">
                             <property name="head" nameId="3ior.8618885170173601779" value="commons-primitives-1.0.jar" />
+                          </node>
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node role="children" roleId="3ior.7389400916848037006" type="3ior.BuildLayout_File" typeId="3ior.9126048691955220717" id="3937583844219185202" nodeInfo="ng">
+              <node role="path" roleId="3ior.9126048691955220762" type="3ior.BuildSourceProjectRelativePath" typeId="3ior.5481553824944787378" id="3937583844219185203" nodeInfo="ng">
+                <node role="compositePart" roleId="3ior.7321017245477039051" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219185204" nodeInfo="nn">
+                  <property name="head" nameId="3ior.8618885170173601779" value="mps-apache-commons" />
+                  <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219185205" nodeInfo="nn">
+                    <property name="head" nameId="3ior.8618885170173601779" value="solutions" />
+                    <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219185206" nodeInfo="nn">
+                      <property name="head" nameId="3ior.8618885170173601779" value="org.apache.commons" />
+                      <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219185207" nodeInfo="nn">
+                        <property name="head" nameId="3ior.8618885170173601779" value="lib" />
+                        <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219185208" nodeInfo="nn">
+                          <property name="head" nameId="3ior.8618885170173601779" value="commons-csv-1.0" />
+                          <node role="tail" roleId="3ior.8618885170173601778" type="3ior.BuildCompositePath" typeId="3ior.8618885170173601777" id="3937583844219186280" nodeInfo="nn">
+                            <property name="head" nameId="3ior.8618885170173601779" value="commons-csv-1.0.jar" />
                           </node>
                         </node>
                       </node>

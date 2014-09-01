@@ -6,6 +6,8 @@
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.sandbox/de.itemis.mps.editor.diagram.sandbox.msd" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/mps-apache-commons.build/mps-apache-commons.build.msd" folder="apache-commons" />
+      <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool.demolang/de.itemis.mps.editor.bool.demolang.mpl" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.build/mps-bool-editor.msd" folder="bool" />
