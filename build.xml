@@ -1255,7 +1255,7 @@
   <target name="java.compile.de.slisson.mps.all.build">
     <mkdir dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.all.build" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.all.build" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.all.build" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
@@ -1270,7 +1270,7 @@
   <target name="java.compile.de.itemis.mps.nativelibs" depends="fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.nativelibs/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.nativelibs" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.nativelibs/source_gen" />
@@ -1317,7 +1317,7 @@
   <target name="java.compile.de.itemis.mps.nativelibs#4185202470056722674" depends="java.compile.de.itemis.mps.nativelibs, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.nativelibs/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.nativelibs#4185202470056722674" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs#4185202470056722674" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs#4185202470056722674" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.nativelibs/generator/source_gen" />
@@ -1361,7 +1361,7 @@
   <target name="java.compile.de.itemis.mps.nativelibs.loader" depends="fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.nativelibs.loader/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.nativelibs.loader" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs.loader" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.nativelibs.loader" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/solutions/de.itemis.mps.nativelibs.loader/source_gen" />
@@ -1399,7 +1399,7 @@
   <target name="java.compile.org.apache.commons">
     <mkdir dir="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" />
     <mkdir dir="${build.tmp}/java/out/org.apache.commons" />
-    <javac destdir="${build.tmp}/java/out/org.apache.commons" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/org.apache.commons" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-apache-commons/solutions/org.apache.commons/source_gen" />
@@ -1420,7 +1420,7 @@
   <target name="java.compile.de.slisson.mps.editor.multiline" depends="java.compile.de.slisson.mps.editor.multiline.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-multiline/languages/multiline/source_gen" />
@@ -1474,7 +1474,7 @@
   <target name="java.compile.de.slisson.mps.editor.multiline#5792856961266375224" depends="java.compile.de.slisson.mps.editor.multiline, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline#5792856961266375224" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline#5792856961266375224" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline#5792856961266375224" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
@@ -1524,7 +1524,7 @@
   <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
@@ -1578,7 +1578,7 @@
   <target name="java.compile.de.slisson.mps.richtext" depends="java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.customcell, java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-richtext/languages/richtext/source_gen" />
@@ -1640,7 +1640,7 @@
   <target name="java.compile.de.slisson.mps.richtext#1212807527450963095" depends="java.compile.de.slisson.mps.richtext, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
@@ -1686,7 +1686,7 @@
   <target name="java.compile.de.slisson.mps.richtext.customcell" depends="fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
@@ -1735,7 +1735,7 @@
   <target name="java.compile.de.slisson.mps.richtext.customcell#2490242408670609648" depends="java.compile.de.slisson.mps.richtext.customcell, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell#2490242408670609648" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell#2490242408670609648" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext.customcell#2490242408670609648" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
@@ -1785,7 +1785,7 @@
   <target name="java.compile.de.itemis.mps.editor.bool.runtime" depends="fetchDependencies">
     <mkdir dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.bool.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" />
@@ -1820,7 +1820,7 @@
   <target name="java.compile.de.itemis.mps.editor.bool" depends="java.compile.de.itemis.mps.editor.bool.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.bool" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" />
@@ -1870,7 +1870,7 @@
   <target name="java.compile.de.itemis.mps.editor.bool#4900677560559654859" depends="java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.bool#4900677560559654859" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool#4900677560559654859" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.bool#4900677560559654859" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
@@ -1921,7 +1921,7 @@
   <target name="java.compile.de.itemis.mps.editor.math.runtime" depends="fetchDependencies">
     <mkdir dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
@@ -1956,7 +1956,7 @@
   <target name="java.compile.de.itemis.mps.editor.math.symbols" depends="java.compile.de.itemis.mps.editor.math.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math.symbols" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.symbols" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.symbols" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen" />
@@ -1992,7 +1992,7 @@
   <target name="java.compile.de.itemis.mps.editor.math" depends="java.compile.de.itemis.mps.editor.math.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen" />
@@ -2042,7 +2042,7 @@
   <target name="java.compile.de.itemis.mps.editor.math#1546395981771464573" depends="java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math#1546395981771464573" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math#1546395981771464573" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math#1546395981771464573" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/languages/de.itemis.mps.editor.math/generator/source_gen" />
@@ -2093,7 +2093,7 @@
   <target name="java.compile.de.itemis.mps.editor.math.notations" depends="java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, fetchDependencies">
     <mkdir dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" />
@@ -2145,7 +2145,7 @@
   <target name="java.compile.de.itemis.mps.editor.math.notations#175930839491770475" depends="java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, fetchDependencies">
     <mkdir dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations#175930839491770475" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations#175930839491770475" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.math.notations#175930839491770475" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
@@ -2257,7 +2257,7 @@
   <target name="java.compile.de.slisson.mps.tables.runtime" depends="java.compile.java.modules.cycle.1, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
@@ -2319,7 +2319,7 @@
   <target name="java.compile.de.slisson.mps.tables" depends="java.compile.java.modules.cycle.1, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
@@ -2372,7 +2372,7 @@
   <target name="java.compile.de.slisson.mps.tables#2318718871439220866" depends="java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.tables#2318718871439220866" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
@@ -2425,7 +2425,7 @@
   <target name="java.compile.de.slisson.mps.conditionalEditor.runtime" depends="fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
@@ -2463,7 +2463,7 @@
   <target name="java.compile.de.slisson.mps.conditionalEditor" depends="java.compile.de.slisson.mps.conditionalEditor.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
@@ -2515,7 +2515,7 @@
   <target name="java.compile.de.slisson.mps.conditionalEditor#2877762237605071651" depends="java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
@@ -2568,7 +2568,7 @@
   <target name="java.compile.de.slisson.mps.reflection.runtime">
     <mkdir dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
@@ -2583,7 +2583,7 @@
   <target name="java.compile.de.slisson.mps.reflection" depends="fetchDependencies">
     <mkdir dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.reflection" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" />
@@ -2627,7 +2627,7 @@
   <target name="java.compile.de.slisson.mps.reflection#5820306262934157507" depends="java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.reflection#5820306262934157507" />
-    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection#5820306262934157507" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.reflection#5820306262934157507" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" />
@@ -2734,7 +2734,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram.runtime" depends="java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.slisson.mps.reflection.runtime, java.compile.org.apache.commons, java.compile.java.modules.cycle.2, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
@@ -2800,7 +2800,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.styles, java.compile.java.modules.cycle.2, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
@@ -2859,7 +2859,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
@@ -2918,7 +2918,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram.styles" depends="fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/source_gen" />
@@ -2961,7 +2961,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles#5014430417954750349" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles#5014430417954750349" fork="true" includeantruntime="false" debug="true">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles#5014430417954750349" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/generator/source_gen" />

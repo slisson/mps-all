@@ -2080,6 +2080,7 @@
     </node>
     <node role="parts" roleId="3ior.7389400916848080626" type="3ior.BuildSource_JavaOptions" typeId="3ior.927724900262033858" id="103852046405568519" nodeInfo="ng">
       <property name="generateDebugInfo" nameId="3ior.927724900262033861" value="true" />
+      <property name="javaLevel" nameId="3ior.6998860900671147996" value="1.6" />
     </node>
     <node role="parts" roleId="3ior.7389400916848080626" type="kdzh.BuildMps_GeneratorOptions" typeId="kdzh.4297162197620964123" id="3008937229056433373" nodeInfo="ng">
       <property name="strict" nameId="kdzh.4297162197620978188" value="true" />
