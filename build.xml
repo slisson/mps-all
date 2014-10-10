@@ -251,6 +251,38 @@
       <zipfileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.runtime-models" prefix="module/models" />
     </jar>
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.shapes.jar" />
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.shapes.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.itemis.mps.editor.diagram.shapes.jar/META-INF/module.xml">
+      <module namespace="de.itemis.mps.editor.diagram.shapes" type="solution" uuid="f7ad14aa-a3e2-4301-8822-d919845c8bcf">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="1144260c-e9a5-49a2-9add-39a1a1a7077e(de.itemis.mps.editor.diagram.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
+        <sources jar="de.itemis.mps.editor.diagram.shapes-src.jar" descriptor="de.itemis.mps.editor.diagram.shapes.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.shapes.jar">
+      <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" />
+      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/de.itemis.mps.editor.diagram.shapes.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.shapes-models">
+      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.shapes-src.jar">
+      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <zipfileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.editor.diagram.shapes-models" prefix="module/models" />
+    </jar>
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.jar" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.editor.diagram.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.itemis.mps.editor.diagram.jar/META-INF/module.xml">
@@ -1133,7 +1165,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.shapes, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349" />
   
   <target name="processResources" />
   
@@ -1243,7 +1275,9 @@
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" />
         <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
       </chunk>
-      <chunk />
+      <chunk>
+        <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" />
+      </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
       </jvmargs>
@@ -2795,6 +2829,58 @@
     </copy>
   </target>
   
+  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
+    <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" />
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/libavoid/adaptagrams.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.3.2.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes">
+      <fileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
   <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
@@ -3043,6 +3129,7 @@
     <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
+    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
   </target>
 </project>
