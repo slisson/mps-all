@@ -1192,6 +1192,7 @@
       <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" prefix="mps-apache-commons/lib" />
       <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" prefix="mps-apache-commons/lib" />
       <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-csv-1.0/commons-csv-1.0.jar" prefix="mps-apache-commons/lib" />
+      <zipfileset file="${diagram.home}/devkits/de.itemis.mps.editor.diagram.devkit.devkit" prefix="de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram" />
       <zipfileset dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib" prefix="de.itemis.mps.editor.diagram/lib" />
       <zipfileset dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib" prefix="mps-multiline/lib" />
       <fileset dir="${build.tmp}/default/mps-sl-all.zip" />
@@ -1316,6 +1317,7 @@
       </chunk>
       <chunk>
         <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" />
+        <module file="${diagram.home}/devkits/de.itemis.mps.editor.diagram.devkit.devkit" />
         <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" />
         <module file="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" />
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/de.itemis.mps.editor.math.symbols.msd" />
