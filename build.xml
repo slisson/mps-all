@@ -2897,7 +2897,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.runtime" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.slisson.mps.reflection.runtime, java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.runtime" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.slisson.mps.reflection.runtime, java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2915,6 +2915,7 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
