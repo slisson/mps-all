@@ -201,6 +201,7 @@
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.hacks</depends>
         <depends>org.apache.commons</depends>
+        <depends>de.itemis.mps.editor.layout</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -2995,7 +2996,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.runtime" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.slisson.mps.reflection.runtime, java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.runtime" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.slisson.mps.reflection.runtime, java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3016,6 +3017,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
@@ -3025,6 +3027,7 @@
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/libavoid/adaptagrams.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.layout.runtime/lib/miglayout-core-4.2.jar" />
         <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
         <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
         <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" />

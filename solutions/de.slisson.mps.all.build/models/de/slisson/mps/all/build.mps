@@ -360,6 +360,9 @@
       <node role="dependencies" roleId="kdzh.6592112598314499028" type="kdzh.BuildMps_IdeaPluginDependency" typeId="kdzh.6592112598314499027" id="8508091138234809996" nodeInfo="ng">
         <link role="target" roleId="kdzh.6592112598314499066" targetNodeId="5063083321524165986" />
       </node>
+      <node role="dependencies" roleId="kdzh.6592112598314499028" type="kdzh.BuildMps_IdeaPluginDependency" typeId="kdzh.6592112598314499027" id="6775831531067445927" nodeInfo="ng">
+        <link role="target" roleId="kdzh.6592112598314499066" targetNodeId="500099795018230835" />
+      </node>
       <node role="containerName" roleId="kdzh.6592112598314855574" type="3ior.BuildStringNotEmpty" typeId="3ior.841011766566059607" id="4813947565936947184" nodeInfo="ng">
         <node role="parts" roleId="3ior.4903714810883783243" type="3ior.BuildTextStringPart" typeId="3ior.4903714810883702019" id="4813947565936947185" nodeInfo="ng">
           <property name="text" nameId="3ior.4903714810883755350" value="de.itemis.mps.editor.diagram" />
