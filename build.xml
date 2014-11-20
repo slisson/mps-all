@@ -3276,7 +3276,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349" depends="java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles#5014430417954750349" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles#5014430417954750349" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3290,19 +3290,11 @@
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
-        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
-        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
-        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
-        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
-        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
-        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/libavoid/adaptagrams.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
