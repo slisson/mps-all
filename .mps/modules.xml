@@ -22,6 +22,8 @@
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.layout.runtime/de.itemis.mps.editor.layout.runtime.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/languages/de.itemis.mps.smodel.listeners.demo/de.itemis.mps.smodel.listeners.demo.mpl" folder="smodel.listeners" />
+      <modulePath path="$PROJECT_DIR$/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.mpl" folder="smodel.listeners" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/mps-apache-commons.build/mps-apache-commons.build.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool.demolang/de.itemis.mps.editor.bool.demolang.mpl" folder="bool" />
@@ -56,6 +58,8 @@
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" folder="tables" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" folder="tables" />
       <modulePath path="$PROJECT_DIR$/mps-tables/languages/de.slisson.mps.tables/sandbox/de.slisson.mps.tables.sandbox.msd" folder="tables" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.itemis.mps.smodel.listeners.runtime/de.itemis.mps.smodel.listeners.runtime.msd" folder="smodel.listeners" />
+      <modulePath path="$PROJECT_DIR$/solutions/de.itemis.mps.smodel.listeners.sandbox/de.itemis.mps.smodel.listeners.sandbox.msd" folder="smodel.listeners" />
       <modulePath path="$PROJECT_DIR$/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" folder="" />
     </projectModules>
   </component>

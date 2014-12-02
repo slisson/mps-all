@@ -1359,6 +1359,102 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-hacks-languages-de.slisson.mps.reflection-languageModels" prefix="module/languageModels" />
     </jar>
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/META-INF/plugin.xml">
+      <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
+        <id>de.itemis.mps.smodel.listeners</id>
+        <name>de.itemis.mps.smodel.listeners</name>
+        <version>2.0.0</version>
+        <depends>jetbrains.mps.core</depends>
+        <depends>de.slisson.mps.hacks</depends>
+        
+        <extensions defaultExtensionNs="com.intellij">
+          <mps.LanguageLibrary dir="/languages" />
+        </extensions>
+      </idea-plugin>
+    </echoxml>
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners" />
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.runtime.jar" />
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.runtime.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.itemis.mps.smodel.listeners.runtime.jar/META-INF/module.xml">
+      <module namespace="de.itemis.mps.smodel.listeners.runtime" type="solution" uuid="a2965780-bf67-437f-bb31-cd4418713046">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
+        <sources jar="de.itemis.mps.smodel.listeners.runtime-src.jar" descriptor="de.itemis.mps.smodel.listeners.runtime.msd" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.runtime.jar">
+      <fileset dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime" />
+      <fileset dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.runtime.jar" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.smodel.listeners.runtime-models">
+      <fileset dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.runtime-src.jar">
+      <fileset dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <zipfileset file="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/de.itemis.mps.smodel.listeners.runtime.msd" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.smodel.listeners.runtime-models" prefix="module/models" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.jar" />
+    <mkdir dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.itemis.mps.smodel.listeners.jar/META-INF/module.xml">
+      <module namespace="de.itemis.mps.smodel.listeners" type="language" uuid="f3d1ad40-16ad-45af-8bca-c6eed962ee54">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
+          <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
+          <module ref="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
+        <sources jar="de.itemis.mps.smodel.listeners-src.jar" descriptor="de.itemis.mps.smodel.listeners.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.jar">
+      <fileset dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners" />
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners" includes="icons/**, resources/**" />
+      <fileset dir="${build.tmp}/default/de.itemis.mps.smodel.listeners.jar" />
+    </jar>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners-generator.jar">
+      <fileset dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners#1122727885939207384" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.smodel.listeners-generator-template">
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.smodel.listeners-languageModels">
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.smodel.listeners/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners-src.jar">
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/source_gen">
+        <exclude name="**/trace.info" />
+      </fileset>
+      <zipfileset file="${basedir}/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.smodel.listeners-generator-template" prefix="module/generator/template" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.smodel.listeners-languageModels" prefix="module/languageModels" />
+    </jar>
     <zip destfile="${build.layout}/mps-sl-all.zip">
       <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" prefix="mps-apache-commons/lib" />
       <zipfileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" prefix="mps-apache-commons/lib" />
@@ -1385,7 +1481,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.shapes, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.layout#4341402299005877448, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible#4767615435807736937, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout#4452438700753615293" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.shapes, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.layout#4341402299005877448, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible#4767615435807736937, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout#4452438700753615293, java.compile.de.itemis.mps.smodel.listeners.runtime, java.compile.de.itemis.mps.smodel.listeners, java.compile.de.itemis.mps.smodel.listeners#1122727885939207384" />
   
   <target name="processResources" />
   
@@ -1479,6 +1575,8 @@
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" />
         <module file="${basedir}/diagram/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" />
         <module file="${basedir}/diagram/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" />
+        <module file="${basedir}/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.mpl" />
+        <module file="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/de.itemis.mps.smodel.listeners.runtime.msd" />
         <module file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" />
         <module file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" />
         <module file="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" />
@@ -3689,6 +3787,142 @@
     </copy>
   </target>
   
+  <target name="java.compile.de.itemis.mps.smodel.listeners.runtime" depends="java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
+    <mkdir dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime" />
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/source_gen" />
+      </src>
+      <classpath>
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.3.2.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime">
+      <fileset dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.de.itemis.mps.smodel.listeners" depends="java.compile.de.itemis.mps.smodel.listeners.runtime, fetchDependencies">
+    <mkdir dir="${basedir}/languages/de.itemis.mps.smodel.listeners/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners" />
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/languages/de.itemis.mps.smodel.listeners/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.3.2.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners">
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.de.itemis.mps.smodel.listeners#1122727885939207384" depends="java.compile.de.itemis.mps.smodel.listeners, java.compile.de.itemis.mps.smodel.listeners.runtime, fetchDependencies">
+    <mkdir dir="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners#1122727885939207384" />
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners#1122727885939207384" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.smodel.listeners" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.smodel.listeners.runtime" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.3.2.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm4-all.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.collections.jar" />
+        <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.itemis.mps.smodel.listeners#1122727885939207384">
+      <fileset dir="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
   <target name="cleanSources">
     <delete dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" />
     <delete dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" />
@@ -3700,6 +3934,8 @@
     <delete dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.nativelibs/source_gen" />
     <delete dir="${diagram.home}/solutions/de.itemis.mps.nativelibs.loader/source_gen" />
+    <delete dir="${basedir}/languages/de.itemis.mps.smodel.listeners/source_gen" />
+    <delete dir="${basedir}/solutions/de.itemis.mps.smodel.listeners.runtime/source_gen" />
     <delete dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
@@ -3725,6 +3961,7 @@
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/source_gen" />
     <delete dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.symbols/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.nativelibs/generator/source_gen" />
+    <delete dir="${basedir}/languages/de.itemis.mps.smodel.listeners/generator/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
     <delete dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
