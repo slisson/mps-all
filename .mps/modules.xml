@@ -3,25 +3,26 @@
   <component name="MPSProject">
     <projectModules>
       <modulePath path="$PROJECT_DIR$/diagram/devkits/de.itemis.mps.editor.diagram.devkit.devkit" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.collapsible/de.itemis.mps.editor.collapsible.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demo.activity/de.itemis.mps.editor.diagram.demo.activity.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demo.callgraph/de.itemis.mps.editor.diagram.demo.callgraph.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demoentities/de.itemis.mps.editor.diagram.demoentities.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demolang/de.itemis.mps.editor.diagram.demolang.mpl" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.collapsible/de.itemis.mps.editor.collapsible.mpl" folder="diagram.collapsible" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demo.activity/de.itemis.mps.editor.diagram.demo.activity.mpl" folder="diagram.demo.activity" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demo.callgraph/de.itemis.mps.editor.diagram.demo.callgraph.mpl" folder="diagram.demo" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demoentities/de.itemis.mps.editor.diagram.demoentities.mpl" folder="diagram.demo.entities" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.demolang/de.itemis.mps.editor.diagram.demolang.mpl" folder="diagram.demo" />
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.layout/de.itemis.mps.editor.diagram.layout.mpl" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram.styles/de.itemis.mps.editor.diagram.styles.mpl" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout.demolang/de.itemis.mps.editor.layout.demolang.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout/de.itemis.mps.editor.layout.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mos.editor.diagram.shapes/de.itemis.mos.editor.diagram.shapes.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.collapsible.runtime/de.itemis.mps.editor.collapsible.runtime.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.demo.activity.sandbox/de.itemis.mps.editor.diagram.demo.activity.sandbox.msd" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout.demolang/de.itemis.mps.editor.layout.demolang.mpl" folder="diagram.layout" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout/de.itemis.mps.editor.layout.mpl" folder="diagram.layout" />
+      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" folder="diagram.nativelibs" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.collapsible.runtime/de.itemis.mps.editor.collapsible.runtime.msd" folder="diagram.collapsible" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.demo.activity.sandbox/de.itemis.mps.editor.diagram.demo.activity.sandbox.msd" folder="diagram.demo.activity" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.demoentities.sandbox/de.itemis.mps.editor.diagram.demoentities.sandbox.msd" folder="diagram.demo.entities" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.sandbox/de.itemis.mps.editor.diagram.sandbox.msd" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.sandbox/de.itemis.mps.editor.diagram.sandbox.msd" folder="diagram.demo" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.layout.runtime/de.itemis.mps.editor.layout.runtime.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="diagram" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.layout.runtime/de.itemis.mps.editor.layout.runtime.msd" folder="diagram.layout" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.layout.sandbox/de.itemis.mps.editor.layout.sandbox.msd" folder="diagram.layout" />
+      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="diagram.nativelibs" />
       <modulePath path="$PROJECT_DIR$/languages/de.itemis.mps.smodel.listeners.demo/de.itemis.mps.smodel.listeners.demo.mpl" folder="smodel.listeners" />
       <modulePath path="$PROJECT_DIR$/languages/de.itemis.mps.smodel.listeners/de.itemis.mps.smodel.listeners.mpl" folder="smodel.listeners" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/mps-apache-commons.build/mps-apache-commons.build.msd" folder="apache-commons" />
