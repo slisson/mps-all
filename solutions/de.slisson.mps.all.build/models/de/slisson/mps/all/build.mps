@@ -2269,6 +2269,12 @@
               <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
             </node>
           </node>
+          <node concept="1SiIV0" id="3xu7nXs4l__" role="3bR37C">
+            <node concept="3bR9La" id="3xu7nXs4l_A" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" to="ffeo:7Kfy9QB6LfQ" resolve="jetbrains.mps.kernel" />
+            </node>
+          </node>
         </node>
         <node concept="1SiIV0" id="3FRjz$vmO0A" role="3bR37C">
           <node concept="3bR9La" id="3FRjz$vmO0B" role="1SiIV1">
@@ -2314,6 +2320,12 @@
         <node concept="1SiIV0" id="2eQzkDL_91c" role="3bR37C">
           <node concept="1Busua" id="2eQzkDL_91d" role="1SiIV1">
             <ref role="1Busuk" to="ffeo:7Kfy9QB6L2F" resolve="jetbrains.mps.baseLanguage.tuples" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3xu7nXs4l_z" role="3bR37C">
+          <node concept="3bR9La" id="3xu7nXs4l_$" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
           </node>
         </node>
       </node>
@@ -2602,24 +2614,9 @@
                 <node concept="2Ry0Ak" id="4be$WTb2yGV" role="2Ry0An">
                   <property role="2Ry0Am" value=".." />
                   <node concept="2Ry0Ak" id="4be$WTb2zv$" role="2Ry0An">
-                    <property role="2Ry0Am" value=".." />
+                    <property role="2Ry0Am" value="app" />
                     <node concept="2Ry0Ak" id="3O4K3r9SCHF" role="2Ry0An">
-                      <property role="2Ry0Am" value=".." />
-                      <node concept="2Ry0Ak" id="3O4K3r9SDAy" role="2Ry0An">
-                        <property role="2Ry0Am" value=".." />
-                        <node concept="2Ry0Ak" id="3O4K3r9SEqz" role="2Ry0An">
-                          <property role="2Ry0Am" value=".." />
-                          <node concept="2Ry0Ak" id="3O4K3r9SEPU" role="2Ry0An">
-                            <property role="2Ry0Am" value="Applications" />
-                            <node concept="2Ry0Ak" id="3O4K3r9SF3D" role="2Ry0An">
-                              <property role="2Ry0Am" value="MPS32.app" />
-                              <node concept="2Ry0Ak" id="3O4K3r9SFv0" role="2Ry0An">
-                                <property role="2Ry0Am" value="Contents" />
-                              </node>
-                            </node>
-                          </node>
-                        </node>
-                      </node>
+                      <property role="2Ry0Am" value="mps32rc1" />
                     </node>
                   </node>
                 </node>
