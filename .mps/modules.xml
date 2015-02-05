@@ -13,15 +13,12 @@
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout.demolang/de.itemis.mps.editor.layout.demolang.mpl" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.editor.layout/de.itemis.mps.editor.layout.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mos.editor.diagram.shapes/de.itemis.mos.editor.diagram.shapes.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.collapsible.runtime/de.itemis.mps.editor.collapsible.runtime.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.demo.activity.sandbox/de.itemis.mps.editor.diagram.demo.activity.sandbox.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.sandbox/de.itemis.mps.editor.diagram.sandbox.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.editor.layout.runtime/de.itemis.mps.editor.layout.runtime.msd" folder="diagram" />
-      <modulePath path="$PROJECT_DIR$/diagram/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="diagram" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/mps-apache-commons.build/mps-apache-commons.build.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool.demolang/de.itemis.mps.editor.bool.demolang.mpl" folder="bool" />
@@ -33,10 +30,12 @@
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.build/de.slisson.mps.conditionalEditor.build.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.sandbox/de.slisson.mps.conditionalEditor.sandbox.msd" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" folder="hacks.nativelibs" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.dynsmodel/de.slisson.mps.dynsmodel.mpl" folder="hacks" />
-      <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" folder="hacks" />
-      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" folder="hacks" />
-      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.sandbox/de.slisson.mps.reflection.sandbox.msd" folder="hacks" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" folder="hacks.reflection" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="hacks.nativelibs" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" folder="hacks.reflection" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.sandbox/de.slisson.mps.reflection.sandbox.msd" folder="hacks.reflection" />
       <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.demolang/de.itemis.mps.editor.math.demolang.mpl" folder="math" />
       <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.java/de.itemis.mps.editor.math.java.mpl" folder="math" />
       <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.notations/de.itemis.mps.editor.math.notations.mpl" folder="math" />

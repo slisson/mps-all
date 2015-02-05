@@ -585,7 +585,7 @@
         <property role="2GAjPV" value="false" />
         <node concept="55IIr" id="2H_mjOXwdN8" role="3LF7KH">
           <node concept="2Ry0Ak" id="2H_mjOXwdNj" role="iGT6I">
-            <property role="2Ry0Am" value="diagram" />
+            <property role="2Ry0Am" value="mps-hacks" />
             <node concept="2Ry0Ak" id="2H_mjOXwdNr" role="2Ry0An">
               <property role="2Ry0Am" value="languages" />
               <node concept="2Ry0Ak" id="2H_mjOXwdNz" role="2Ry0An">
@@ -630,7 +630,7 @@
         <property role="2GAjPV" value="false" />
         <node concept="55IIr" id="2H_mjOXyaTw" role="3LF7KH">
           <node concept="2Ry0Ak" id="2H_mjOXybef" role="iGT6I">
-            <property role="2Ry0Am" value="diagram" />
+            <property role="2Ry0Am" value="mps-hacks" />
             <node concept="2Ry0Ak" id="2H_mjOXyboD" role="2Ry0An">
               <property role="2Ry0Am" value="solutions" />
               <node concept="2Ry0Ak" id="2H_mjOXybHl" role="2Ry0An">
