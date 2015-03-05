@@ -2373,6 +2373,11 @@
             <ref role="3bR37D" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
           </node>
         </node>
+        <node concept="1SiIV0" id="7p$r3W6ItVp" role="3bR37C">
+          <node concept="1Busua" id="7p$r3W6ItVq" role="1SiIV1">
+            <ref role="1Busuk" node="rKHxOEjFyx" resolve="de.itemis.mps.editor.layout" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="4frYVBf39$o" role="2G$12L">
         <property role="BnDLt" value="true" />

@@ -264,6 +264,7 @@
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="1144260c-e9a5-49a2-9add-39a1a1a7077e(de.itemis.mps.editor.diagram.runtime)" />
+          <module ref="776efd50-4c6d-4d39-90b3-7f994c98f819(de.itemis.mps.editor.layout.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
@@ -1482,7 +1483,6 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.script.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.util.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.textGen.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
@@ -3106,7 +3106,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3128,11 +3128,13 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/libavoid/adaptagrams.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.layout.runtime/lib/miglayout-core-4.2.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
@@ -3157,7 +3159,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3180,6 +3182,7 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
@@ -3217,7 +3220,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3241,11 +3244,14 @@
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/libavoid/adaptagrams.jar" />
+        <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.layout.runtime/lib/miglayout-core-4.2.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
