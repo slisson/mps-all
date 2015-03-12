@@ -2480,6 +2480,12 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
+        <node concept="1SiIV0" id="7TpiM9SsGt4" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsGt5" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" node="7TpiM9SsCWu" resolve="de.itemis.mps.mouselistener.runtime" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="48DYfEtkkjU" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -2533,6 +2539,72 @@
               <property role="3bR36h" value="false" />
               <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
             </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="7TpiM9SsCWu" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="de.itemis.mps.mouselistener.runtime" />
+        <property role="3LESm3" value="5c13c612-0f7b-4f0a-ab8b-565186b418de" />
+        <property role="2GAjPV" value="false" />
+        <node concept="398BVA" id="7TpiM9SsDke" role="3LF7KH">
+          <ref role="398BVh" node="4be$WTb1AVp" resolve="diagram.home" />
+          <node concept="2Ry0Ak" id="7TpiM9SsE1X" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="7TpiM9SsEsS" role="2Ry0An">
+              <property role="2Ry0Am" value="de.itemis.mps.mouselistener.runtime" />
+              <node concept="2Ry0Ak" id="7TpiM9SsERN" role="2Ry0An">
+                <property role="2Ry0Am" value="de.itemis.mps.mouselistener.runtime.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5g" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5h" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5i" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5j" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5k" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5l" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5m" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5n" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="2Xjt3l57hht" resolve="de.slisson.mps.reflection.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5o" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5p" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5q" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5r" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5s" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5t" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="7TpiM9SsF5u" role="3bR37C">
+          <node concept="3bR9La" id="7TpiM9SsF5v" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
           </node>
         </node>
       </node>
