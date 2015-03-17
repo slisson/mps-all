@@ -3602,7 +3602,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.collapsible.runtime" depends="java.compile.de.itemis.mps.mouselistener.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.collapsible.runtime" depends="java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.collapsible.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3623,6 +3623,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.mouselistener.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
