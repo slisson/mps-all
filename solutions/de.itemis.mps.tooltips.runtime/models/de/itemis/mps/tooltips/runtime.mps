@@ -57,6 +57,10 @@
         <child id="1188208488637" name="annotation" index="2AJF6D" />
       </concept>
       <concept id="1095950406618" name="jetbrains.mps.baseLanguage.structure.DivExpression" flags="nn" index="FJ1c_" />
+      <concept id="1153952380246" name="jetbrains.mps.baseLanguage.structure.TryStatement" flags="nn" index="2GUZhq">
+        <child id="1153952416686" name="body" index="2GV8ay" />
+        <child id="1153952429843" name="finallyBody" index="2GVbov" />
+      </concept>
       <concept id="1224848483129" name="jetbrains.mps.baseLanguage.structure.IBLDeprecatable" flags="ng" index="IEa8$">
         <property id="1224848525476" name="isDeprecated" index="IEkAT" />
       </concept>
@@ -1556,24 +1560,6 @@
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="7CEHNszwyaq" role="3cqZAp">
-          <node concept="2OqwBi" id="7CEHNszwyfq" role="3clFbG">
-            <node concept="37vLTw" id="7CEHNszwyap" role="2Oq$k0">
-              <ref role="3cqZAo" node="7CEHNszwtjr" resolve="myTooltipCell" />
-            </node>
-            <node concept="liA8E" id="7CEHNszwyjE" role="2OqNvi">
-              <ref role="37wK5l" to="nu8v:~EditorCell.moveTo(int,int):void" resolve="moveTo" />
-              <node concept="10M0yZ" id="6zKSYRPQ5DI" role="37wK5m">
-                <ref role="1PxDUh" node="7CEHNszwp5C" resolve="TooltipComponent" />
-                <ref role="3cqZAo" node="7CEHNszC8rg" resolve="X_PADDING" />
-              </node>
-              <node concept="10M0yZ" id="6zKSYRPQ5DJ" role="37wK5m">
-                <ref role="3cqZAo" node="3brlo9KRxuh" resolve="Y_PADDING" />
-                <ref role="1PxDUh" node="7CEHNszwp5C" resolve="TooltipComponent" />
-              </node>
-            </node>
-          </node>
-        </node>
         <node concept="3clFbF" id="7CEHNszy0jl" role="3cqZAp">
           <node concept="1rXfSq" id="7CEHNszy0jk" role="3clFbG">
             <ref role="37wK5l" to="dbrf:~JComponent.setPreferredSize(java.awt.Dimension):void" resolve="setPreferredSize" />
@@ -1636,46 +1622,110 @@
       <node concept="3Tmbuc" id="7CEHNszwtSR" role="1B3o_S" />
       <node concept="3cqZAl" id="7CEHNszwtST" role="3clF45" />
       <node concept="37vLTG" id="7CEHNszwtSU" role="3clF46">
-        <property role="TrG5h" value="graphics" />
+        <property role="TrG5h" value="g_" />
         <node concept="3uibUv" id="7CEHNszwtSV" role="1tU5fm">
           <ref role="3uigEE" to="1t7x:~Graphics" resolve="Graphics" />
         </node>
       </node>
       <node concept="3clFbS" id="7CEHNszwtSW" role="3clF47">
-        <node concept="3clFbF" id="7CEHNszExdF" role="3cqZAp">
-          <node concept="2OqwBi" id="7CEHNszExkt" role="3clFbG">
-            <node concept="1eOMI4" id="7CEHNszExdD" role="2Oq$k0">
-              <node concept="10QFUN" id="7CEHNszExdA" role="1eOMHV">
-                <node concept="3uibUv" id="7CEHNszExgL" role="10QFUM">
-                  <ref role="3uigEE" to="1t7x:~Graphics2D" resolve="Graphics2D" />
-                </node>
-                <node concept="37vLTw" id="7CEHNszExhv" role="10QFUP">
-                  <ref role="3cqZAo" node="7CEHNszwtSU" resolve="graphics" />
-                </node>
-              </node>
+        <node concept="3clFbH" id="6PI4N6Jqr6s" role="3cqZAp" />
+        <node concept="3clFbH" id="6PI4N6JqqGc" role="3cqZAp" />
+        <node concept="3clFbH" id="6PI4N6JqqLt" role="3cqZAp" />
+        <node concept="3cpWs8" id="6PI4N6Jqrmd" role="3cqZAp">
+          <node concept="3cpWsn" id="6PI4N6Jqrme" role="3cpWs9">
+            <property role="TrG5h" value="g" />
+            <node concept="3uibUv" id="6PI4N6Jqrmf" role="1tU5fm">
+              <ref role="3uigEE" to="1t7x:~Graphics2D" resolve="Graphics2D" />
             </node>
-            <node concept="liA8E" id="7CEHNszExsw" role="2OqNvi">
-              <ref role="37wK5l" to="1t7x:~Graphics2D.setRenderingHint(java.awt.RenderingHints$Key,java.lang.Object):void" resolve="setRenderingHint" />
-              <node concept="10M0yZ" id="7CEHNszExt_" role="37wK5m">
-                <ref role="3cqZAo" to="1t7x:~RenderingHints.KEY_ANTIALIASING" resolve="KEY_ANTIALIASING" />
-                <ref role="1PxDUh" to="1t7x:~RenderingHints" resolve="RenderingHints" />
+            <node concept="10QFUN" id="6PI4N6JqsBP" role="33vP2m">
+              <node concept="2OqwBi" id="6PI4N6Jqs6h" role="10QFUP">
+                <node concept="37vLTw" id="6PI4N6JqsKN" role="2Oq$k0">
+                  <ref role="3cqZAo" node="7CEHNszwtSU" resolve="g_" />
+                </node>
+                <node concept="liA8E" id="6PI4N6Jqsh6" role="2OqNvi">
+                  <ref role="37wK5l" to="1t7x:~Graphics.create():java.awt.Graphics" resolve="create" />
+                </node>
               </node>
-              <node concept="10M0yZ" id="7CEHNszExy7" role="37wK5m">
-                <ref role="1PxDUh" to="1t7x:~RenderingHints" resolve="RenderingHints" />
-                <ref role="3cqZAo" to="1t7x:~RenderingHints.VALUE_ANTIALIAS_ON" resolve="VALUE_ANTIALIAS_ON" />
+              <node concept="3uibUv" id="6PI4N6JqsBQ" role="10QFUM">
+                <ref role="3uigEE" to="1t7x:~Graphics2D" resolve="Graphics2D" />
               </node>
             </node>
           </node>
         </node>
-        <node concept="3clFbF" id="7CEHNszwuDf" role="3cqZAp">
-          <node concept="2OqwBi" id="7CEHNszwuEW" role="3clFbG">
-            <node concept="37vLTw" id="7CEHNszwuDe" role="2Oq$k0">
-              <ref role="3cqZAo" node="7CEHNszwtjr" resolve="myTooltipCell" />
+        <node concept="2GUZhq" id="6PI4N6Jqqpx" role="3cqZAp">
+          <node concept="3clFbS" id="6PI4N6Jqqpz" role="2GV8ay">
+            <node concept="3clFbF" id="6PI4N6Jqu2Y" role="3cqZAp">
+              <node concept="2YIFZM" id="6PI4N6JquhA" role="3clFbG">
+                <ref role="37wK5l" to="9a8:~EditorComponent.turnOnAliasingIfPossible(java.awt.Graphics2D):void" resolve="turnOnAliasingIfPossible" />
+                <ref role="1Pybhc" to="9a8:~EditorComponent" resolve="EditorComponent" />
+                <node concept="37vLTw" id="6PI4N6Jquke" role="37wK5m">
+                  <ref role="3cqZAo" node="6PI4N6Jqrme" resolve="g" />
+                </node>
+              </node>
             </node>
-            <node concept="liA8E" id="7CEHNszwv0x" role="2OqNvi">
-              <ref role="37wK5l" to="jsgz:~EditorCell.paint(java.awt.Graphics):void" resolve="paint" />
-              <node concept="37vLTw" id="7CEHNszwv2K" role="37wK5m">
-                <ref role="3cqZAo" node="7CEHNszwtSU" resolve="graphics" />
+            <node concept="3clFbF" id="6PI4N6JquRw" role="3cqZAp">
+              <node concept="2OqwBi" id="6PI4N6JquSO" role="3clFbG">
+                <node concept="37vLTw" id="6PI4N6JquRu" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6PI4N6Jqrme" resolve="g" />
+                </node>
+                <node concept="liA8E" id="6PI4N6Jqv1A" role="2OqNvi">
+                  <ref role="37wK5l" to="1t7x:~Graphics2D.translate(int,int):void" resolve="translate" />
+                  <node concept="3cpWs3" id="6PI4N6JqwWS" role="37wK5m">
+                    <node concept="37vLTw" id="6PI4N6Jqxen" role="3uHU7w">
+                      <ref role="3cqZAo" node="7CEHNszC8rg" resolve="X_PADDING" />
+                    </node>
+                    <node concept="1ZRNhn" id="6PI4N6Jqw7Y" role="3uHU7B">
+                      <node concept="2OqwBi" id="6PI4N6Jqvdv" role="2$L3a6">
+                        <node concept="37vLTw" id="6PI4N6Jqv6U" role="2Oq$k0">
+                          <ref role="3cqZAo" node="7CEHNszwtjr" resolve="myTooltipCell" />
+                        </node>
+                        <node concept="liA8E" id="6PI4N6Jqvjz" role="2OqNvi">
+                          <ref role="37wK5l" to="nu8v:~EditorCell.getX():int" resolve="getX" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                  <node concept="3cpWs3" id="6PI4N6JqxGv" role="37wK5m">
+                    <node concept="37vLTw" id="6PI4N6JqyvK" role="3uHU7w">
+                      <ref role="3cqZAo" node="3brlo9KRxuh" resolve="Y_PADDING" />
+                    </node>
+                    <node concept="1ZRNhn" id="6PI4N6JqwvA" role="3uHU7B">
+                      <node concept="2OqwBi" id="6PI4N6JqvIZ" role="2$L3a6">
+                        <node concept="37vLTw" id="6PI4N6JqvyK" role="2Oq$k0">
+                          <ref role="3cqZAo" node="7CEHNszwtjr" resolve="myTooltipCell" />
+                        </node>
+                        <node concept="liA8E" id="6PI4N6JqvTO" role="2OqNvi">
+                          <ref role="37wK5l" to="nu8v:~EditorCell.getY():int" resolve="getY" />
+                        </node>
+                      </node>
+                    </node>
+                  </node>
+                </node>
+              </node>
+            </node>
+            <node concept="3clFbF" id="7CEHNszwuDf" role="3cqZAp">
+              <node concept="2OqwBi" id="7CEHNszwuEW" role="3clFbG">
+                <node concept="37vLTw" id="7CEHNszwuDe" role="2Oq$k0">
+                  <ref role="3cqZAo" node="7CEHNszwtjr" resolve="myTooltipCell" />
+                </node>
+                <node concept="liA8E" id="7CEHNszwv0x" role="2OqNvi">
+                  <ref role="37wK5l" to="jsgz:~EditorCell.paint(java.awt.Graphics):void" resolve="paint" />
+                  <node concept="37vLTw" id="6PI4N6JqERf" role="37wK5m">
+                    <ref role="3cqZAo" node="6PI4N6Jqrme" resolve="g" />
+                  </node>
+                </node>
+              </node>
+            </node>
+          </node>
+          <node concept="3clFbS" id="6PI4N6Jqqp$" role="2GVbov">
+            <node concept="3clFbF" id="6PI4N6JqsQw" role="3cqZAp">
+              <node concept="2OqwBi" id="6PI4N6JqsRE" role="3clFbG">
+                <node concept="37vLTw" id="6PI4N6JqsQv" role="2Oq$k0">
+                  <ref role="3cqZAo" node="6PI4N6Jqrme" resolve="g" />
+                </node>
+                <node concept="liA8E" id="6PI4N6JqsYp" role="2OqNvi">
+                  <ref role="37wK5l" to="1t7x:~Graphics.dispose():void" resolve="dispose" />
+                </node>
               </node>
             </node>
           </node>
@@ -2930,6 +2980,28 @@
                 </node>
                 <node concept="37vLTw" id="7XU1fOGnIy6" role="2ZW6bz">
                   <ref role="3cqZAo" node="7XU1fOGniQL" resolve="c" />
+                </node>
+              </node>
+              <node concept="3eNFk2" id="6PI4N6JpObo" role="3eNLev">
+                <node concept="2ZW3vV" id="6PI4N6JpVK8" role="3eO9$A">
+                  <node concept="3uibUv" id="6PI4N6JpVLy" role="2ZW6by">
+                    <ref role="3uigEE" node="6zKSYRPT1To" resolve="ITooltip" />
+                  </node>
+                  <node concept="37vLTw" id="6PI4N6JpVIL" role="2ZW6bz">
+                    <ref role="3cqZAo" node="7XU1fOGniQL" resolve="c" />
+                  </node>
+                </node>
+                <node concept="3clFbS" id="6PI4N6JpObq" role="3eOfB_">
+                  <node concept="3cpWs6" id="6PI4N6JpVN$" role="3cqZAp">
+                    <node concept="10QFUN" id="6PI4N6JpYZw" role="3cqZAk">
+                      <node concept="3uibUv" id="6PI4N6Jq0$P" role="10QFUM">
+                        <ref role="3uigEE" node="6zKSYRPT1To" resolve="ITooltip" />
+                      </node>
+                      <node concept="37vLTw" id="6PI4N6JpXq4" role="10QFUP">
+                        <ref role="3cqZAo" node="7XU1fOGniQL" resolve="c" />
+                      </node>
+                    </node>
+                  </node>
                 </node>
               </node>
             </node>
