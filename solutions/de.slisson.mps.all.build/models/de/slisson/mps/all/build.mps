@@ -1125,11 +1125,6 @@
         <node concept="1E0d5M" id="1sO539bGQw6" role="1E1XAP">
           <ref role="1E0d5P" node="4p3FRivDLPL" resolve="de.slisson.mps.editor.multiline.runtime" />
         </node>
-        <node concept="1SiIV0" id="1sO539bGQw7" role="3bR37C">
-          <node concept="1Busua" id="1sO539bGQw8" role="1SiIV1">
-            <ref role="1Busuk" to="ffeo:7Kfy9QB6LaO" resolve="jetbrains.mps.lang.structure" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="r6xhSD_t3E" role="3bR37C">
           <node concept="3bR9La" id="r6xhSD_t3F" role="1SiIV1">
             <property role="3bR36h" value="false" />
