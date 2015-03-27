@@ -2849,12 +2849,6 @@
               <ref role="3bR37D" to="ffeo:7YI57w6K0iE" resolve="jetbrains.mps.lang.editor#1129914002149" />
             </node>
           </node>
-          <node concept="1SiIV0" id="6$BmuzArNEU" role="3bR37C">
-            <node concept="3bR9La" id="6$BmuzArNEV" role="1SiIV1">
-              <property role="3bR36h" value="false" />
-              <ref role="3bR37D" node="6$BmuzArJZq" resolve="de.itemis.mps.tooltips.runtime" />
-            </node>
-          </node>
           <node concept="1SiIV0" id="6$BmuzArNEW" role="3bR37C">
             <node concept="3bR9La" id="6$BmuzArNEX" role="1SiIV1">
               <property role="3bR36h" value="false" />
@@ -2866,6 +2860,9 @@
           <node concept="1Busua" id="7UnSZUGhVul" role="1SiIV1">
             <ref role="1Busuk" to="ffeo:7Kfy9QB6L4X" resolve="jetbrains.mps.lang.editor" />
           </node>
+        </node>
+        <node concept="1E0d5M" id="1jqeBRZN83G" role="1E1XAP">
+          <ref role="1E0d5P" node="64TsoMQT2qP" resolve="de.slisson.mps.hacks.editor" />
         </node>
       </node>
     </node>
