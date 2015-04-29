@@ -13,7 +13,7 @@
     </language>
   </registry>
   <node concept="3KoksT" id="3_TG3j98$Pz">
-    <property role="3KoQWc" value="Value3" />
+    <property role="3KoQWc" value="Value2" />
   </node>
 </model>
 
