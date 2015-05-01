@@ -336,6 +336,9 @@
       <node concept="m$_yC" id="1sO539bGQvR" role="m$_yJ">
         <ref role="m$_y1" node="4p3FRivDLPy" resolve="org.apache.commons" />
       </node>
+      <node concept="m$_yC" id="6Y0V2RJx6rY" role="m$_yJ">
+        <ref role="m$_y1" node="6Y0V2RJk3uw" resolve="de.itemis.mps.selection" />
+      </node>
       <node concept="3_J27D" id="1sO539bGQv$" role="m_cZH">
         <node concept="3Mxwew" id="1sO539bGQv_" role="3MwsjC">
           <property role="3MwjfP" value="mps-richtext" />
@@ -1207,6 +1210,12 @@
           <node concept="3bR9La" id="31bAEZ1fPhg" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="31bAEZ0srt5" resolve="org.apache.commons" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="6Y0V2RJx5Tz" role="3bR37C">
+          <node concept="3bR9La" id="6Y0V2RJx5T$" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
           </node>
         </node>
       </node>

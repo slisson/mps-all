@@ -636,6 +636,7 @@
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
         <depends>org.apache.commons</depends>
+        <depends>de.itemis.mps.selection</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -657,6 +658,7 @@
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="dc038ceb-b7ea-4fea-ac12-55f7400e97ba(de.slisson.mps.editor.multiline.runtime)" />
+          <module ref="7037b32c-9607-4f8e-81bd-1f028a4c117b(de.slisson.mps.reflection.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
@@ -2157,7 +2159,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.richtext" depends="java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext.customcell, java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.richtext" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.richtext.customcell, java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2177,7 +2179,9 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.selection.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" />
         <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />

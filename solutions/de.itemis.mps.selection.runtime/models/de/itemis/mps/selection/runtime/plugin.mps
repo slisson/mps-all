@@ -1649,7 +1649,7 @@
     </node>
   </node>
   <node concept="312cEu" id="3mjtVpITv5Q">
-    <property role="TrG5h" value="AbstractDragSelectionMouseListener" />
+    <property role="TrG5h" value="AbstractDragSelectionHandler" />
     <property role="1sVAO0" value="true" />
     <node concept="2tJIrI" id="3mjtVpITvfc" role="jymVt" />
     <node concept="3clFb_" id="7CiSlGy_bWD" role="jymVt">
@@ -1975,14 +1975,14 @@
     </node>
     <node concept="3Tm1VV" id="3mjtVpITvgJ" role="1B3o_S" />
     <node concept="3uibUv" id="3mjtVpIUSO9" role="1zkMxy">
-      <ref role="3uigEE" node="3mjtVpITv5Q" resolve="AbstractDragSelectionMouseListener" />
+      <ref role="3uigEE" node="3mjtVpITv5Q" resolve="AbstractDragSelectionHandler" />
     </node>
   </node>
   <node concept="312cEu" id="6Y0V2RJbSKG">
     <property role="TrG5h" value="NodeRangeSelectionHandler" />
     <node concept="3Tm1VV" id="6Y0V2RJbSKH" role="1B3o_S" />
     <node concept="3uibUv" id="6Y0V2RJbSL9" role="1zkMxy">
-      <ref role="3uigEE" node="3mjtVpITv5Q" resolve="AbstractDragSelectionMouseListener" />
+      <ref role="3uigEE" node="3mjtVpITv5Q" resolve="AbstractDragSelectionHandler" />
     </node>
     <node concept="3clFb_" id="6Y0V2RJbSLk" role="jymVt">
       <property role="1EzhhJ" value="false" />
