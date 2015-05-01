@@ -28,6 +28,7 @@
     <import index="ec5l" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/f:java_stub#8865b7a8-5271-43d3-884c-6fd1d9cfdd34#org.jetbrains.mps.openapi.model(MPS.OpenAPI/org.jetbrains.mps.openapi.model@java_stub)" />
     <import index="4jas" ref="r:b1829bc1-5615-478b-87a3-55032e34acfd(de.itemis.mps.selection.runtime)" />
     <import index="jxum" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.selection(MPS.Editor/jetbrains.mps.nodeEditor.selection@java_stub)" />
+    <import index="v6aj" ref="r:176c6aa3-c2ff-4c24-bd16-d09e7c304982(de.itemis.mps.selection.runtime.linear)" />
     <import index="z8iw" ref="r:dfdf3542-dbcf-43df-870a-3c3504b3c840(jetbrains.mps.baseLanguage.collections.custom)" implicit="true" />
   </imports>
   <registry>
@@ -484,6 +485,11 @@
           <node concept="2ShNRf" id="3mjtVpIV0Fv" role="HW$Y0">
             <node concept="HV5vD" id="3mjtVpIV2z5" role="2ShVmc">
               <ref role="HV5vE" node="3mjtVpITvgI" resolve="CommonParentSelectionHandler" />
+            </node>
+          </node>
+          <node concept="2ShNRf" id="5VrxeMEQHoi" role="HW$Y0">
+            <node concept="HV5vD" id="5VrxeMEQNJy" role="2ShVmc">
+              <ref role="HV5vE" to="v6aj:5VrxeMEO90V" resolve="LinearSelectionHandler" />
             </node>
           </node>
         </node>
