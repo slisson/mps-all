@@ -977,7 +977,7 @@
     <node concept="Wx3nA" id="61ogb3QLql1" role="jymVt">
       <property role="3TUv4t" value="true" />
       <property role="TrG5h" value="CELL_CONDITION" />
-      <node concept="3Tm6S6" id="61ogb3QLqkX" role="1B3o_S" />
+      <node concept="3Tm1VV" id="5VrxeMERwTS" role="1B3o_S" />
       <node concept="3uibUv" id="61ogb3QLqkY" role="1tU5fm">
         <ref role="3uigEE" to="r9fo:~Condition" resolve="Condition" />
         <node concept="3uibUv" id="61ogb3QLqkZ" role="11_B2D">
@@ -3836,10 +3836,14 @@
           </node>
           <node concept="37vLTI" id="5VrxeMEQ5zB" role="1Dwrff">
             <node concept="2YIFZM" id="5VrxeMEQ5A9" role="37vLTx">
-              <ref role="37wK5l" to="nu8v:~CellTraversalUtil.getNextLeaf(jetbrains.mps.openapi.editor.cells.EditorCell):jetbrains.mps.openapi.editor.cells.EditorCell" resolve="getNextLeaf" />
               <ref role="1Pybhc" to="nu8v:~CellTraversalUtil" resolve="CellTraversalUtil" />
+              <ref role="37wK5l" to="nu8v:~CellTraversalUtil.getNextLeaf(jetbrains.mps.openapi.editor.cells.EditorCell,org.jetbrains.mps.util.Condition):jetbrains.mps.openapi.editor.cells.EditorCell" resolve="getNextLeaf" />
               <node concept="37vLTw" id="5VrxeMEQ5Bl" role="37wK5m">
                 <ref role="3cqZAo" node="5VrxeMEQ4ed" resolve="nextLeaf" />
+              </node>
+              <node concept="10M0yZ" id="5VrxeMERxsE" role="37wK5m">
+                <ref role="1PxDUh" node="4ZiZg53AFD3" resolve="LinearSelection" />
+                <ref role="3cqZAo" node="61ogb3QLql1" resolve="CELL_CONDITION" />
               </node>
             </node>
             <node concept="37vLTw" id="5VrxeMEQ5yb" role="37vLTJ">
@@ -3919,10 +3923,14 @@
               </node>
               <node concept="37vLTI" id="5VrxeMEQbTP" role="1Dwrff">
                 <node concept="2YIFZM" id="5VrxeMEQh$Z" role="37vLTx">
-                  <ref role="37wK5l" to="nu8v:~CellTraversalUtil.getPrevLeaf(jetbrains.mps.openapi.editor.cells.EditorCell):jetbrains.mps.openapi.editor.cells.EditorCell" resolve="getPrevLeaf" />
                   <ref role="1Pybhc" to="nu8v:~CellTraversalUtil" resolve="CellTraversalUtil" />
+                  <ref role="37wK5l" to="nu8v:~CellTraversalUtil.getPrevLeaf(jetbrains.mps.openapi.editor.cells.EditorCell,org.jetbrains.mps.util.Condition):jetbrains.mps.openapi.editor.cells.EditorCell" resolve="getPrevLeaf" />
                   <node concept="37vLTw" id="5VrxeMEQh_0" role="37wK5m">
                     <ref role="3cqZAo" node="5VrxeMEQbTJ" resolve="prevLeaf" />
+                  </node>
+                  <node concept="10M0yZ" id="5VrxeMERIa1" role="37wK5m">
+                    <ref role="3cqZAo" node="61ogb3QLql1" resolve="CELL_CONDITION" />
+                    <ref role="1PxDUh" node="4ZiZg53AFD3" resolve="LinearSelection" />
                   </node>
                 </node>
                 <node concept="37vLTw" id="5VrxeMEQbTS" role="37vLTJ">
