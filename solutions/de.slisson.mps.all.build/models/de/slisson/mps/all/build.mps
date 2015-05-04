@@ -2154,6 +2154,24 @@
             <ref role="3bR37D" to="ffeo:44LXwdzyvTi" resolve="Annotations" />
           </node>
         </node>
+        <node concept="1SiIV0" id="5d_XfTkm7VR" role="3bR37C">
+          <node concept="3bR9La" id="5d_XfTkm7VS" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJt" resolve="jetbrains.mps.ide.platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5d_XfTkm7VT" role="3bR37C">
+          <node concept="3bR9La" id="5d_XfTkm7VU" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5d_XfTkm7VV" role="3bR37C">
+          <node concept="3bR9La" id="5d_XfTkm7VW" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="7klUZA6XM5R" role="3989C9">
