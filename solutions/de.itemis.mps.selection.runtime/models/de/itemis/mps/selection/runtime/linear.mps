@@ -23,6 +23,7 @@
     <import index="jxum" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.selection(MPS.Editor/jetbrains.mps.nodeEditor.selection@java_stub)" />
     <import index="8jfv" ref="r:b49d7b4c-a97a-4226-a59e-b10183eecf00(de.itemis.mps.selection.runtime.plugin)" />
     <import index="4jas" ref="r:b1829bc1-5615-478b-87a3-55032e34acfd(de.itemis.mps.selection.runtime)" />
+    <import index="6tp1" ref="r:5c0390a8-12e2-407a-ba93-793107153436(de.itemis.mps.selection.runtime.mouse)" />
     <import index="tpce" ref="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" implicit="true" />
     <import index="e2lb" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" implicit="true" />
   </imports>
@@ -3589,7 +3590,7 @@
     <property role="TrG5h" value="LinearSelectionHandler" />
     <node concept="3Tm1VV" id="5VrxeMEO90W" role="1B3o_S" />
     <node concept="3uibUv" id="5VrxeMEPanz" role="1zkMxy">
-      <ref role="3uigEE" to="8jfv:3mjtVpITv5Q" resolve="AbstractDragSelectionHandler" />
+      <ref role="3uigEE" to="6tp1:630t2b8eexZ" resolve="AbstractDragSelectionHandler" />
     </node>
     <node concept="3clFb_" id="5VrxeMEPbnT" role="jymVt">
       <property role="1EzhhJ" value="false" />
