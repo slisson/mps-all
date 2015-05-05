@@ -2173,6 +2173,48 @@
           </node>
         </node>
       </node>
+      <node concept="1E1JtD" id="4dUgPRDTtko" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="de.itemis.mps.selection.intentions" />
+        <property role="3LESm3" value="05f762a9-99f5-4971-a9ed-5a6481dc2be4" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="4dUgPRDTtkr" role="3LF7KH">
+          <node concept="2Ry0Ak" id="4dUgPRDTukI" role="iGT6I">
+            <property role="2Ry0Am" value="languages" />
+            <node concept="2Ry0Ak" id="4dUgPRDTuzv" role="2Ry0An">
+              <property role="2Ry0Am" value="de.itemis.mps.selection.intentions" />
+              <node concept="2Ry0Ak" id="4dUgPRDTuMg" role="2Ry0An">
+                <property role="2Ry0Am" value="de.itemis.mps.selection.intentions.mpl" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4dUgPRDTyLW" role="3bR37C">
+          <node concept="3bR9La" id="4dUgPRDTyLX" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="4dUgPRDTtko" resolve="de.itemis.mps.selection.intentions" />
+          </node>
+        </node>
+        <node concept="1E0d5M" id="4dUgPRDTyLY" role="1E1XAP">
+          <ref role="1E0d5P" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
+        </node>
+        <node concept="1SiIV0" id="4dUgPRDTyLZ" role="3bR37C">
+          <node concept="1Busua" id="4dUgPRDTyM0" role="1SiIV1">
+            <ref role="1Busuk" to="ffeo:7Kfy9QB6KYb" resolve="jetbrains.mps.baseLanguage" />
+          </node>
+        </node>
+        <node concept="1yeLz9" id="4dUgPRDTyM1" role="1TViLv">
+          <property role="TrG5h" value="de.itemis.mps.selection.intentions#6009478650970381565" />
+          <property role="3LESm3" value="42608bd1-85bd-4af0-aacd-1a69028ce333" />
+          <property role="2GAjPV" value="false" />
+          <node concept="1SiIV0" id="4dUgPRDTyM2" role="3bR37C">
+            <node concept="3bR9La" id="4dUgPRDTyM3" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
+            </node>
+          </node>
+        </node>
+      </node>
     </node>
     <node concept="2G$12M" id="7klUZA6XM5R" role="3989C9">
       <property role="TrG5h" value="de.slisson.mps.conditionalEditor" />
