@@ -19,11 +19,13 @@
     <import index="y596" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor.selection(MPS.Editor/jetbrains.mps.openapi.editor.selection@java_stub)" />
     <import index="srng" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.openapi.editor(MPS.Editor/jetbrains.mps.openapi.editor@java_stub)" />
     <import index="jxum" ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224/f:java_stub#1ed103c3-3aa6-49b7-9c21-6765ee11f224#jetbrains.mps.nodeEditor.selection(MPS.Editor/jetbrains.mps.nodeEditor.selection@java_stub)" />
+    <import index="as9o" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/f:java_stub#3f233e7f-b8a6-46d2-a57f-795d56775243#org.jetbrains.annotations(Annotations/org.jetbrains.annotations@java_stub)" />
     <import index="e2lb" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/f:java_stub#6354ebe7-c22a-4a0f-ac54-50b52ab9b065#java.lang(JDK/java.lang@java_stub)" implicit="true" />
     <import index="z8iw" ref="r:dfdf3542-dbcf-43df-870a-3c3504b3c840(jetbrains.mps.baseLanguage.collections.custom)" implicit="true" />
   </imports>
   <registry>
     <language id="f3061a53-9226-4cc5-a443-f952ceaf5816" name="jetbrains.mps.baseLanguage">
+      <concept id="1080223426719" name="jetbrains.mps.baseLanguage.structure.OrExpression" flags="nn" index="22lmx$" />
       <concept id="1215693861676" name="jetbrains.mps.baseLanguage.structure.BaseAssignmentExpression" flags="nn" index="d038R">
         <child id="1068498886297" name="rValue" index="37vLTx" />
         <child id="1068498886295" name="lValue" index="37vLTJ" />
@@ -1292,6 +1294,25 @@
             </node>
           </node>
         </node>
+        <node concept="3clFbJ" id="7YF6A5eXuZv" role="3cqZAp">
+          <node concept="3clFbS" id="7YF6A5eXuZx" role="3clFbx">
+            <node concept="3cpWs6" id="7YF6A5eXvdT" role="3cqZAp" />
+          </node>
+          <node concept="22lmx$" id="7YF6A5eXv8R" role="3clFbw">
+            <node concept="3clFbC" id="7YF6A5eXvcj" role="3uHU7w">
+              <node concept="10Nm6u" id="7YF6A5eXvda" role="3uHU7w" />
+              <node concept="37vLTw" id="7YF6A5eXvbf" role="3uHU7B">
+                <ref role="3cqZAo" node="630t2b8eeCC" resolve="endCell" />
+              </node>
+            </node>
+            <node concept="3clFbC" id="7YF6A5eXv6C" role="3uHU7B">
+              <node concept="37vLTw" id="7YF6A5eXv4J" role="3uHU7B">
+                <ref role="3cqZAo" node="630t2b8eeCz" resolve="startCell" />
+              </node>
+              <node concept="10Nm6u" id="7YF6A5eXv8j" role="3uHU7w" />
+            </node>
+          </node>
+        </node>
         <node concept="3cpWs8" id="630t2b8eeCG" role="3cqZAp">
           <node concept="3cpWsn" id="630t2b8eeCH" role="3cpWs9">
             <property role="TrG5h" value="selection" />
@@ -1372,11 +1393,17 @@
         <node concept="3uibUv" id="630t2b8eeDa" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
         </node>
+        <node concept="2AHcQZ" id="7YF6A5eXve4" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
+        </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeDb" role="3clF46">
         <property role="TrG5h" value="toCell" />
         <node concept="3uibUv" id="630t2b8eeDc" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
+        </node>
+        <node concept="2AHcQZ" id="7YF6A5eYzq5" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
         </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeDd" role="3clF46">
@@ -1746,11 +1773,17 @@
         <node concept="3uibUv" id="630t2b8eeFy" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
         </node>
+        <node concept="2AHcQZ" id="7YF6A5eYzLo" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
+        </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeFz" role="3clF46">
         <property role="TrG5h" value="toCell" />
         <node concept="3uibUv" id="630t2b8eeF$" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
+        </node>
+        <node concept="2AHcQZ" id="7YF6A5eYzMg" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
         </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeF_" role="3clF46">
@@ -1789,11 +1822,17 @@
         <node concept="3uibUv" id="630t2b8eeFO" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
         </node>
+        <node concept="2AHcQZ" id="7YF6A5eYzNa" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
+        </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeFP" role="3clF46">
         <property role="TrG5h" value="toCell" />
         <node concept="3uibUv" id="630t2b8eeFQ" role="1tU5fm">
           <ref role="3uigEE" to="nu8v:~EditorCell" resolve="EditorCell" />
+        </node>
+        <node concept="2AHcQZ" id="7YF6A5eYzOj" role="2AJF6D">
+          <ref role="2AI5Lk" to="as9o:~NotNull" resolve="NotNull" />
         </node>
       </node>
       <node concept="37vLTG" id="630t2b8eeFR" role="3clF46">
