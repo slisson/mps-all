@@ -3877,7 +3877,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3900,6 +3900,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
@@ -3924,7 +3925,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3948,6 +3949,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
@@ -3985,7 +3987,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -4011,6 +4013,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />

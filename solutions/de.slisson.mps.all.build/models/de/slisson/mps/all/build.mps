@@ -2671,7 +2671,7 @@
         </node>
         <node concept="1SiIV0" id="6$BmuzArKFj" role="3bR37C">
           <node concept="3bR9La" id="6$BmuzArKFk" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" node="6$BmuzArJZq" resolve="de.itemis.mps.tooltips.runtime" />
           </node>
         </node>
