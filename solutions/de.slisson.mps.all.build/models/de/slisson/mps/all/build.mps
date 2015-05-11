@@ -299,6 +299,9 @@
       <node concept="m$_yC" id="31bAEZ0stND" role="m$_yJ">
         <ref role="m$_y1" node="4p3FRivDLPy" resolve="org.apache.commons" />
       </node>
+      <node concept="m$_yC" id="3UK0RR4mewi" role="m$_yJ">
+        <ref role="m$_y1" node="6Y0V2RJk3uw" resolve="de.itemis.mps.selection" />
+      </node>
       <node concept="3_J27D" id="31bAEZ0srEi" role="m_cZH">
         <node concept="3Mxwew" id="31bAEZ0srEj" role="3MwsjC">
           <property role="3MwjfP" value="mps-multiline" />
@@ -1085,6 +1088,12 @@
             <ref role="3bR37D" node="31bAEZ0srt5" resolve="org.apache.commons" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3UK0RR4mcDs" role="3bR37C">
+          <node concept="3bR9La" id="3UK0RR4mcDt" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="1sO539bGQvA" role="3989C9">
@@ -1214,7 +1223,7 @@
         </node>
         <node concept="1SiIV0" id="6Y0V2RJx5Tz" role="3bR37C">
           <node concept="3bR9La" id="6Y0V2RJx5T$" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
           </node>
         </node>

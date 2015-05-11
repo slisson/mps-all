@@ -534,6 +534,7 @@
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
         <depends>org.apache.commons</depends>
+        <depends>de.itemis.mps.selection</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -1846,8 +1847,6 @@
         <module file="${basedir}/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" />
         <module file="${basedir}/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.mpl" />
         <module file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" />
-        <module file="${basedir}/mps-multiline/languages/multiline/multiline.mpl" />
-        <module file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/runtime.msd" />
         <module file="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" />
         <module file="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" />
         <module file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" />
@@ -1871,13 +1870,15 @@
         <module file="${basedir}/solutions/de.itemis.mps.tooltips.runtime/de.itemis.mps.tooltips.runtime.msd" />
         <module file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" />
         <module file="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" />
+        <module file="${basedir}/mps-multiline/languages/multiline/multiline.mpl" />
+        <module file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/runtime.msd" />
         <module file="${basedir}/mps-hacks/solutions/de.slisson.mps.hacks.editor/de.slisson.mps.hacks.editor.msd" />
-        <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
       </chunk>
       <chunk>
         <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" />
+        <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
       </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
@@ -2153,7 +2154,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.org.apache.commons, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2162,7 +2163,6 @@
         <path location="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
       </src>
       <classpath>
-        <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
@@ -2174,6 +2174,8 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.selection.runtime" />
+        <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
         <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
         <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
@@ -2269,7 +2271,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.richtext#1212807527450963095" depends="java.compile.de.slisson.mps.richtext, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.richtext#1212807527450963095" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.de.slisson.mps.richtext, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext#1212807527450963095" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2289,6 +2291,7 @@
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.selection.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.richtext" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
@@ -4498,9 +4501,6 @@
     <delete dir="${basedir}/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/source_gen" />
     <delete dir="${basedir}/languages/de.itemis.mps.tooltips/source_gen" />
     <delete dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
-    <delete dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
-    <delete dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
-    <delete dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <delete dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" />
     <delete dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
@@ -4527,10 +4527,11 @@
     <delete dir="${basedir}/solutions/de.itemis.mps.tooltips.runtime/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
+    <delete dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
+    <delete dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
+    <delete dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <delete dir="${basedir}/mps-hacks/solutions/de.slisson.mps.hacks.editor/source_gen" />
     <delete dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/generator/source_gen" />
-    <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
-    <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/generator/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
@@ -4543,5 +4544,7 @@
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
     <delete dir="${basedir}/languages/de.itemis.mps.selection.intentions/generator/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
+    <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
+    <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
   </target>
 </project>
