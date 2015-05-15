@@ -569,6 +569,9 @@
       <node concept="m$_yC" id="7szUFELLHSD" role="m$_yJ">
         <ref role="m$_y1" node="7szUFELHeHf" resolve="de.itemis.mps.editor.widgets" />
       </node>
+      <node concept="m$_yC" id="4opyGmdCDDq" role="m$_yJ">
+        <ref role="m$_y1" node="6Y0V2RJk3uw" resolve="de.itemis.mps.selection" />
+      </node>
       <node concept="3_J27D" id="4be$WTb1MZK" role="m_cZH">
         <node concept="3Mxwew" id="4be$WTb1MZL" role="3MwsjC">
           <property role="3MwjfP" value="de.itemis.mps.editor.diagram" />
@@ -2682,6 +2685,12 @@
           <node concept="3bR9La" id="6$BmuzArKFk" role="1SiIV1">
             <property role="3bR36h" value="true" />
             <ref role="3bR37D" node="6$BmuzArJZq" resolve="de.itemis.mps.tooltips.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="4opyGmdCCcL" role="3bR37C">
+          <node concept="3bR9La" id="4opyGmdCCcM" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
           </node>
         </node>
       </node>
