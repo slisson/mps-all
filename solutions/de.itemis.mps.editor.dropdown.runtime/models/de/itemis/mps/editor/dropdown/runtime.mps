@@ -2,6 +2,7 @@
 <model ref="r:2da81fb8-b6c6-47b8-8c70-4c760b6faf63(de.itemis.mps.editor.dropdown.runtime)">
   <persistence version="9" />
   <languages>
+    <use id="63650c59-16c8-498a-99c8-005c7ee9515d" name="jetbrains.mps.lang.access" version="0" />
     <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
   </languages>
   <imports>
@@ -415,7 +416,7 @@
         <node concept="3cpWs8" id="7szUFELGa$C" role="3cqZAp">
           <node concept="3cpWsn" id="7szUFELGa$D" role="3cpWs9">
             <property role="TrG5h" value="editorComponent" />
-            <node concept="3uibUv" id="7szUFELGaB$" role="1tU5fm">
+            <node concept="3uibUv" id="2$QdVR142O7" role="1tU5fm">
               <ref role="3uigEE" to="9a8:~EditorComponent" resolve="EditorComponent" />
             </node>
             <node concept="10QFUN" id="7szUFELGaD6" role="33vP2m">
@@ -441,9 +442,7 @@
               <node concept="3clFbT" id="7szUFELGggc" role="37wK5m">
                 <property role="3clFbU" value="true" />
               </node>
-              <node concept="3clFbT" id="7szUFELGgm2" role="37wK5m">
-                <property role="3clFbU" value="true" />
-              </node>
+              <node concept="3clFbT" id="7szUFELGgm2" role="37wK5m" />
             </node>
           </node>
         </node>
