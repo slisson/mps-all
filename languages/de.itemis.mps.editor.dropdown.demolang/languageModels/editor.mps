@@ -36,6 +36,7 @@
       <concept id="1219418625346" name="jetbrains.mps.lang.editor.structure.IStyleContainer" flags="ng" index="3F0Thp">
         <child id="1219418656006" name="styleItem" index="3F10Kt" />
       </concept>
+      <concept id="1073389882823" name="jetbrains.mps.lang.editor.structure.CellModel_RefNode" flags="sg" stub="730538219795960754" index="3F1sOY" />
       <concept id="1166049232041" name="jetbrains.mps.lang.editor.structure.AbstractComponent" flags="ng" index="1XWOmA">
         <reference id="1166049300910" name="conceptDeclaration" index="1XX52x" />
       </concept>
@@ -72,6 +73,17 @@
           </node>
         </node>
         <node concept="l2Vlx" id="3_TG3j96g8q" role="2iSdaV" />
+      </node>
+      <node concept="3EZMnI" id="2$QdVR13E8J" role="3EZMnx">
+        <node concept="3F0ifn" id="2$QdVR13E8K" role="3EZMnx">
+          <property role="3F0ifm" value="choose value:" />
+        </node>
+        <node concept="LrGm3" id="2$QdVR13E8L" role="3EZMnx">
+          <node concept="3F1sOY" id="2$QdVR13Mdk" role="LrInP">
+            <ref role="1NtTu8" to="o1o8:2$QdVR13Ebx" />
+          </node>
+        </node>
+        <node concept="l2Vlx" id="2$QdVR13E8N" role="2iSdaV" />
       </node>
       <node concept="3F0ifn" id="7szUFELPsXk" role="3EZMnx" />
       <node concept="3F0ifn" id="7szUFELPsXB" role="3EZMnx" />
