@@ -3882,7 +3882,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.shapes" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.shapes" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3900,11 +3900,13 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.mouselistener.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
@@ -3930,7 +3932,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3948,12 +3950,14 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.mouselistener.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
@@ -3992,7 +3996,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram#1110129820007083940" depends="java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram#1110129820007083940" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -4010,6 +4014,7 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.collapsible.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
@@ -4018,6 +4023,7 @@
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.styles" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.layout.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.mouselistener.runtime" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/jgraphx.jar" />
         <fileset file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/lib/klay-emf_2014-05.jar" />
