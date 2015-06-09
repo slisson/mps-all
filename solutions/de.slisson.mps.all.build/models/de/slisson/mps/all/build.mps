@@ -1024,7 +1024,7 @@
         </node>
         <node concept="1SiIV0" id="1sO539bGMYk" role="3bR37C">
           <node concept="3bR9La" id="1sO539bGMYl" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
@@ -1095,6 +1095,12 @@
           <node concept="3bR9La" id="3UK0RR4mcDt" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" node="6Y0V2RJk2ll" resolve="de.itemis.mps.selection.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="77vSOTOhAgA" role="3bR37C">
+          <node concept="3bR9La" id="77vSOTOhAgB" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
           </node>
         </node>
       </node>
@@ -2114,6 +2120,18 @@
           <node concept="3bR9La" id="5QBYBgqwXWA" role="1SiIV1">
             <property role="3bR36h" value="true" />
             <ref role="3bR37D" to="ffeo:2eDSGe9d1q1" resolve="MPS.Workbench" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="77vSOTOhAFd" role="3bR37C">
+          <node concept="3bR9La" id="77vSOTOhAFe" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1H905DlDUSw" resolve="MPS.OpenAPI" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="77vSOTOhAFf" role="3bR37C">
+          <node concept="3bR9La" id="77vSOTOhAFg" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
       </node>

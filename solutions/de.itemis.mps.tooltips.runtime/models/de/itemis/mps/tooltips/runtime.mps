@@ -510,13 +510,9 @@
                   </node>
                 </node>
                 <node concept="liA8E" id="2a194$KunFR" role="2OqNvi">
-                  <ref role="37wK5l" to="jsgz:~EditorCell.paint(java.awt.Graphics,jetbrains.mps.nodeEditor.cells.ParentSettings):void" resolve="paint" />
+                  <ref role="37wK5l" to="jsgz:~EditorCell.paint(java.awt.Graphics):void" resolve="paint" />
                   <node concept="37vLTw" id="2a194$KunHC" role="37wK5m">
                     <ref role="3cqZAo" node="2a194$KujzX" resolve="graphics" />
-                  </node>
-                  <node concept="2YIFZM" id="2a194$KunPY" role="37wK5m">
-                    <ref role="1Pybhc" to="jsgz:~ParentSettings" resolve="ParentSettings" />
-                    <ref role="37wK5l" to="jsgz:~ParentSettings.createDefaultSetting():jetbrains.mps.nodeEditor.cells.ParentSettings" resolve="createDefaultSetting" />
                   </node>
                 </node>
               </node>
