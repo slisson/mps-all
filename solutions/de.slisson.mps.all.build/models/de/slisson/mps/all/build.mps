@@ -3295,7 +3295,7 @@
                   <node concept="2Ry0Ak" id="4be$WTb2zv$" role="2Ry0An">
                     <property role="2Ry0Am" value="app" />
                     <node concept="2Ry0Ak" id="3O4K3r9SCHF" role="2Ry0An">
-                      <property role="2Ry0Am" value="mps32rc1" />
+                      <property role="2Ry0Am" value="mps322" />
                     </node>
                   </node>
                 </node>
@@ -3640,33 +3640,6 @@
     <property role="TrG5h" value="mps-sl-all-tests" />
     <property role="2DA0ip" value="../../" />
     <property role="turDy" value="build-tests.xml" />
-    <node concept="m$_wf" id="7eF9rfAuuoq" role="3989C9">
-      <property role="m$_wk" value="dummy" />
-      <node concept="3_J27D" id="7eF9rfAuuor" role="m$_yQ">
-        <node concept="3Mxwew" id="7eF9rfAuuos" role="3MwsjC">
-          <property role="3MwjfP" value="dummy" />
-        </node>
-      </node>
-      <node concept="3_J27D" id="7eF9rfAuuot" role="m_cZH">
-        <node concept="3Mxwew" id="7eF9rfAuuou" role="3MwsjC">
-          <property role="3MwjfP" value="dummy" />
-        </node>
-      </node>
-      <node concept="3_J27D" id="7eF9rfAuuov" role="m$_w8">
-        <node concept="3Mxwew" id="7eF9rfAuuow" role="3MwsjC">
-          <property role="3MwjfP" value="1.0" />
-        </node>
-      </node>
-      <node concept="m$_yC" id="6yXTMcTQu0W" role="m$_yJ">
-        <ref role="m$_y1" to="ffeo:ymnOULATpW" resolve="jetbrains.mps.testing" />
-      </node>
-      <node concept="m$_yC" id="6yXTMcTRu$_" role="m$_yJ">
-        <ref role="m$_y1" node="4be$WTb1MZD" resolve="de.itemis.mps.editor.diagram" />
-      </node>
-      <node concept="m$f5U" id="6yXTMcTRuyl" role="m$_yh">
-        <ref role="m$f5T" node="6$6tsX_CIRQ" resolve="de.slisson.mps.all.tests" />
-      </node>
-    </node>
     <node concept="2_Ic$z" id="6$6tsX_CF79" role="3989C9">
       <property role="2_Ic$$" value="true" />
       <property role="TZNOO" value="1.6" />
@@ -3846,7 +3819,7 @@
                   <node concept="2Ry0Ak" id="6$6tsX_CF7k" role="2Ry0An">
                     <property role="2Ry0Am" value="app" />
                     <node concept="2Ry0Ak" id="6$6tsX_CF7l" role="2Ry0An">
-                      <property role="2Ry0Am" value="mps32rc1" />
+                      <property role="2Ry0Am" value="mps322" />
                     </node>
                   </node>
                 </node>

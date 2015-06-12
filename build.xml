@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/mps-sl-all" />
   <property name="build.layout" location="${build.dir}/artifacts/mps-sl-all" />
-  <property name="mps.home" location="${basedir}/../../../../../app/mps32rc1" />
+  <property name="mps.home" location="${basedir}/../../../../../app/mps322" />
   <property name="diagram.home" location="${basedir}/diagram" />
   <property name="artifacts.mps" location="${mps.home}" />
   <property name="artifacts.mpsBootstrapCore" location="${mps.home}" />
