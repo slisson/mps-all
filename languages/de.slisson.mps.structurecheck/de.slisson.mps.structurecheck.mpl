@@ -16,6 +16,7 @@
       <external-templates />
       <dependencies>
         <dependency reexport="false">6f14e29b-9796-426f-ae46-86ea46d4d320(de.slisson.mps.structurecheck.runtime)</dependency>
+        <dependency reexport="false">fd392034-7849-419d-9071-12563d152375(jetbrains.mps.baseLanguage.closures)</dependency>
       </dependencies>
       <usedLanguages>
         <usedLanguage>b401a680-8325-4110-8fd3-84331ff25bef(jetbrains.mps.lang.generator)</usedLanguage>
