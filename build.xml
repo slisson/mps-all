@@ -1612,6 +1612,8 @@
           <module ref="7037b32c-9607-4f8e-81bd-1f028a4c117b(de.slisson.mps.reflection.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
+          <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" />
+          <module ref="d7eb0a2a-bd50-4576-beae-e4a89db35f20(jetbrains.mps.lang.scopes.runtime)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
         <sources jar="de.slisson.mps.hacks.editor-src.jar" descriptor="de.slisson.mps.hacks.editor.msd" />
@@ -3633,7 +3635,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor.runtime" depends="java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor.runtime" depends="java.compile.de.slisson.mps.hacks.editor, java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3642,7 +3644,6 @@
         <path location="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
       </src>
       <classpath>
-        <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
@@ -3652,6 +3653,8 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.hacks.editor" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
@@ -3802,6 +3805,7 @@
         <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.hacks.editor">

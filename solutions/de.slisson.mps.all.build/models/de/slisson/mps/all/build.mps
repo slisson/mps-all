@@ -2304,6 +2304,12 @@
             <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
           </node>
         </node>
+        <node concept="1SiIV0" id="3pwG8PShwU5" role="3bR37C">
+          <node concept="3bR9La" id="3pwG8PShwU6" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="64TsoMQT2qP" resolve="de.slisson.mps.hacks.editor" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="7klUZA6XM5Q" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -2430,6 +2436,24 @@
           <node concept="3bR9La" id="64TsoMQT5dM" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3pwG8PShwUn" role="3bR37C">
+          <node concept="3bR9La" id="3pwG8PShwUo" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1TaHNgiIbJb" resolve="MPS.Platform" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3pwG8PShwUp" role="3bR37C">
+          <node concept="3bR9La" id="3pwG8PShwUq" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1ia2VB5guYy" resolve="MPS.IDEA" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3pwG8PShwUr" role="3bR37C">
+          <node concept="3bR9La" id="3pwG8PShwUs" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="2Xjt3l57hht" resolve="de.slisson.mps.reflection.runtime" />
           </node>
         </node>
       </node>

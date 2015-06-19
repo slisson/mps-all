@@ -43,6 +43,7 @@
       <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.dynsmodel/de.slisson.mps.dynsmodel.mpl" folder="hacks" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" folder="hacks.reflection" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" folder="hacks.nativelibs" />
+      <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.hacks.editor/de.slisson.mps.hacks.editor.msd" folder="" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" folder="hacks.reflection" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/solutions/de.slisson.mps.reflection.sandbox/de.slisson.mps.reflection.sandbox.msd" folder="hacks.reflection" />
       <modulePath path="$PROJECT_DIR$/mps-math/languages/de.itemis.mps.editor.math.demolang/de.itemis.mps.editor.math.demolang.mpl" folder="math" />
