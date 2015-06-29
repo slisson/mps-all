@@ -16,8 +16,14 @@
     </language>
   </registry>
   <node concept="PZ4Z_" id="7LkwBl9F3R6">
-    <node concept="PZ5kB" id="3Yb7CZxP41D" role="PZgLZ">
-      <property role="PZ5zY" value="com.mbeddr.core.base.pluginSolution.plugin.mbeddrPlatformProjectionModeGroup_ActionGroup" />
+    <node concept="PZ5kB" id="2$J6heYEDhJ" role="PZgLZ">
+      <property role="PZ5zY" value="FileMenu" />
+    </node>
+    <node concept="PZ5kB" id="3wU63Tv8RLc" role="PZgLZ">
+      <property role="PZ5zY" value="OpenFile" />
+    </node>
+    <node concept="PZ5kB" id="3wU63Tv8RLr" role="PZgLZ">
+      <property role="PZ5zY" value="E" />
     </node>
   </node>
 </model>
