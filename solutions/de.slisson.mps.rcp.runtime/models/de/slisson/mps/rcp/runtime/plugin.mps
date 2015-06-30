@@ -92,6 +92,7 @@
         <child id="1081773367579" name="rightExpression" index="3uHU7w" />
         <child id="1081773367580" name="leftExpression" index="3uHU7B" />
       </concept>
+      <concept id="1073239437375" name="jetbrains.mps.baseLanguage.structure.NotEqualsExpression" flags="nn" index="3y3z36" />
     </language>
     <language id="443f4c36-fcf5-4eb6-9500-8d06ed259e3e" name="jetbrains.mps.baseLanguage.classifiers">
       <concept id="1205752633985" name="jetbrains.mps.baseLanguage.classifiers.structure.ThisClassifierExpression" flags="nn" index="2WthIp" />
@@ -326,57 +327,42 @@
       <node concept="3clFbS" id="3$wt7UMbOi3" role="2VODD2">
         <node concept="3clFbJ" id="3$wt7UMc0Vw" role="3cqZAp">
           <node concept="3clFbS" id="3$wt7UMc0Vx" role="3clFbx">
-            <node concept="3clFbF" id="3$wt7UMc0Vy" role="3cqZAp">
-              <node concept="37vLTI" id="3$wt7UMc0Vz" role="3clFbG">
-                <node concept="2ShNRf" id="3$wt7UMc0V$" role="37vLTx">
-                  <node concept="HV5vD" id="3$wt7UMc0V_" role="2ShVmc">
-                    <ref role="HV5vE" to="fx8p:2ZrHegMYtMW" resolve="ActionFilterModel" />
+            <node concept="3clFbF" id="3$wt7UMbOWw" role="3cqZAp">
+              <node concept="2OqwBi" id="3$wt7UMbRZq" role="3clFbG">
+                <node concept="2OqwBi" id="3$wt7UMbP2w" role="2Oq$k0">
+                  <node concept="liA8E" id="3$wt7UMbRY8" role="2OqNvi">
+                    <ref role="37wK5l" to="kno3:5wzRHNZC2Xt" resolve="getFilter" />
+                  </node>
+                  <node concept="2YIFZM" id="2$J6heYGTP0" role="2Oq$k0">
+                    <ref role="37wK5l" to="kno3:2P0hLWpHTkD" resolve="getInstance" />
+                    <ref role="1Pybhc" to="kno3:4EB7X9ki7CF" resolve="FilteringActionManager" />
                   </node>
                 </node>
-                <node concept="2OqwBi" id="3$wt7UMc0VA" role="37vLTJ">
-                  <node concept="2WthIp" id="3$wt7UMc0VB" role="2Oq$k0" />
-                  <node concept="34pFcN" id="3$wt7UMc0VC" role="2OqNvi">
-                    <ref role="2WH_rO" node="2ZrHegMYw4o" resolve="model" />
+                <node concept="liA8E" id="3$wt7UMbSGF" role="2OqNvi">
+                  <ref role="37wK5l" to="kno3:5wzRHNZwPoP" resolve="setFilters" />
+                  <node concept="2OqwBi" id="3$wt7UMbSTb" role="37wK5m">
+                    <node concept="2OqwBi" id="3$wt7UMbSKI" role="2Oq$k0">
+                      <node concept="2WthIp" id="3$wt7UMbSKL" role="2Oq$k0" />
+                      <node concept="34pFcN" id="3$wt7UMbSKN" role="2OqNvi">
+                        <ref role="2WH_rO" node="2ZrHegMYw4o" resolve="model" />
+                      </node>
+                    </node>
+                    <node concept="liA8E" id="3$wt7UMbTmU" role="2OqNvi">
+                      <ref role="37wK5l" to="fx8p:61pZq5Svvw3" resolve="getFilteredIds" />
+                    </node>
                   </node>
                 </node>
               </node>
             </node>
           </node>
-          <node concept="3clFbC" id="3$wt7UMc0VD" role="3clFbw">
-            <node concept="10Nm6u" id="3$wt7UMc0VE" role="3uHU7w" />
+          <node concept="3y3z36" id="6RnZMKPG_MU" role="3clFbw">
             <node concept="2OqwBi" id="3$wt7UMc0VF" role="3uHU7B">
               <node concept="2WthIp" id="3$wt7UMc0VG" role="2Oq$k0" />
               <node concept="34pFcN" id="3$wt7UMc0VH" role="2OqNvi">
                 <ref role="2WH_rO" node="2ZrHegMYw4o" resolve="model" />
               </node>
             </node>
-          </node>
-        </node>
-        <node concept="3clFbF" id="3$wt7UMbOWw" role="3cqZAp">
-          <node concept="2OqwBi" id="3$wt7UMbRZq" role="3clFbG">
-            <node concept="2OqwBi" id="3$wt7UMbP2w" role="2Oq$k0">
-              <node concept="liA8E" id="3$wt7UMbRY8" role="2OqNvi">
-                <ref role="37wK5l" to="kno3:5wzRHNZC2Xt" resolve="getFilter" />
-              </node>
-              <node concept="2YIFZM" id="2$J6heYGTP0" role="2Oq$k0">
-                <ref role="37wK5l" to="kno3:2P0hLWpHTkD" resolve="getInstance" />
-                <ref role="1Pybhc" to="kno3:4EB7X9ki7CF" resolve="FilteringActionManager" />
-              </node>
-            </node>
-            <node concept="liA8E" id="3$wt7UMbSGF" role="2OqNvi">
-              <ref role="37wK5l" to="kno3:5wzRHNZwPoP" resolve="setFilters" />
-              <node concept="2OqwBi" id="3$wt7UMbSTb" role="37wK5m">
-                <node concept="2OqwBi" id="3$wt7UMbSKI" role="2Oq$k0">
-                  <node concept="2WthIp" id="3$wt7UMbSKL" role="2Oq$k0" />
-                  <node concept="34pFcN" id="3$wt7UMbSKN" role="2OqNvi">
-                    <ref role="2WH_rO" node="2ZrHegMYw4o" resolve="model" />
-                  </node>
-                </node>
-                <node concept="liA8E" id="3$wt7UMbTmU" role="2OqNvi">
-                  <ref role="37wK5l" to="fx8p:61pZq5Svvw3" resolve="getFilteredIds" />
-                </node>
-              </node>
-            </node>
+            <node concept="10Nm6u" id="3$wt7UMc0VE" role="3uHU7w" />
           </node>
         </node>
       </node>
