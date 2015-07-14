@@ -1,6 +1,10 @@
 @echo off
 :: clean all touched files in submodules
 for /D %%G in ("mps-*") do CALL :resetGit %%G
+
+:: clean diagram
+CALL :resetGit "diagram"
+
 :: clean meta-submodule
 git clean -fd
 git reset --hard

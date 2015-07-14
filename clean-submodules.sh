@@ -11,6 +11,14 @@ for f in `ls -d mps-*`; do
 	git reset --hard
 	cd ..
 done
+
+# clean diagram
+cd diagram
+echo `pwd`
+git clean -fd
+git reset --hard
+cd ..
+
 # clean meta-submodule
 git clean -fd
 git reset --hard
