@@ -2057,11 +2057,10 @@
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/de.slisson.mps.tables.mpl" />
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
       </chunk>
-      <chunk bootstrap="true">
+      <chunk>
         <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" />
-        <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" bootstrap="true" />
+        <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
       </chunk>
-      <chunk />
       <jvmargs>
         <arg value="-Xmx512m" />
       </jvmargs>
@@ -4961,6 +4960,16 @@
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.collapsible/generator/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
+    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
+    <delete dir="${basedir}/languages/de.itemis.mps.editor.dropdown/generator/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.layout/generator/source_gen" />
+    <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
+    <delete dir="${basedir}/languages/de.itemis.mps.selection.intentions/generator/source_gen" />
+    <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
+    <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
+    <delete dir="${basedir}/languages/de.slisson.mps.structurecheck/generator/source_gen" />
   </target>
 </project>
