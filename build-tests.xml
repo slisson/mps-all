@@ -3,7 +3,7 @@
   <property name="build.dir" location="build" />
   <property name="build.tmp" location="${build.dir}/tmp/mps-sl-all-tests" />
   <property name="build.layout" location="${build.dir}/artifacts/mps-sl-all-tests" />
-  <property name="mps.home" location="${basedir}/../../../../../app/mps322" />
+  <property name="mps.home" location="${basedir}/../../../../../app/mps33_1283.app/Contents" />
   <property name="diagram.home" location="${basedir}/diagram" />
   <property name="artifacts.mps" location="${mps.home}" />
   <property name="artifacts.mpsTesting" location="${mps.home}" />
@@ -49,12 +49,13 @@
         <sources jar="de.itemis.mps.editor.diagram.demo.activity-src.jar" descriptor="de.itemis.mps.editor.diagram.demo.activity.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity.jar">
+    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" />
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity" includes="icons/**, resources/**" />
+      <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.editor.diagram.demo.activity.jar" />
     </jar>
-    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity-generator.jar">
+    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity#5725606875425068161" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram.demo.activity-generator-template">
@@ -63,12 +64,14 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram.demo.activity-languageModels">
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity-src.jar">
+    <jar destfile="${build.layout}/de.itemis.mps.editor.diagram.demo.activity-src.jar" duplicate="preserve">
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/generator/source_gen">
         <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
       </fileset>
       <fileset dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/source_gen">
         <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
       </fileset>
       <zipfileset file="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/de.itemis.mps.editor.diagram.demo.activity.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.editor.diagram.demo.activity-generator-template" prefix="module/generator/template" />
@@ -96,12 +99,13 @@
         <sources jar="test.de.itemis.mps.editor.diagram.lang-src.jar" descriptor="test.de.itemis.mps.editor.diagram.lang.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang.jar">
+    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" />
       <fileset dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang" includes="icons/**, resources/**" />
+      <fileset dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/test.de.itemis.mps.editor.diagram.lang.jar" />
     </jar>
-    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang-generator.jar">
+    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang#6137251545971652545" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-test.de.itemis.mps.editor.diagram.lang-generator-template">
@@ -110,12 +114,14 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-test.de.itemis.mps.editor.diagram.lang-languageModels">
       <fileset dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang-src.jar">
+    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.lang-src.jar" duplicate="preserve">
       <fileset dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/generator/source_gen">
         <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
       </fileset>
       <fileset dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/source_gen">
         <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
       </fileset>
       <zipfileset file="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/test.de.itemis.mps.editor.diagram.lang.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-test.de.itemis.mps.editor.diagram.lang-generator-template" prefix="module/generator/template" />
@@ -135,23 +141,26 @@
           <module ref="6f14e29b-9796-426f-ae46-86ea46d4d320(de.slisson.mps.structurecheck.runtime)" />
           <module ref="83f155ff-422c-4b5a-a2f2-b459302dd215(jetbrains.mps.baseLanguage.unitTest.libs)" />
           <module ref="2d3c70e9-aab2-4870-8d8d-6036800e4103(jetbrains.mps.kernel)" />
+          <module ref="e55e6749-03cb-4ea7-9695-2322bab791c1(jetbrains.mps.lang.test.matcher)" />
           <module ref="707c4fde-f79a-44b5-b3d7-b5cef8844ccf(jetbrains.mps.lang.test.runtime)" />
           <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
         </dependencies>
         <sources jar="test.de.itemis.mps.editor.diagram.solution-src.jar" descriptor="test.de.itemis.mps.editor.diagram.solution.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.solution.jar">
+    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.solution.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.solution" />
       <fileset dir="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution" includes="icons/**, resources/**" />
+      <fileset dir="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/test.de.itemis.mps.editor.diagram.solution.jar" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-test.de.itemis.mps.editor.diagram.solution-models">
       <fileset dir="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.solution-src.jar">
+    <jar destfile="${build.layout}/test.de.itemis.mps.editor.diagram.solution-src.jar" duplicate="preserve">
       <fileset dir="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/source_gen">
         <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
       </fileset>
       <zipfileset file="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/test.de.itemis.mps.editor.diagram.solution.msd" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/solutions-test.de.itemis.mps.editor.diagram.solution-models" prefix="module/models" />
@@ -205,6 +214,7 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-design.devkit" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.aspectDescriptor.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.classLike.jar" />
@@ -243,6 +253,7 @@
       <library file="${artifacts.mps}/lib/mps-collections.jar" />
       <library file="${artifacts.mps}/lib/mps-core.jar" />
       <library file="${artifacts.mps}/lib/mps-editor.jar" />
+      <library file="${artifacts.mps}/lib/mps-environment.jar" />
       <library file="${artifacts.mps}/lib/mps-openapi.jar" />
       <library file="${artifacts.mps}/lib/mps-platform.jar" />
       <library file="${artifacts.mps}/lib/mps-test.jar" />
@@ -252,6 +263,7 @@
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.editor.editorTest.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.smodelTests.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
+      <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.jar" />
@@ -298,7 +310,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram.demo.activity" depends="fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/source_gen" />
@@ -307,11 +319,12 @@
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/lib/jgraphx.jar" />
@@ -339,6 +352,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
@@ -351,7 +365,7 @@
   <target name="java.compile.de.itemis.mps.editor.diagram.demo.activity#5725606875425068161" depends="java.compile.de.itemis.mps.editor.diagram.demo.activity, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity#5725606875425068161" />
-    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity#5725606875425068161" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+    <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity#5725606875425068161" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/de.itemis.mps.editor.diagram.demo.activity/generator/source_gen" />
@@ -360,11 +374,12 @@
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
@@ -380,6 +395,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
@@ -392,7 +408,7 @@
   <target name="java.compile.test.de.itemis.mps.editor.diagram.lang" depends="fetchDependencies">
     <mkdir dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/source_gen" />
     <mkdir dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" />
-    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/source_gen" />
@@ -401,11 +417,12 @@
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/lib/jgraphx.jar" />
@@ -438,6 +455,7 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.editor.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
@@ -452,7 +470,7 @@
   <target name="java.compile.test.de.itemis.mps.editor.diagram.lang#6137251545971652545" depends="java.compile.test.de.itemis.mps.editor.diagram.lang, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang#6137251545971652545" />
-    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang#6137251545971652545" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang#6137251545971652545" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/languages/test.de.itemis.mps.editor.diagram.lang/generator/source_gen" />
@@ -461,11 +479,12 @@
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
@@ -481,6 +500,7 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
@@ -493,7 +513,7 @@
   <target name="java.compile.test.de.itemis.mps.editor.diagram.solution" depends="java.compile.de.itemis.mps.editor.diagram.demo.activity, java.compile.test.de.itemis.mps.editor.diagram.lang, fetchDependencies">
     <mkdir dir="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/source_gen" />
     <mkdir dir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.solution" />
-    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.solution" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
+    <javac destdir="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.solution" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
       <compilerarg value="-Xlint:none" />
       <src>
         <path location="${diagram.home}/solutions/test.de.itemis.mps.editor.diagram.solution/source_gen" />
@@ -503,15 +523,17 @@
         <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
         <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
         <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
-        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.editor.diagram.demo.activity" />
         <pathelement path="${build.tmp}/java/out/test.de.itemis.mps.editor.diagram.lang" />
         <fileset file="${artifacts.mps}/lib/mps-test.jar" />
+        <fileset file="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/bsh-core-2.0b4.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/cglib-nodep-2.1_3.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-core-1.1.jar" />
@@ -546,7 +568,9 @@
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+        <fileset file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
         <fileset file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       </classpath>
@@ -578,6 +602,7 @@
       <pathelement location="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-design.devkit" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
+      <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.aspectDescriptor.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
       <pathelement location="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.classLike.jar" />
@@ -610,6 +635,7 @@
       <pathelement location="${artifacts.mps}/lib/mps-collections.jar" />
       <pathelement location="${artifacts.mps}/lib/mps-core.jar" />
       <pathelement location="${artifacts.mps}/lib/mps-editor.jar" />
+      <pathelement location="${artifacts.mps}/lib/mps-environment.jar" />
       <pathelement location="${artifacts.mps}/lib/mps-openapi.jar" />
       <pathelement location="${artifacts.mps}/lib/mps-platform.jar" />
       <pathelement location="${artifacts.mps}/lib/mps-test.jar" />
@@ -619,6 +645,7 @@
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.editor.editorTest.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.smodelTests.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
+      <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.matcher.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
       <pathelement location="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
       <pathelement location="${build.layout}/de.itemis.mps.editor.diagram.demo.activity.jar" />
