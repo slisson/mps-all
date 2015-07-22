@@ -647,7 +647,6 @@
         <vendor url="http://github.com/slisson/mps-multiline">Sascha Lisson</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
-        <depends>org.apache.commons</depends>
         <depends>de.itemis.mps.selection</depends>
         <idea-version since-build="139.1" until-build="140.1" />
         
@@ -756,7 +755,6 @@
         <depends>jetbrains.mps.build</depends>
         <depends>jetbrains.mps.core</depends>
         <depends>de.slisson.mps.editor.multiline</depends>
-        <depends>org.apache.commons</depends>
         <depends>de.itemis.mps.selection</depends>
         <idea-version since-build="139.1" until-build="140.1" />
         
@@ -2347,7 +2345,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.editor.multiline.runtime" depends="java.compile.de.itemis.mps.selection.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2368,13 +2366,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.selection.runtime" />
-        <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-csv-1.0/commons-csv-1.0.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/bsh-core-2.0b4.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/cglib-nodep-2.1_3.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.libs/hamcrest-core-1.1.jar" />
@@ -2403,7 +2395,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.richtext" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.richtext.customcell, java.compile.org.apache.commons, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.richtext" depends="java.compile.de.itemis.mps.selection.runtime, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.richtext.customcell, fetchDependencies">
     <mkdir dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.richtext" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.richtext" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2427,13 +2419,7 @@
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.editor.multiline.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.richtext.customcell" />
-        <pathelement path="${build.tmp}/java/out/org.apache.commons" />
         <fileset file="${basedir}/mps-multiline/solutions/de.slisson.mps.editor.multiline.runtime/lib/diff_match_patch.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-io-2.4/commons-io-2.4.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-lang3-3.3.2/commons-lang3-3.3.2.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-math3-3.3/commons-math3-3.3.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-primitives-1.0/commons-primitives-1.0.jar" />
-        <fileset file="${basedir}/mps-apache-commons/solutions/org.apache.commons/lib/commons-csv-1.0/commons-csv-1.0.jar" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
