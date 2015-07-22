@@ -386,6 +386,12 @@
           </node>
         </node>
       </node>
+      <node concept="2pNNFK" id="5LEeV$4fWU$" role="20twgj">
+        <property role="2pNNFO" value="description" />
+        <node concept="3o6iSG" id="5LEeV$4fWU_" role="3o6s8t">
+          <property role="3o6i5n" value="An editor component for properties that supports wrapping of long lines and new lines by pressing ENTER." />
+        </node>
+      </node>
       <node concept="3_J27D" id="31bAEZ0srEb" role="m$_yQ">
         <node concept="3Mxwew" id="31bAEZ0srEc" role="3MwsjC">
           <property role="3MwjfP" value="MPS Multiline Property Editor Component" />
@@ -434,6 +440,12 @@
           <node concept="2pMdtt" id="5bIQU4J45XG" role="2pMdts">
             <property role="2pMdty" value="140.1" />
           </node>
+        </node>
+      </node>
+      <node concept="2pNNFK" id="5LEeV$4fXaC" role="20twgj">
+        <property role="2pNNFO" value="description" />
+        <node concept="3o6iSG" id="5LEeV$4fXaD" role="3o6s8t">
+          <property role="3o6i5n" value="Mixing of plain text and MPS nodes." />
         </node>
       </node>
       <node concept="m$_yC" id="3IBdWhDPhz8" role="m$_yJ">
@@ -640,6 +652,12 @@
           <node concept="2pMdtt" id="5bIQU4J45ZX" role="2pMdts">
             <property role="2pMdty" value="140.1" />
           </node>
+        </node>
+      </node>
+      <node concept="2pNNFK" id="5LEeV$4fW8s" role="20twgj">
+        <property role="2pNNFO" value="description" />
+        <node concept="3o6iSG" id="5LEeV$4fWUl" role="3o6s8t">
+          <property role="3o6i5n" value="With this plugin you can select nodes in MPS using the mouse." />
         </node>
       </node>
       <node concept="3_J27D" id="6Y0V2RJk3ux" role="m$_yQ">

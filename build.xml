@@ -649,6 +649,7 @@
         <depends>jetbrains.mps.build</depends>
         <depends>de.itemis.mps.selection</depends>
         <idea-version since-build="139.1" until-build="140.1" />
+        <description>An editor component for properties that supports wrapping of long lines and new lines by pressing ENTER.</description>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -757,6 +758,7 @@
         <depends>de.slisson.mps.editor.multiline</depends>
         <depends>de.itemis.mps.selection</depends>
         <idea-version since-build="139.1" until-build="140.1" />
+        <description>Mixing of plain text and MPS nodes.</description>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -1478,6 +1480,7 @@
         <vendor url="https://github.com/slisson/mps-all">itemis AG</vendor>
         <depends>jetbrains.mps.core</depends>
         <idea-version since-build="139.1" until-build="140.1" />
+        <description>With this plugin you can select nodes in MPS using the mouse.</description>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
