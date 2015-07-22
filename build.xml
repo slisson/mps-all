@@ -643,7 +643,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.editor.multiline</id>
         <name>MPS Multiline Property Editor Component</name>
-        <version>2.0.0</version>
+        <version>2.0.1</version>
         <vendor url="http://github.com/slisson/mps-multiline">Sascha Lisson</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>jetbrains.mps.build</depends>
@@ -750,7 +750,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.slisson.mps.richtext</id>
         <name>MPS Richtext Editor Component</name>
-        <version>2.0.0</version>
+        <version>2.0.1</version>
         <vendor url="https://github.com/slisson/mps-richtext">Sascha Lisson</vendor>
         <depends>jetbrains.mps.build</depends>
         <depends>jetbrains.mps.core</depends>
@@ -1474,7 +1474,7 @@
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.itemis.mps.selection</id>
         <name>Mouse Selection Support</name>
-        <version>2.0.0</version>
+        <version>2.0.1</version>
         <vendor url="https://github.com/slisson/mps-all">itemis AG</vendor>
         <depends>jetbrains.mps.core</depends>
         <idea-version since-build="139.1" until-build="140.1" />
