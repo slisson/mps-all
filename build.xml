@@ -1470,9 +1470,9 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-tables-languages-de.slisson.mps.tables-languageModels" prefix="module/languageModels" />
     </jar>
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection" />
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/META-INF" />
-    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/META-INF/plugin.xml">
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/META-INF" />
+    <echoxml file="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/META-INF/plugin.xml">
       <idea-plugin version="2" xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>de.itemis.mps.selection</id>
         <name>Mouse Selection Support</name>
@@ -1487,8 +1487,8 @@
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages" />
-    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages" />
+    <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.selection.runtime.jar" />
     <mkdir dir="${build.tmp}/default/de.itemis.mps.selection.runtime.jar/META-INF" />
     <echoxml file="${build.tmp}/default/de.itemis.mps.selection.runtime.jar/META-INF/module.xml">
@@ -1510,7 +1510,7 @@
         <sources jar="de.itemis.mps.selection.runtime-src.jar" descriptor="de.itemis.mps.selection.runtime.msd" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.selection.runtime" />
       <fileset dir="${basedir}/solutions/de.itemis.mps.selection.runtime" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/solutions/de.itemis.mps.selection.runtime/source_gen" includes="**/trace.info, **/exports" />
@@ -1519,7 +1519,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/solutions-de.itemis.mps.selection.runtime-models">
       <fileset dir="${basedir}/solutions/de.itemis.mps.selection.runtime/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/solutions/de.itemis.mps.selection.runtime/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -1547,13 +1547,13 @@
         <sources jar="de.itemis.mps.selection.intentions-src.jar" descriptor="de.itemis.mps.selection.intentions.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.selection.intentions" />
       <fileset dir="${basedir}/languages/de.itemis.mps.selection.intentions" includes="icons/**, resources/**" />
       <fileset dir="${basedir}/languages/de.itemis.mps.selection.intentions/source_gen" includes="**/trace.info, **/exports" />
       <fileset dir="${build.tmp}/default/de.itemis.mps.selection.intentions.jar" />
     </jar>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions-generator.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/de.itemis.mps.selection.intentions#6009478650970381565" />
     </jar>
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.selection.intentions-generator-template">
@@ -1562,7 +1562,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-de.itemis.mps.selection.intentions-languageModels">
       <fileset dir="${basedir}/languages/de.itemis.mps.selection.intentions/languageModels" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions-src.jar" duplicate="preserve">
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.intentions-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/de.itemis.mps.selection.intentions/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />

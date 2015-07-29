@@ -262,6 +262,7 @@
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/languageDesign/jetbrains.mps.lang.test.runtime.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
+      <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.layout.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar" />
@@ -275,7 +276,6 @@
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
-      <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
@@ -631,6 +631,7 @@
       <pathelement location="${artifacts.mps}/plugins/mps-testing/lib/jetbrains.mps.lang.test.util.jar" />
       <pathelement location="${build.layout}/de.itemis.mps.editor.diagram.demo.activity.jar" />
       <pathelement location="${build.layout}/test.de.itemis.mps.editor.diagram.lang.jar" />
+      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.layout.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.shapes.jar" />
@@ -641,7 +642,6 @@
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.bool.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
-      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection/languages/de.itemis.mps.selection/de.itemis.mps.selection.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
@@ -652,13 +652,13 @@
       <pathelement location="${artifacts.mps}/plugins/mps-build" />
       <pathelement location="${artifacts.mps}/plugins/mps-core/META-INF/plugin.xml/../.." />
       <pathelement location="${artifacts.mps}/plugins/mps-testing" />
+      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection" />
+      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.layout" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.layout" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets" />
-      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection" />
-      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks" />
@@ -689,6 +689,12 @@
         <fileset dir="${artifacts.mps}/plugins/mps-testing">
           <include name="**/lib/*.jar" />
         </fileset>
+        <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection">
+          <include name="**/lib/*.jar" />
+        </fileset>
+        <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de-itemis-mps-selection">
+          <include name="**/lib/*.jar" />
+        </fileset>
         <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.diagram">
           <include name="**/lib/*.jar" />
         </fileset>
@@ -702,12 +708,6 @@
           <include name="**/lib/*.jar" />
         </fileset>
         <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets">
-          <include name="**/lib/*.jar" />
-        </fileset>
-        <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection">
-          <include name="**/lib/*.jar" />
-        </fileset>
-        <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.selection">
           <include name="**/lib/*.jar" />
         </fileset>
         <fileset dir="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips">
