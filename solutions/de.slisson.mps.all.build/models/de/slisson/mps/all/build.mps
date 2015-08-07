@@ -1945,6 +1945,18 @@
             </node>
           </node>
         </node>
+        <node concept="1SiIV0" id="3oPLsSd8_y7" role="3bR37C">
+          <node concept="3bR9La" id="3oPLsSd8_y8" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" node="48DYfEtkinT" resolve="de.itemis.mps.editor.collapsible.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="3oPLsSd8_y9" role="3bR37C">
+          <node concept="3bR9La" id="3oPLsSd8_ya" role="1SiIV1">
+            <property role="3bR36h" value="true" />
+            <ref role="3bR37D" node="7TpiM9SsCWu" resolve="de.itemis.mps.mouselistener.runtime" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="2Xjt3l57bIw" role="3989C9">
