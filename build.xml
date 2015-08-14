@@ -1956,14 +1956,14 @@
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.bootstrap-languages.devkit" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.general-purpose.devkit" />
       <library file="${artifacts.mps}/languages/devkits/jetbrains.mps.devkit.language-design.devkit" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.baseLanguage.lightweightdsl.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.access.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.actions.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.aspectDescriptor.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.behavior.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.checkedName.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.classLike.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.constraints.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.customAspect.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.dataFlow.analyzers.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.dataFlow.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.jar" />
@@ -2012,6 +2012,7 @@
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.mps.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.mps.tests.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.jar" />
+      <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.preset.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.ide.build.jar" />
       <library file="${artifacts.mps}/plugins/mps-core/languages/util/jetbrains.mps.core.properties.jar" />
       <library file="${artifacts.mps}/plugins/mps-testing/languages/baseLanguage/jetbrains.mps.baseLanguage.unitTest.jar" />
@@ -2075,7 +2076,7 @@
   
   <target name="makeDependents" />
   
-  <target name="java.compile.de.slisson.mps.all.build">
+  <target name="java.compile.de.slisson.mps.all.build" depends="fetchDependencies">
     <mkdir dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.all.build" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.all.build" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -2083,7 +2084,9 @@
       <src>
         <path location="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
       </src>
-      <classpath />
+      <classpath>
+        <fileset file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.workflow.preset.jar" />
+      </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.all.build">
       <fileset dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" excludes="**/*.java" />
@@ -3031,7 +3034,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.collapsible#4767615435807736937" depends="java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.mouselistener.runtime, fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.collapsible#4767615435807736937" depends="java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.tooltips.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.collapsible/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.collapsible#4767615435807736937" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.collapsible#4767615435807736937" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3055,6 +3058,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.itemis.mps.mouselistener.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.itemis.mps.tooltips.runtime" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
@@ -3847,7 +3851,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor" depends="java.compile.de.slisson.mps.conditionalEditor.runtime, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor" depends="java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3869,6 +3873,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.hacks.editor" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
@@ -3900,7 +3905,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor#2877762237605071651" depends="java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor.runtime, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor#2877762237605071651" depends="java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3923,6 +3928,7 @@
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.hacks.editor" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
