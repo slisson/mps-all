@@ -676,6 +676,12 @@
             <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
           </node>
         </node>
+        <node concept="1SiIV0" id="2A84N_PMFek" role="3bR37C">
+          <node concept="3bR9La" id="2A84N_PMFel" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:1WGJoq9Wd0d" resolve="jetbrains.mps.build.workflow.preset" />
+          </node>
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="2H_mjOXwd9K" role="3989C9">
@@ -1684,6 +1690,12 @@
             </node>
           </node>
         </node>
+        <node concept="1E0d5M" id="1zMEcc5q5cI" role="1E1XAP">
+          <ref role="1E0d5P" node="7TpiM9SsCWu" resolve="de.itemis.mps.mouselistener.runtime" />
+        </node>
+        <node concept="1E0d5M" id="1zMEcc5q5cJ" role="1E1XAP">
+          <ref role="1E0d5P" node="6$BmuzArJZq" resolve="de.itemis.mps.tooltips.runtime" />
+        </node>
       </node>
     </node>
     <node concept="2G$12M" id="2Xjt3l57bIw" role="3989C9">
@@ -2293,12 +2305,6 @@
             <ref role="3bR37D" to="ffeo:1TaHNgiIbIZ" resolve="MPS.Editor" />
           </node>
         </node>
-        <node concept="1SiIV0" id="6Y0V2RJjZQC" role="3bR37C">
-          <node concept="3bR9La" id="6Y0V2RJjZQD" role="1SiIV1">
-            <property role="3bR36h" value="false" />
-            <ref role="3bR37D" node="2Xjt3l57hht" resolve="de.slisson.mps.reflection.runtime" />
-          </node>
-        </node>
         <node concept="1SiIV0" id="3gXDBnMNuv3" role="3bR37C">
           <node concept="3bR9La" id="3gXDBnMNuv4" role="1SiIV1">
             <property role="3bR36h" value="false" />
@@ -2307,7 +2313,7 @@
         </node>
         <node concept="1SiIV0" id="3pwG8PShwU5" role="3bR37C">
           <node concept="3bR9La" id="3pwG8PShwU6" role="1SiIV1">
-            <property role="3bR36h" value="false" />
+            <property role="3bR36h" value="true" />
             <ref role="3bR37D" node="64TsoMQT2qP" resolve="de.slisson.mps.hacks.editor" />
           </node>
         </node>
@@ -2391,6 +2397,9 @@
               <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
             </node>
           </node>
+        </node>
+        <node concept="1E0d5M" id="1zMEcc5q5kN" role="1E1XAP">
+          <ref role="1E0d5P" node="64TsoMQT2qP" resolve="de.slisson.mps.hacks.editor" />
         </node>
       </node>
     </node>
