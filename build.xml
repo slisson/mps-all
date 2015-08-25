@@ -415,6 +415,7 @@
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="9d368018-badb-4569-9884-4b463e4f6696(de.slisson.mps.conditionalEditor.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
@@ -2031,7 +2032,6 @@
       <chunk>
         <module file="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" />
         <module file="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/de.itemis.mps.editor.bool.runtime.msd" />
-        <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/de.itemis.mps.editor.diagram.layout.mpl" />
         <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/de.itemis.mps.editor.diagram.styles.mpl" />
         <module file="${basedir}/mps-math/languages/de.itemis.mps.editor.math/de.itemis.mps.editor.math.mpl" />
         <module file="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/de.itemis.mps.editor.math.runtime.msd" />
@@ -2048,9 +2048,6 @@
       <chunk>
         <module file="${diagram.home}/languages/de.itemis.mps.editor.collapsible/de.itemis.mps.editor.collapsible.mpl" />
         <module file="${diagram.home}/solutions/de.itemis.mps.editor.collapsible.runtime/de.itemis.mps.editor.collapsible.runtime.msd" />
-        <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" />
-        <module file="${diagram.home}/devkits/de.itemis.mps.editor.diagram.devkit.devkit" />
-        <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" />
         <module file="${basedir}/languages/de.itemis.mps.editor.dropdown/de.itemis.mps.editor.dropdown.mpl" />
         <module file="${basedir}/solutions/de.itemis.mps.editor.dropdown.runtime/de.itemis.mps.editor.dropdown.runtime.msd" />
         <module file="${diagram.home}/languages/de.itemis.mps.editor.layout/de.itemis.mps.editor.layout.mpl" />
@@ -2071,8 +2068,16 @@
         <module file="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/de.slisson.mps.tables.runtime.msd" />
       </chunk>
       <chunk>
-        <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" />
+        <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/de.itemis.mps.editor.diagram.layout.mpl" />
         <module file="${basedir}/mps-richtext/languages/richtext/richtext.mpl" />
+      </chunk>
+      <chunk>
+        <module file="${diagram.home}/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.mpl" />
+        <module file="${diagram.home}/devkits/de.itemis.mps.editor.diagram.devkit.devkit" />
+        <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/de.itemis.mps.editor.diagram.runtime.msd" />
+      </chunk>
+      <chunk>
+        <module file="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/de.itemis.mps.editor.diagram.shapes.msd" />
       </chunk>
       <jvmargs>
         <arg value="-Xmx512m" />
@@ -4319,7 +4324,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.itemis.mps.editor.diagram.layout" depends="fetchDependencies">
+  <target name="java.compile.de.itemis.mps.editor.diagram.layout" depends="java.compile.de.slisson.mps.conditionalEditor.runtime, fetchDependencies">
     <mkdir dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" />
     <javac destdir="${build.tmp}/java/out/de.itemis.mps.editor.diagram.layout" fork="true" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -4337,6 +4342,9 @@
         <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
         <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
         <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
         <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
@@ -4800,7 +4808,6 @@
   <target name="cleanSources">
     <delete dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/source_gen" />
     <delete dir="${basedir}/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/source_gen" />
-    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/source_gen" />
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math/source_gen" />
     <delete dir="${basedir}/mps-math/solutions/de.itemis.mps.editor.math.runtime/source_gen" />
@@ -4816,9 +4823,6 @@
     <delete dir="${basedir}/mps-boolean-editor/languages/de.itemis.mps.editor.bool/generator/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.collapsible/source_gen" />
     <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.collapsible.runtime/source_gen" />
-    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
-    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/generator/source_gen" />
-    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.styles/generator/source_gen" />
     <delete dir="${basedir}/languages/de.itemis.mps.editor.dropdown/source_gen" />
     <delete dir="${basedir}/solutions/de.itemis.mps.editor.dropdown.runtime/source_gen" />
@@ -4846,8 +4850,7 @@
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/generator/source_gen" />
     <delete dir="${basedir}/mps-tables/languages/de.slisson.mps.tables/runtime/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.collapsible/generator/source_gen" />
-    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
-    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/source_gen" />
     <delete dir="${basedir}/languages/de.itemis.mps.editor.dropdown/generator/source_gen" />
     <delete dir="${diagram.home}/languages/de.itemis.mps.editor.layout/generator/source_gen" />
     <delete dir="${basedir}/mps-math/languages/de.itemis.mps.editor.math.notations/generator/source_gen" />
@@ -4856,5 +4859,10 @@
     <delete dir="${basedir}/mps-richtext/languages/richtext/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/richtext/generator/source_gen" />
     <delete dir="${basedir}/languages/de.slisson.mps.structurecheck/generator/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram.layout/generator/source_gen" />
+    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.runtime/source_gen" />
+    <delete dir="${diagram.home}/languages/de.itemis.mps.editor.diagram/generator/source_gen" />
+    <delete dir="${diagram.home}/solutions/de.itemis.mps.editor.diagram.shapes/source_gen" />
   </target>
 </project>
