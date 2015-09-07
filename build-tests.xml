@@ -284,6 +284,7 @@
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
+      <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <library file="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
@@ -667,6 +668,7 @@
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
+      <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <pathelement location="${build.tmp}/deps/mps-sl-all/mps-sl-all.zip/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />

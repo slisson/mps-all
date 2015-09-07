@@ -28,15 +28,14 @@
       <modulePath path="$PROJECT_DIR$/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.mpl" folder="tooltips" />
       <modulePath path="$PROJECT_DIR$/languages/de.slisson.mps.editor.tabs/de.slisson.mps.editor.tabs.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/de.slisson.mps.structurecheck/de.slisson.mps.structurecheck.mpl" folder="structurecheck" />
-      <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/mps-apache-commons.build/mps-apache-commons.build.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-apache-commons/solutions/org.apache.commons/org.apache.commons.msd" folder="apache-commons" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool.demolang/de.itemis.mps.editor.bool.demolang.mpl" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/languages/de.itemis.mps.editor.bool/de.itemis.mps.editor.bool.mpl" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.runtime/de.itemis.mps.editor.bool.runtime.msd" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-boolean-editor/solutions/de.itemis.mps.editor.bool.sandbox/de.itemis.mps.editor.bool.sandbox.msd" folder="bool" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.demolang/de.slisson.mps.conditionalEditor.demolang.mpl" folder="conditionalEditor" />
+      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/de.slisson.mps.conditionalEditor.hints.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" folder="conditionalEditor" />
-      <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.build/de.slisson.mps.conditionalEditor.build.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/de.slisson.mps.conditionalEditor.runtime.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.sandbox/de.slisson.mps.conditionalEditor.sandbox.msd" folder="conditionalEditor" />
       <modulePath path="$PROJECT_DIR$/mps-hacks/languages/de.itemis.mps.nativelibs/de.itemis.mps.nativelibs.mpl" folder="hacks.nativelibs" />

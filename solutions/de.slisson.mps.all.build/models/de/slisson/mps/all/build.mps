@@ -2586,6 +2586,18 @@
             <ref role="3bR37D" node="64TsoMQT2qP" resolve="de.slisson.mps.hacks.editor" />
           </node>
         </node>
+        <node concept="1SiIV0" id="1ubcIyZj9Hy" role="3bR37C">
+          <node concept="3bR9La" id="1ubcIyZj9Hz" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="2Xjt3l57hht" resolve="de.slisson.mps.reflection.runtime" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="5VXqMlub07d" role="3bR37C">
+          <node concept="3bR9La" id="5VXqMlub07e" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" node="5vQ_hAOOn52" resolve="de.slisson.mps.conditionalEditor.hints" />
+          </node>
+        </node>
       </node>
       <node concept="1E1JtD" id="7klUZA6XM5Q" role="2G$12L">
         <property role="BnDLt" value="true" />
@@ -2669,6 +2681,43 @@
               <ref role="3bR37D" to="ffeo:1TaHNgiIbIQ" resolve="MPS.Core" />
             </node>
           </node>
+          <node concept="1SiIV0" id="1ubcIyZj9HD" role="3bR37C">
+            <node concept="3bR9La" id="1ubcIyZj9HE" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" to="ffeo:7Kfy9QB6KXW" resolve="jetbrains.mps.lang.core" />
+            </node>
+          </node>
+          <node concept="1SiIV0" id="5VXqMluaZYk" role="3bR37C">
+            <node concept="3bR9La" id="5VXqMluaZYl" role="1SiIV1">
+              <property role="3bR36h" value="false" />
+              <ref role="3bR37D" node="5vQ_hAOOn52" resolve="de.slisson.mps.conditionalEditor.hints" />
+            </node>
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtD" id="5vQ_hAOOn52" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="de.slisson.mps.conditionalEditor.hints" />
+        <property role="3LESm3" value="5474e4cd-6621-4b33-a39a-75552543ba57" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="5vQ_hAOOn55" role="3LF7KH">
+          <node concept="2Ry0Ak" id="5vQ_hAOOnfD" role="iGT6I">
+            <property role="2Ry0Am" value="mps-conditional-editor" />
+            <node concept="2Ry0Ak" id="5vQ_hAOOnnt" role="2Ry0An">
+              <property role="2Ry0Am" value="languages" />
+              <node concept="2Ry0Ak" id="5VXqMluaZv5" role="2Ry0An">
+                <property role="2Ry0Am" value="de.slisson.mps.conditionalEditor.hints" />
+                <node concept="2Ry0Ak" id="5VXqMluaZIy" role="2Ry0An">
+                  <property role="2Ry0Am" value="de.slisson.mps.conditionalEditor.hints.mpl" />
+                </node>
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1yeLz9" id="5VXqMluaZQg" role="1TViLv">
+          <property role="TrG5h" value="de.slisson.mps.conditionalEditor.hints#2669483033691476665" />
+          <property role="3LESm3" value="6c43adf5-a74d-4d1e-9cbe-67c85acd3190" />
+          <property role="2GAjPV" value="false" />
         </node>
       </node>
     </node>
@@ -3255,6 +3304,12 @@
           <property role="TrG5h" value="de.itemis.mps.editor.diagram.layout#4341402299005877448" />
           <property role="3LESm3" value="50fd4dec-4494-4a71-a0ca-d35c48af6670" />
           <property role="2GAjPV" value="false" />
+        </node>
+        <node concept="1SiIV0" id="5VXqMlub0fK" role="3bR37C">
+          <node concept="3bR9La" id="5VXqMlub0fL" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:mXGwHwhVPj" resolve="JDK" />
+          </node>
         </node>
       </node>
       <node concept="3LEwk6" id="5kDpuTS3hez" role="2G$12L">

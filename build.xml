@@ -1602,6 +1602,7 @@
         <dependencies>
           <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
           <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
           <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
           <module ref="86441d7a-e194-42da-81a5-2161ec62a379(MPS.Workbench)" />
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
@@ -1680,6 +1681,54 @@
       <zipfileset file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.mpl" prefix="module" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor-languageModels" prefix="module/languageModels" />
+    </jar>
+    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.hints.jar" />
+    <mkdir dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.hints.jar/META-INF" />
+    <echoxml file="${build.tmp}/default/de.slisson.mps.conditionalEditor.hints.jar/META-INF/module.xml">
+      <module namespace="de.slisson.mps.conditionalEditor.hints" type="language" uuid="5474e4cd-6621-4b33-a39a-75552543ba57">
+        <dependencies>
+          <module ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065(JDK)" />
+          <module ref="6ed54515-acc8-4d1e-a16c-9fd6cfe951ea(MPS.Core)" />
+          <module ref="1ed103c3-3aa6-49b7-9c21-6765ee11f224(MPS.Editor)" />
+          <module ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34(MPS.OpenAPI)" />
+          <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
+          <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
+          <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
+          <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
+          <module ref="8fe4c62a-2020-4ff4-8eda-f322a55bdc9f(jetbrains.mps.refactoring.runtime)" />
+          <module ref="9a4afe51-f114-4595-b5df-048ce3c596be(jetbrains.mps.runtime)" />
+        </dependencies>
+        <sources jar="de.slisson.mps.conditionalEditor.hints-src.jar" descriptor="de.slisson.mps.conditionalEditor.hints.mpl" />
+      </module>
+    </echoxml>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints" includes="icons/**, resources/**" />
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen" includes="**/trace.info, **/exports" />
+      <fileset dir="${build.tmp}/default/de.slisson.mps.conditionalEditor.hints.jar" />
+    </jar>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints-generator.jar" duplicate="preserve">
+      <fileset dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints#2669483033691476665" />
+    </jar>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor.hints-generator-template">
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/template" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <copyModels todir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor.hints-models">
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
+    </copyModels>
+    <jar destfile="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints-src.jar" duplicate="preserve">
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+      </fileset>
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen">
+        <exclude name="**/trace.info" />
+        <exclude name="**/exports" />
+      </fileset>
+      <zipfileset file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/de.slisson.mps.conditionalEditor.hints.mpl" prefix="module" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor.hints-generator-template" prefix="module/generator/template" />
+      <zipfileset dir="${build.tmp}/customProcessors/copyModels/mps-conditional-editor-languages-de.slisson.mps.conditionalEditor.hints-models" prefix="module/models" />
     </jar>
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks" />
     <mkdir dir="${build.tmp}/default/mps-sl-all.zip/de.slisson.mps.hacks/META-INF" />
@@ -1938,7 +1987,7 @@
     <delete dir="${build.layout}" />
   </target>
   
-  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.dropdown.runtime, java.compile.de.itemis.mps.editor.dropdown, java.compile.de.itemis.mps.editor.dropdown#671762723175669363, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible#4767615435807736937, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.itemis.mps.selection.runtime, java.compile.de.itemis.mps.selection.intentions, java.compile.de.itemis.mps.selection.intentions#6009478650970381565, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.hacks.editor, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.shapes, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.layout#4341402299005877448, java.compile.de.slisson.mps.structurecheck.runtime, java.compile.de.slisson.mps.structurecheck, java.compile.de.slisson.mps.structurecheck#380240910834170735, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout#4452438700753615293, java.compile.de.itemis.mps.tooltips.runtime, java.compile.de.itemis.mps.tooltips, java.compile.de.itemis.mps.tooltips#7561794385526429391" />
+  <target name="compileJava" depends="java.compile.de.slisson.mps.all.build, java.compile.de.itemis.mps.nativelibs, java.compile.de.itemis.mps.nativelibs#4185202470056722674, java.compile.de.itemis.mps.nativelibs.loader, java.compile.org.apache.commons, java.compile.de.slisson.mps.editor.multiline, java.compile.de.slisson.mps.editor.multiline#5792856961266375224, java.compile.de.slisson.mps.editor.multiline.runtime, java.compile.de.slisson.mps.richtext, java.compile.de.slisson.mps.richtext#1212807527450963095, java.compile.de.slisson.mps.richtext.customcell, java.compile.de.slisson.mps.richtext.customcell#2490242408670609648, java.compile.de.itemis.mps.editor.dropdown.runtime, java.compile.de.itemis.mps.editor.dropdown, java.compile.de.itemis.mps.editor.dropdown#671762723175669363, java.compile.de.itemis.mps.mouselistener.runtime, java.compile.de.itemis.mps.editor.bool.runtime, java.compile.de.itemis.mps.editor.bool, java.compile.de.itemis.mps.editor.bool#4900677560559654859, java.compile.de.itemis.mps.editor.collapsible.runtime, java.compile.de.itemis.mps.editor.collapsible, java.compile.de.itemis.mps.editor.collapsible#4767615435807736937, java.compile.java.modules.cycle.1, java.compile.de.itemis.mps.editor.math.runtime, java.compile.de.itemis.mps.editor.math.symbols, java.compile.de.itemis.mps.editor.math, java.compile.de.itemis.mps.editor.math#1546395981771464573, java.compile.de.itemis.mps.editor.math.notations, java.compile.de.itemis.mps.editor.math.notations#175930839491770475, java.compile.java.modules.cycle.2, java.compile.de.slisson.mps.tables.runtime, java.compile.de.slisson.mps.tables, java.compile.de.slisson.mps.tables#2318718871439220866, java.compile.de.itemis.mps.selection.runtime, java.compile.de.itemis.mps.selection.intentions, java.compile.de.itemis.mps.selection.intentions#6009478650970381565, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor#2877762237605071651, java.compile.de.slisson.mps.conditionalEditor.hints, java.compile.de.slisson.mps.conditionalEditor.hints#2669483033691476665, java.compile.de.slisson.mps.hacks.editor, java.compile.de.slisson.mps.reflection.runtime, java.compile.de.slisson.mps.reflection, java.compile.de.slisson.mps.reflection#5820306262934157507, java.compile.de.itemis.mps.editor.diagram.runtime, java.compile.de.itemis.mps.editor.diagram.shapes, java.compile.de.itemis.mps.editor.diagram, java.compile.de.itemis.mps.editor.diagram#1110129820007083940, java.compile.de.itemis.mps.editor.diagram.styles, java.compile.de.itemis.mps.editor.diagram.styles#5014430417954750349, java.compile.de.itemis.mps.editor.diagram.layout, java.compile.de.itemis.mps.editor.diagram.layout#4341402299005877448, java.compile.de.slisson.mps.structurecheck.runtime, java.compile.de.slisson.mps.structurecheck, java.compile.de.slisson.mps.structurecheck#380240910834170735, java.compile.de.itemis.mps.editor.layout.runtime, java.compile.de.itemis.mps.editor.layout, java.compile.de.itemis.mps.editor.layout#4452438700753615293, java.compile.de.itemis.mps.tooltips.runtime, java.compile.de.itemis.mps.tooltips, java.compile.de.itemis.mps.tooltips#7561794385526429391" />
   
   <target name="processResources" />
   
@@ -2043,6 +2092,7 @@
         <module file="${basedir}/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/de.itemis.mps.nativelibs.loader.msd" />
         <module file="${basedir}/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.mpl" />
         <module file="${basedir}/solutions/de.slisson.mps.all.build/de.slisson.mps.all.build.msd" />
+        <module file="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/de.slisson.mps.conditionalEditor.hints.mpl" />
         <module file="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/de.slisson.mps.reflection.mpl" />
         <module file="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/de.slisson.mps.reflection.runtime.msd" />
         <module file="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/de.slisson.richtext.customcell.mpl" />
@@ -3820,7 +3870,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor.runtime" depends="java.compile.de.slisson.mps.hacks.editor, java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor.runtime" depends="java.compile.de.slisson.mps.conditionalEditor.hints, java.compile.de.slisson.mps.hacks.editor, java.compile.de.slisson.mps.reflection.runtime, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3839,6 +3889,7 @@
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.hacks.editor" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.reflection.runtime" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
@@ -3852,7 +3903,9 @@
         <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
         <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
         <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
       </classpath>
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime">
@@ -3860,7 +3913,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor" depends="java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor" depends="java.compile.de.slisson.mps.conditionalEditor.hints, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3879,6 +3932,7 @@
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
@@ -3914,7 +3968,7 @@
     </copy>
   </target>
   
-  <target name="java.compile.de.slisson.mps.conditionalEditor#2877762237605071651" depends="java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
+  <target name="java.compile.de.slisson.mps.conditionalEditor#2877762237605071651" depends="java.compile.de.slisson.mps.conditionalEditor, java.compile.de.slisson.mps.conditionalEditor.hints, java.compile.de.slisson.mps.conditionalEditor.runtime, java.compile.de.slisson.mps.hacks.editor, fetchDependencies">
     <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" />
     <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" />
     <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
@@ -3934,6 +3988,7 @@
         <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
         <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
         <fileset file="${artifacts.mps}/lib/mps-icons.jar" />
         <fileset file="${artifacts.mps}/lib/mps-workbench.jar" />
         <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.runtime" />
@@ -3966,6 +4021,83 @@
     </javac>
     <copy todir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor#2877762237605071651">
       <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/generator/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.de.slisson.mps.conditionalEditor.hints" depends="fetchDependencies">
+    <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.4.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints">
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen" excludes="**/*.java" />
+    </copy>
+  </target>
+  
+  <target name="java.compile.de.slisson.mps.conditionalEditor.hints#2669483033691476665" depends="java.compile.de.slisson.mps.conditionalEditor.hints, fetchDependencies">
+    <mkdir dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/source_gen" />
+    <mkdir dir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints#2669483033691476665" />
+    <javac destdir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints#2669483033691476665" fork="false" includeantruntime="false" debug="true" source="1.6" target="1.6">
+      <compilerarg value="-Xlint:none" />
+      <src>
+        <path location="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/source_gen" />
+      </src>
+      <classpath>
+        <fileset file="${artifacts.mps}/lib/mps-closures.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-collections.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-openapi.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-core.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-api.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor-runtime.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-environment.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-platform.jar" />
+        <pathelement path="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints" />
+        <fileset file="${artifacts.IDEA}/lib/log4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/annotations.jar" />
+        <fileset file="${artifacts.IDEA}/lib/jdom.jar" />
+        <fileset file="${artifacts.IDEA}/lib/ecj-4.4.jar" />
+        <fileset file="${artifacts.IDEA}/lib/trove4j.jar" />
+        <fileset file="${artifacts.IDEA}/lib/xstream-1.4.3.jar" />
+        <fileset file="${artifacts.IDEA}/lib/asm-all.jar" />
+        <fileset file="${artifacts.mps}/lib/diffutils-1.2.1.jar" />
+        <fileset dir="${artifacts.IDEA}/lib" includes="*.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
+        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
+      </classpath>
+    </javac>
+    <copy todir="${build.tmp}/java/out/de.slisson.mps.conditionalEditor.hints#2669483033691476665">
+      <fileset dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/source_gen" excludes="**/*.java" />
     </copy>
   </target>
   
@@ -4941,6 +5073,7 @@
     <delete dir="${basedir}/mps-hacks/solutions/de.itemis.mps.nativelibs.loader/source_gen" />
     <delete dir="${basedir}/languages/de.itemis.mps.tooltips/source_gen" />
     <delete dir="${basedir}/solutions/de.slisson.mps.all.build/source_gen" />
+    <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/source_gen" />
     <delete dir="${basedir}/mps-hacks/languages/de.slisson.mps.reflection/source_gen" />
     <delete dir="${basedir}/mps-hacks/solutions/de.slisson.mps.reflection.runtime/source_gen" />
     <delete dir="${basedir}/mps-richtext/languages/de.slisson.richtext.customcell/source_gen" />
@@ -4964,6 +5097,7 @@
     <delete dir="${basedir}/languages/de.itemis.mps.tooltips/generator/source_gen" />
     <delete dir="${basedir}/solutions/de.itemis.mps.tooltips.runtime/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor/source_gen" />
+    <delete dir="${basedir}/mps-conditional-editor/languages/de.slisson.mps.conditionalEditor.hints/generator/source_gen" />
     <delete dir="${basedir}/mps-conditional-editor/solutions/de.slisson.mps.conditionalEditor.runtime/source_gen" />
     <delete dir="${basedir}/mps-multiline/languages/multiline/source_gen" />
     <delete dir="${basedir}/mps-multiline/languages/multiline/generator/source_gen" />
